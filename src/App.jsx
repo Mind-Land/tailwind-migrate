@@ -1,14 +1,13 @@
-import { DarkThemeToggle, Flowbite } from 'flowbite-react';
-import customTheme from './custom-theme';
-import Homepage from './pages/Homepage';
+import { Flowbite } from "flowbite-react";
+import customTheme from "./custom-theme";
+import Register from "./pages/auth/Register";
 
 function App() {
   return (
     <Flowbite theme={{ theme: customTheme }}>
-      <Homepage/>
-      <DarkThemeToggle></DarkThemeToggle>
+      <Register />
     </Flowbite>
   );
 }
 
-export default App
+export default App;
