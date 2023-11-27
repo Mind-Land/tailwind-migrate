@@ -56,7 +56,7 @@ export default {
       "color-danger-700": "#B72D19",
       "color-danger-800": "#93170F",
       "color-danger-900": "#7A090A",
-    }
+    },
   },
   darkMode: 'class',
 }
