@@ -3,13 +3,14 @@
 import { Button, Navbar } from "flowbite-react";
 import logo from "../assets/mindlandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
+import { NavLink } from "react-router-dom";
 import { navLinks } from "../data/index";
 
 function Navbarcomponent() {
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-50 ">
+    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10">
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
-        <Navbar.Brand href="https://flowbite-react.com">
+        <Navbar.Brand href="/">
           <img
             src={logo}
             className="mr-3 h-6 sm:h-9"
@@ -23,12 +24,23 @@ function Navbarcomponent() {
           </Button>
           <Navbar.Toggle />
         </div>
-        <Navbar.Collapse className="cursor-pointer">
+        <Navbar.Collapse className="cursor-pointer ">
           {navLinks.map((link) => {
             return (
-              <Navbar.Link key={link.id} to={link.path}>
-                {link.text}
-              </Navbar.Link>
+              <div
+                key={link.id}
+                className="active:text-color-primary-500 hover:text-color-primary-500"
+              >
+                <NavLink
+                  to={link.path}
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                  end
+                >
+                  {link.text}
+                </NavLink>
+              </div>
             );
           })}
         </Navbar.Collapse>

@@ -8,13 +8,16 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "json": "json-server --watch db.json"
+    "json": "json-server --watch db.json",
+    "serve": "http-server dist --port 9000"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.8.7",
     "flowbite": "^2.2.0",
     "flowbite-react": "^0.7.0",
     "lottie-react": "^2.4.0",
+    "http-server": "^14.1.1",
+    "next-images": "^1.8.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-loading-skeleton": "^3.3.1"
