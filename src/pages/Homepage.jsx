@@ -2,6 +2,10 @@ import { Badge } from "flowbite-react";
 import { HiChatAlt2, HiTrendingUp, HiUserGroup } from "react-icons/hi";
 import Articlecard from "../components/Articlecard";
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
+import Lottie from "lottie-react";
+import HeroImage from "../assets/Hero.json";
+
 import ArticlecardSkeleton from "../components/ArticlecardSkeleton";
 
 const fetchArticles = async () => {
@@ -35,6 +39,7 @@ function Homepage() {
     ));
   };
 
+  let naviget = useNavigate();
   return (
     <>
       <div className="h-screen">
@@ -53,6 +58,7 @@ function Homepage() {
               <a
                 href="#"
                 className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-color-primary-500 hover:bg-color-primary-600 focus:ring-4 focus:ring-color-primary-300 dark:focus:ring-color-primary-900"
+                onClick={() => naviget("/checknow")}
               >
                 Periksa Sekarang
               </a>
@@ -72,10 +78,7 @@ function Homepage() {
               </div>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <img
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-                alt="mockup"
-              />
+              <Lottie animationData={HeroImage} alt="hero" />
             </div>
           </div>
         </section>

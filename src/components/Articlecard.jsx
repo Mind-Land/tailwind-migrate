@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
 function Articlecard({ article }) {
-  const {title, author, postAt, body} = article;
+  const { title, author, postAt, body } = article;
 
-  console.log(article)
+  console.log(article);
 
   const truncatedBody = body.split(" ").slice(0, 25).join(" ") + " ...";
 

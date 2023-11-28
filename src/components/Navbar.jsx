@@ -7,7 +7,7 @@ import { navLinks } from "../data/index";
 
 function Navbarcomponent() {
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full">
+    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-50 ">
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="https://flowbite-react.com">
           <img
@@ -23,10 +23,10 @@ function Navbarcomponent() {
           </Button>
           <Navbar.Toggle />
         </div>
-        <Navbar.Collapse>
+        <Navbar.Collapse className="cursor-pointer">
           {navLinks.map((link) => {
             return (
-              <Navbar.Link key={link.id} to={link.path}  >
+              <Navbar.Link key={link.id} to={link.path}>
                 {link.text}
               </Navbar.Link>
             );
