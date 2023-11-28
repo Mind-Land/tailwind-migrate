@@ -1,40 +1,10 @@
 import { Badge } from "flowbite-react";
 import { HiChatAlt2, HiTrendingUp, HiUserGroup } from "react-icons/hi";
-import Articlecard from "../components/Articlecard";
-import { useQuery } from "@tanstack/react-query";
-import ArticlecardSkeleton from "../components/ArticlecardSkeleton";
+import Getpopulararticles from '../pages/templates/Getpopulararticles'
 
-const fetchArticles = async () => {
-  const respon = await fetch("http://localhost:3000/articles");
-  const data = await respon.json();
-  return data;
-};
 
 function Homepage() {
-  const { data, isError, isLoading } = useQuery({
-    queryKey: ["ArticleQuery"],
-    queryFn: fetchArticles,
-  });
-
-  const renderContent = () => {
-    if (isLoading) {
-      return (
-        <>
-          <ArticlecardSkeleton />
-          <ArticlecardSkeleton />
-        </>
-      );
-    }
-
-    if (isError) {
-      return <p>Error fetching data</p>;
-    }
-
-    return data.map((article) => (
-      <Articlecard key={article.id} article={article} />
-    ));
-  };
-
+  
   return (
     <>
       <div className="h-screen">
@@ -92,7 +62,9 @@ function Homepage() {
                 kamu mungkin akan merasa lebih baik
               </p>
             </div>
-            <div className="grid gap-8 lg:grid-cols-2">{renderContent()}</div>
+            <div className="grid gap-8 lg:grid-cols-2">
+              <Getpopulararticles />
+            </div>
           </div>
         </section>
       </div>

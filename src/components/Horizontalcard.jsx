@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-function Articlecard({ article }) {
+function Horizontalcard({ article }) {
   const {title, author, postAt, body} = article;
 
   console.log(article)
 
-  const truncatedBody = body.split(" ").slice(0, 25).join(" ") + " ...";
+  const truncatedBody = body.split(" ").slice(0, 20).join(" ") + " ...";
 
   // Logika untuk menghitung selisih hari antara postAt dan tanggal sekarang
   const postDate = new Date(postAt);
@@ -31,7 +31,7 @@ function Articlecard({ article }) {
           </svg>
           Article
         </span>
-        <span className="text-sm">{`${daysAgo} days ago`}</span>
+        <span className="text-sm">{`${daysAgo} hari yang lalu`}</span>
       </div>
       <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         <a href="#">{title}</a>
@@ -71,7 +71,7 @@ function Articlecard({ article }) {
   );
 }
 
-Articlecard.propTypes = {
+Horizontalcard.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
@@ -80,4 +80,4 @@ Articlecard.propTypes = {
   }).isRequired,
 };
 
-export default Articlecard;
+export default Horizontalcard;

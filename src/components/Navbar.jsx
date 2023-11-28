@@ -7,7 +7,7 @@ import { navLinks } from "../data/index";
 
 function Navbarcomponent() {
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full">
+    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10">
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="https://flowbite-react.com">
           <img
