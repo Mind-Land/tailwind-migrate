@@ -12,10 +12,27 @@ import Getpopulararticles from "../templates/Getpopulararticles";
 import { useState } from "react";
 
 function Articles() {
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [articleCount, setArticleCount] = useState(0);
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const hadnleButtonSearch = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if(section) {
+      section.scrollIntoView({behavior: 'smooth'})
+    }
+  }
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
+  };
+
+  const handleArticleCountChange = (count) => {
+    setArticleCount(count);
   };
 
   return (
@@ -32,7 +49,7 @@ function Articles() {
                 kamu mungkin akan merasa lebih baik
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge color="primary" icon={HiChatAlt2}>
+                <Badge color="primary" icon={HiChatAlt2}  >
                   Chat AI
                 </Badge>
                 <Badge color="primary" icon={HiUserGroup}>
@@ -53,7 +70,7 @@ function Articles() {
                   value={searchTerm}
                   className="flex-1"
                 />
-                <Button color="primary" className="flex-2">
+                <Button color="primary" className="flex-2"  onClick={() => hadnleButtonSearch('article-section')}>
                   <HiSearch className="h-6 w-6" />
                 </Button>
               </div>
@@ -65,18 +82,18 @@ function Articles() {
         </section>
       </div>
       <div className="min-h-screen bg-white dark:bg-gray-900">
-        <section className="h-full flex flex-col items-center justify-center">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <section className="h-full flex flex-col items-center justify-center w-full">
+          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 w-full">
             <h3 className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500">
               Artikel Populer
             </h3>
             <div className="grid gap-8 lg:grid-cols-2 mb-12">
               <Getpopulararticles />
             </div>
-            <h3 className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500">
+            <h3 className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500" id="article-section">
               Cari Artikel
             </h3>
-            <div className="mx-auto text-center lg:mb-10 mb-8">
+            <div className="mx-auto text-center lg:mb-10 mb-8"  >
               <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-row justify-between items-center">
                 <div className="flex gap-2 flex-grow">
                   <TextInput
@@ -91,31 +108,31 @@ function Articles() {
                     className="flex-grow md:flex-grow-0 w-1/3"
                   />
                   <div className="hidden md:block">
-                    <Dropdown label="Dropdown" size="sm" color="primary">
-                      <Dropdown.Item onClick={() => alert("Dashboard!")}>
-                        Dashboard
+                    <Dropdown label={selectedCategory === '' ? 'Semua Kategori' : selectedCategory} size="sm" color="primary">
+                      <Dropdown.Item onClick={() => handleCategorySelect('mental_health')} >
+                        Mental Health
                       </Dropdown.Item>
-                      <Dropdown.Item onClick={() => alert("Settings!")}>
-                        Settings
+                      <Dropdown.Item onClick={() => handleCategorySelect('anxiety')}>
+                      Anxiety
                       </Dropdown.Item>
-                      <Dropdown.Item onClick={() => alert("Earnings!")}>
-                        Earnings
+                      <Dropdown.Item onClick={() => handleCategorySelect('introvert')}>
+                      Introvert
                       </Dropdown.Item>
-                      <Dropdown.Item onClick={() => alert("Sign out!")}>
-                        Sign out
+                      <Dropdown.Item onClick={() => handleCategorySelect('')}>
+                        Semua kategori
                       </Dropdown.Item>
                     </Dropdown>
                   </div>
                 </div>
                 <div className="hidden md:block">
                   <p className="text-gray-700 dark:text-gray-400 flex items-center text-sm">
-                    Menampilkan 13 artikel
+                    Menampilkan {articleCount} artikel
                   </p>
                 </div>
               </div>
             </div>
-            <div className="grid gap-6 lg:grid-cols-4">
-              <Getarticles searchTerm={searchTerm} />
+            <div className="grid gap-6 lg:grid-cols-3">
+              <Getarticles searchTerm={searchTerm} selectedCategory={selectedCategory} onArticleCountChange={handleArticleCountChange}/>
             </div>
           </div>
         </section>

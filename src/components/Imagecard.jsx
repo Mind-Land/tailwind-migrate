@@ -5,8 +5,8 @@ function Imagecard({ article }) {
 
   console.log(article);
 
-  const truncatedBody = body.split(" ").slice(0, 15).join(" ") + " ...";
-  const truncatedTitle = title.length > 30 ? title.split(" ").slice(0, 6).join(" ") + " ..." : title;
+  const truncatedBody = body.slice(0, 100) + " ...";
+  const truncatedTitle = title.slice(0, 70) + "...";
 
   // Logika untuk menghitung selisih hari antara postAt dan tanggal sekarang
   const postDate = new Date(postAt);
@@ -39,7 +39,7 @@ function Imagecard({ article }) {
               href="#"
               className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-color-primary-500 rounded-lg hover:bg-color-primary-800 focus:ring-4 focus:outline-none focus:ring-color-primary-300 dark:bg-color-primary-600 dark:hover:bg-color-primary-700 dark:focus:ring-color-primary-800"
             >
-              Read more
+              Selengkapnya
               <svg
                 className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                 aria-hidden="true"

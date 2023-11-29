@@ -22,7 +22,10 @@ function Getpopulararticles() {
     return <p>Error fetching data</p>;
   }
 
-  return data.map((article) => (
+  const sortedArticles = [...data].sort((a, b) => b.viewed - a.viewed);
+  const popularArticles = sortedArticles.slice(0, 2);
+
+  return popularArticles.map((article) => (
     <Horizontalcard key={article.id} article={article} />
   ));
 

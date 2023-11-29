@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Navbar } from "flowbite-react";
+import { Button, Navbar, DarkThemeToggle } from "flowbite-react";
 import logo from "../assets/mindlandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
 import { navLinks } from "../data/index";
@@ -16,7 +16,8 @@ function Navbarcomponent() {
             alt="Flowbite React Logo"
           />
         </Navbar.Brand>
-        <div className="flex md:order-2">
+        <div className="flex md:order-2 gap-2">
+          <DarkThemeToggle></DarkThemeToggle>
           <Button color="primary" className="justify-center">
             Masuk
             <HiChevronRight className="ml-2 h-5 w-5" />
@@ -26,7 +27,7 @@ function Navbarcomponent() {
         <Navbar.Collapse>
           {navLinks.map((link) => {
             return (
-              <Navbar.Link key={link.id} to={link.path}  >
+              <Navbar.Link key={link.id} to={link.path} className="cursor-pointer">
                 {link.text}
               </Navbar.Link>
             );
