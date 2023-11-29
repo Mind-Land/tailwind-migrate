@@ -1,7 +1,7 @@
 "use client";
 import { useNavigate } from "react-router-dom";
 import { HiFingerPrint } from "react-icons/hi";
-import HeroCheckNow from "../../assets/heroCheck.json";
+import HeroCheckNow from "../../assets/lottie/heroCheck.json";
 import Lottie from "lottie-react";
 import Doctorcard from "../../components/Doctorcard";
 import Featurecard from "../../components/Featurecard";

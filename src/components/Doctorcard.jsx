@@ -1,5 +1,5 @@
 "use client";
-
+import { Rating } from "flowbite-react";
 import { Card } from "flowbite-react";
 import { DokterUnggulan } from "../data/index";
 import { HiOutlineChat, HiOutlineInformationCircle } from "react-icons/hi";
@@ -9,7 +9,7 @@ function Doctorcard() {
     <div className="grid gap-10 lg:grid-cols-3">
       {DokterUnggulan.map((dokter) => {
         return (
-          <div key={dokter.id}>
+          <div key={dokter.id} data-aos="fade-up">
             <Card className="max-w-sm">
               <div className="flex flex-col items-center pb-5">
                 <img
@@ -22,12 +22,21 @@ function Doctorcard() {
                 <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
                   {dokter.title}
                 </h5>
+
                 <p className="text-xs font-bold text-gray-500 dark:text-gray-400">
                   {dokter.experience}
                 </p>
                 <span className="text-sm text-gray-500 dark:text-gray-400">
                   {dokter.specialist}
                 </span>
+                <Rating>
+                  {dokter.rating.stars.map((star, index) => (
+                    <Rating.Star key={index} filled={star.filled} />
+                  ))}
+                  <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                    {dokter.rating.average} out of {dokter.rating.maxRating}
+                  </p>
+                </Rating>
                 <div className="mt-4 flex space-x-3 lg:mt-6 ">
                   <a
                     href="#"

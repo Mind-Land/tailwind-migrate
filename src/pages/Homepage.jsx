@@ -3,7 +3,8 @@ import { HiChatAlt2, HiTrendingUp, HiUserGroup } from "react-icons/hi";
 import Getpopulararticles from "../pages/templates/Getpopulararticles";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import HeroImage from "../assets/Hero.json";
+import HeroImage from "../assets/lottie/Hero.json";
+import Faqcomponent from "../components/Faq";
 
 function Homepage() {
   let naviget = useNavigate();
@@ -68,6 +69,9 @@ function Homepage() {
             </div>
           </div>
         </section>
+        <div>
+          <Faqcomponent />
+        </div>
       </div>
     </>
   );
