@@ -28,7 +28,7 @@ const Checknowpage = () => {
                 <a
                   href="#"
                   className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-color-primary-500 hover:bg-color-primary-600 focus:ring-4 focus:ring-color-primary-300 dark:focus:ring-color-primary-900"
-                  onClick={() => naviget("/")}
+                  onClick={() => naviget("/doctor")}
                 >
                   Cari Ahli.
                   <HiFingerPrint />
@@ -48,7 +48,10 @@ const Checknowpage = () => {
               <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white">
                 Daftar Dokter
               </h2>
-              <p className=" text-gray-500  dark:text-gray-400 hover:text-color-primary-500 cursor-pointer">
+              <p
+                className=" text-gray-500  dark:text-gray-400 hover:text-color-primary-500 cursor-pointer"
+                onClick={() => naviget("/doctor")}
+              >
                 Lihat Semua
               </p>
             </div>

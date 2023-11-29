@@ -50,6 +50,51 @@ export const DokterUnggulan = [
   },
 ]
 
+export const DaftarDokter = [
+  {
+    id: 1,
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww",
+    title: "Dr. Senin",
+    experience: "5 y.e",
+    specialist: "Psikolog",
+  },
+  {
+    id: 2,
+    image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    title: "Dr. Selasa",
+    experience: "7 y.e",
+    specialist: "Spesialis Otak",
+  },
+  {
+    id: 3,
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    title: "Dr. Rabu",
+    experience: "4 y.e",
+    specialist: "Spesialis konsultasi",
+  },
+  {
+    id: 4,
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    title: "Dr. Kamis",
+    experience: "4 y.e",
+    specialist: "Spesialis Gabut",
+  },
+  {
+    id: 5,
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    title: "Dr. Jumat",
+    experience: "4 y.e",
+    specialist: "Spesialis Beribadah",
+  },
+  {
+    id: 6,
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
+    title: "Dr. Sabtu",
+    experience: "4 y.e",
+    specialist: "Spesialis Weekend",
+  },
+]
+
 
 export const navLinks = [
   {

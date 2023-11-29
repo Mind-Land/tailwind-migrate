@@ -28,19 +28,19 @@ function Doctorcard() {
                 <span className="text-sm text-gray-500 dark:text-gray-400">
                   {dokter.specialist}
                 </span>
-                <div className="mt-4 flex space-x-3 lg:mt-6">
+                <div className="mt-4 flex space-x-3 lg:mt-6 ">
                   <a
                     href="#"
-                    className="inline-flex items-center rounded-lg border border-gray-300 bg-color-primary-500 px-4 py-2 text-center text-sm font-medium text-white hover:bg-color-primary-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+                    className="inline-flex items-center rounded-lg border border-gray-300 bg-color-primary-500 px-4 py-2 text-center text-sm font-medium text-white hover:bg-color-primary-700 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800 dark:text-gray-900 "
                   >
-                    <HiOutlineInformationCircle />
+                    <HiOutlineInformationCircle className="mr-1 h-4 w-4" />
                     Cek Detail
                   </a>
                   <a
                     href="#"
                     className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-center text-sm font-medium text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:hover:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
                   >
-                    <HiOutlineChat />
+                    <HiOutlineChat className="mr-1 h-4 w-4" />
                     Kirim Pesan
                   </a>
                 </div>

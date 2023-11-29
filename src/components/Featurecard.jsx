@@ -18,7 +18,7 @@ const Featurecard = () => {
                   animationData={fitur.image}
                   alt="feature-1"
                 />
-                <h5 className="mb-2 text-xs font-medium text-gray-900 dark:text-white transition duration-300 ease-in-out group-hover:text-white text-center">
+                <h5 className="mb-2 text-xs font-medium text-gray-900 dark:text-black transition duration-300 ease-in-out group-hover:text-white text-center">
                   {fitur.title}
                 </h5>
               </div>

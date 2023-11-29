@@ -21,7 +21,7 @@ function Homepage() {
               </h1>
               <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
                 Chat psikolog, test tingkat stress, forum diskusi, artikel
-                kesehatan mental, dan chat bersama expoert.
+                kesehatan mental, dan chat bersama exppert.
               </p>
               <a
                 href="#"

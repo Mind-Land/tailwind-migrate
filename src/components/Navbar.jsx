@@ -29,7 +29,7 @@ function Navbarcomponent() {
             return (
               <div
                 key={link.id}
-                className="active:text-color-primary-500 hover:text-color-primary-500"
+                className="active:text-color-primary-500 hover:text-color-primary-500 dark:text-white"
               >
                 <NavLink
                   to={link.path}
