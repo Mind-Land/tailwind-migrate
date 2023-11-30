@@ -2,11 +2,12 @@
 
 import { Button, Navbar } from "flowbite-react";
 import logo from "../assets/mindlandlogo.png";
-import {HiChevronRight} from 'react-icons/hi'
+import { HiChevronRight } from "react-icons/hi";
+import { navLinks } from "../data/index";
 
 function Navbarcomponent() {
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full">
+    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10">
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="https://flowbite-react.com">
           <img
@@ -18,18 +19,18 @@ function Navbarcomponent() {
         <div className="flex md:order-2">
           <Button color="primary" className="justify-center">
             Masuk
-            <HiChevronRight  className="ml-2 h-5 w-5" />
+            <HiChevronRight className="ml-2 h-5 w-5" />
           </Button>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" active>
-            Home
-          </Navbar.Link>
-          <Navbar.Link href="#">About</Navbar.Link>
-          <Navbar.Link href="#">Services</Navbar.Link>
-          <Navbar.Link href="#">Pricing</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+          {navLinks.map((link) => {
+            return (
+              <Navbar.Link key={link.id} to={link.path}>
+                {link.text}
+              </Navbar.Link>
+            );
+          })}
         </Navbar.Collapse>
       </Navbar>
     </div>
