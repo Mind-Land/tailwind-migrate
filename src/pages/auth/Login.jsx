@@ -1,8 +1,20 @@
 "use client";
 
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login() {
+  const [password, setPassword] = useState("");
+  const [validPassword, setValidPassword] = useState(false);
+
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+
+    setPassword(newPassword);
+    setValidPassword(passwordRegex.test(newPassword));
+  };
   return (
     <>
       <div className="flex flex-row-reverse items-center justify-center">
@@ -39,17 +51,38 @@ function Login() {
               <div className="mb-2 block">
                 <Label htmlFor="password1" value="Password" />
               </div>
-              <TextInput id="password1" type="password" required />
+              <TextInput
+                id="password1"
+                type="password"
+                required
+                onChange={handlePasswordChange}
+              />
+              {!validPassword && password.length > 0 && (
+                <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
+                  Password must contain 1 uppercase letter, 8 characters, and 1
+                  or 2 digits.
+                </p>
+              )}
             </div>
-            <div className="flex items-center gap-2">
-              <Checkbox className="" id="remember" />
-              <Label htmlFor="remember">Remember me</Label>
+            <div className="flex items-center justify-between gap-2 w-full">
+              <div className="flex items-center gap-2">
+                <Checkbox className="" id="remember" />
+                <Label htmlFor="remember">Remember me</Label>
+              </div>
+              <Link
+                to="/register"
+                style={{ background: "none", border: "none" }}
+                className="dark:text-white"
+                type="submit"
+              >
+                Create an Account
+              </Link>
             </div>
             <Button
               className="bg-color-primary-500 dark:bg-color-primary-300 dark:hover:bg-color-primary-500 dark:text-black dark:hover:text-white hover:bg-color-primary-100 hover:text-color-primary-900 border hover:border-color-primary-900"
-              type="submit"
+              type="button"
             >
-              Submit
+              Login
             </Button>
           </form>
         </div>

@@ -1,8 +1,31 @@
 "use client";
 
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
+import { useState } from "react";
 
 function Register() {
+  const [password, setPassword] = useState("");
+  const [repeatPassword, setRepeatPassword] = useState("");
+  const [validPassword, setValidPassword] = useState(false);
+  const [passwordsMatch, setPasswordsMatch] = useState(true);
+
+  const handlePasswordChange = (event) => {
+    const newPassword = event.target.value;
+    setPassword(newPassword);
+    setValidPassword(validatePassword(newPassword));
+    setPasswordsMatch(newPassword === repeatPassword);
+  };
+
+  const handleRepeatPasswordChange = (event) => {
+    const newRepeatPassword = event.target.value;
+    setRepeatPassword(newRepeatPassword);
+    setPasswordsMatch(newRepeatPassword === password);
+  };
+
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password);
+  };
   return (
     <>
       <div className="h-screen flex flex-row items-center justify-center">
@@ -44,7 +67,14 @@ function Register() {
                 type="password"
                 required
                 placeholder="password"
+                onChange={handlePasswordChange}
               />
+              {!validPassword && password.length > 0 && (
+                <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
+                  Password must contain 1 uppercase letter, 8 characters, and 1
+                  or 2 digits.
+                </p>
+              )}
             </div>
             <div>
               <div className="mb-2 block">
@@ -55,7 +85,13 @@ function Register() {
                 type="Password"
                 placeholder="confirm password"
                 required
+                onChange={handleRepeatPasswordChange}
               />
+              {!passwordsMatch && repeatPassword.length > 0 && (
+                <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
+                  Passwords do not match.
+                </p>
+              )}
             </div>
             <div className="flex items-center gap-2">
               <Checkbox className="" id="remember" />
