@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getArticles } from "../../globals/api";
 import Horizontalcard from "../../components/Horizontalcard";
-import ArticlecardSkeleton from "../../components/ArticlecardSkeleton";
+import ArticlecardSkeleton from "../../components/Cardskeleton";
 
 function Getpopulararticles() {
   const { data, isError, isLoading } = useQuery({
@@ -28,7 +28,6 @@ function Getpopulararticles() {
   return popularArticles.map((article) => (
     <Horizontalcard key={article.id} article={article} />
   ));
-
 }
 
 export default Getpopulararticles;

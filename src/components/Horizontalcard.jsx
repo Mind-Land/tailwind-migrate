@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function Horizontalcard({ article }) {
   const {title, author, postAt, body} = article;
 
-  console.log(article)
+  console.log(article);
 
   const truncatedBody = body.slice(0, 200) + " ...";
 

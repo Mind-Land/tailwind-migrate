@@ -10,7 +10,6 @@ Currently, two official plugins are available:
 # todo
 
 3. buat navbar active
-4. slicing article detail
 5. slicing docter detail
 
 
