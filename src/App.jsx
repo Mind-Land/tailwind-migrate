@@ -1,11 +1,11 @@
 import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 import customTheme from './custom-theme';
-import Homepage from './pages/Homepage';
+import Aichatpage from './pages/chatAi/aichatpages';
 
 function App() {
   return (
     <Flowbite theme={{ theme: customTheme }}>
-      <Homepage/>
+      <Aichatpage/>
       <DarkThemeToggle></DarkThemeToggle>
     </Flowbite>
   );
