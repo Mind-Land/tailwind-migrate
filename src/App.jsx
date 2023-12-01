@@ -1,4 +1,4 @@
-import { Flowbite, DarkThemeToggle } from "flowbite-react";
+import { Flowbite } from "flowbite-react";
 import { Routes, Route } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import customTheme from "./custom-theme";

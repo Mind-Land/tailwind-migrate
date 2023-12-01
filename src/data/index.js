@@ -114,7 +114,7 @@ export const navLinks = [
   },
   {
     id: 4,
-    path: "/tentang",
+    path: "/About",
     text: "Tentang",
   },
   {

@@ -64,6 +64,7 @@ function Navbarcomponent() {
               );
             })}
           </ul>
+        </div>
       </Navbar>
     </div>
   );
