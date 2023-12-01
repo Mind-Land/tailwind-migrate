@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 
-function Articlecard({ article }) {
+function Horizontalcard({ article }) {
   const {title, author, postAt, body} = article;
 
-  console.log(article)
+  console.log(article);
 
-  const truncatedBody = body.split(" ").slice(0, 25).join(" ") + " ...";
+  const truncatedBody = body.slice(0, 200) + " ...";
 
   // Logika untuk menghitung selisih hari antara postAt dan tanggal sekarang
   const postDate = new Date(postAt);
@@ -29,9 +29,9 @@ function Articlecard({ article }) {
             ></path>
             <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path>
           </svg>
-          Article
+          Artikel
         </span>
-        <span className="text-sm">{`${daysAgo} days ago`}</span>
+        <span className="text-sm">{`${daysAgo} hari yang lalu`}</span>
       </div>
       <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         <a href="#">{title}</a>
@@ -52,7 +52,7 @@ function Articlecard({ article }) {
           href="#"
           className="inline-flex items-center font-medium text-color-primary-600 dark:text-primary-500 hover:underline"
         >
-          Read more
+          Selengkapnya
           <svg
             className="ml-2 w-4 h-4"
             fill="currentColor"
@@ -71,7 +71,7 @@ function Articlecard({ article }) {
   );
 }
 
-Articlecard.propTypes = {
+Horizontalcard.propTypes = {
   article: PropTypes.shape({
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
@@ -80,4 +80,4 @@ Articlecard.propTypes = {
   }).isRequired,
 };
 
-export default Articlecard;
+export default Horizontalcard;
