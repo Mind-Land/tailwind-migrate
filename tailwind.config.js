@@ -3,7 +3,6 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
     './node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   plugins: [
@@ -59,5 +58,5 @@ export default {
       "color-danger-900": "#7A090A",
     },
   },
-  darkMode: 'class',
-}
+  darkMode: "class",
+};
