@@ -12,6 +12,7 @@ import Checknowpage from "./pages/checknow/Checknowpage";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Faqcomponent from "./components/Faq";
+import ChatAiPage from "./pages/Ai/chatAi";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/articles" Component={Articles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/faq" Component={Faqcomponent}></Route>
+            <Route path="/chatai" Component={ChatAiPage}></Route>
           </Routes>
           <Footer />
           <DarkThemeToggle></DarkThemeToggle>
