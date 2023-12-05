@@ -1,5 +1,5 @@
 import { Flowbite } from "flowbite-react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import customTheme from "./custom-theme";
 import Homepage from "./pages/Homepage";
@@ -12,15 +12,21 @@ import Checknowpage from "./pages/checknow/Checknowpage";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
+import Faqcomponent from "./components/Faq";
 
 const queryClient = new QueryClient();
+const pagesWithoutNavbarFooter = ["/login", "/register"];
 
 function App() {
+  const location = useLocation();
+  const shouldShowNavbarFooter = !pagesWithoutNavbarFooter.includes(
+    location.pathname
+  );
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <Flowbite theme={{ theme: customTheme }}>
-          <Navbarcomponent />
+          {shouldShowNavbarFooter && <Navbarcomponent />}
           <Routes>
             <Route path="/" Component={Homepage}></Route>
             <Route path="/login" Component={Login}></Route>
@@ -30,9 +36,10 @@ function App() {
             <Route path="/articles" Component={Articles}></Route>
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
+            <Route path="/faq" Component={Faqcomponent}></Route>
           </Routes>
-          <Footer />
-        </Flowbite>   
+          {shouldShowNavbarFooter && <Footer />}
+        </Flowbite>
       </QueryClientProvider>
     </>
   );

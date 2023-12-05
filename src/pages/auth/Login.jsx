@@ -18,7 +18,7 @@ function Login() {
   return (
     <>
       <div className="flex flex-row-reverse items-center justify-center">
-        <div className="h-screen bg-color-primary-200 w-full hidden lg:flex items-center justify-center">
+        <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center">
           <img className="w-3/5" src="./public/img/hero-image.png" alt="" />
         </div>
         <div className="dark:bg-gray-900 h-screen w-full px-6 flex flex-col items-center justify-center">
@@ -64,6 +64,8 @@ function Login() {
                 </p>
               )}
             </div>
+            
+            <Button color="primary">Login</Button>
             <div className="flex items-center justify-between gap-2 w-full">
               <div className="flex items-center gap-2">
                 <Checkbox className="" id="remember" />
@@ -75,15 +77,9 @@ function Login() {
                 className="dark:text-white"
                 type="submit"
               >
-                Create an Account
+                Buat Akun
               </Link>
             </div>
-            <Button
-              className="bg-color-primary-500 dark:bg-color-primary-300 dark:hover:bg-color-primary-500 dark:text-black dark:hover:text-white hover:bg-color-primary-100 hover:text-color-primary-900 border hover:border-color-primary-900"
-              type="button"
-            >
-              Login
-            </Button>
           </form>
         </div>
       </div>

@@ -5,7 +5,7 @@ import ArticlecardSkeleton from "../../components/Cardskeleton";
 
 function Getpopulararticles() {
   const { data, isError, isLoading } = useQuery({
-    queryKey: ["ArticleQuery"],
+    queryKey: ["PopularArticleQuery"],
     queryFn: getArticles,
   });
 

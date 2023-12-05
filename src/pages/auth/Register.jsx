@@ -1,7 +1,8 @@
 "use client";
 
-import { Button, Checkbox, Label, TextInput } from "flowbite-react";
+import { Button, Label, TextInput } from "flowbite-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [password, setPassword] = useState("");
@@ -29,7 +30,7 @@ function Register() {
   return (
     <>
       <div className="h-screen flex flex-row items-center justify-center">
-        <div className="h-screen bg-color-primary-200 w-full hidden lg:flex items-center justify-center">
+        <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center">
           <img
             className="w-2/4 -scale-x-100 w-"
             src="./public/img/hero-image.png"
@@ -93,16 +94,18 @@ function Register() {
                 </p>
               )}
             </div>
+
+            <Button color="primary">Submit</Button>
             <div className="flex items-center gap-2">
-              <Checkbox className="" id="remember" />
-              <Label htmlFor="remember">Remember me</Label>
+              <Link
+                to="/login"
+                style={{ background: "none", border: "none" }}
+                className="dark:text-white"
+                type="submit"
+              >
+                Masuk
+              </Link>
             </div>
-            <Button
-              className="bg-color-primary-500 dark:bg-color-primary-300 dark:hover:bg-color-primary-500 dark:text-black dark:hover:text-white hover:bg-color-primary-100 hover:text-color-primary-900 border hover:border-color-primary-900"
-              type="submit"
-            >
-              Submit
-            </Button>
           </form>
         </div>
       </div>
