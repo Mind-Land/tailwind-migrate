@@ -8,41 +8,68 @@
   "articles": [
     {
       "id": 1,
-      "title": "Sering merasa pusing? mungkin saja kamu sedang",
+      "title": "satu Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fuga?",
+      "kategory": "mental_health",
       "author": "Dr.Supratman",
       "postAt" : "11-26-2023",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum reprehenderit ex, modi mollitia temporibus quas culpa expedita unde blanditiis nihil velit perferendis illum eligendi maxime impedit inventore, consectetur quo deleniti, animi aliquam a quaerat sequi? Sequi assumenda harum doloremque sit inventore reprehenderit laboriosam, at earum autem odit velit perspiciatis deserunt. Eos, commodi consequuntur perferendis tenetur cupiditate rem temporibus quis ipsam voluptatum illo repudiandae nesciunt et debitis nobis nihil facere culpa ex accusantium eligendi repellendus iure eaque harum! Optio praesentium sequi nemo eos sit hic tempora dicta maiores quos deleniti eius cumque sapiente temporibus, ad expedita error illo ratione sed. Sapiente eius cumque nihil dicta, delectus repellendus consequuntur asperiores fuga soluta quia molestiae dignissimos quos a numquam obcaecati eveniet sunt, quidem accusamus accusantium unde, natus laboriosam vitae at hic. Obcaecati, mollitia? Error quo delectus adipisci quod, ipsum repudiandae, suscipit excepturi ex, dolorum magnam numquam eos! Adipisci accusantium rerum minima impedit enim quaerat explicabo, facilis sed molestias velit, in beatae nesciunt soluta distinctio cumque praesentium! Ipsa molestias sed facere id enim quod consequatur quo, magni quaerat laudantium quos dolorem commodi. Dolorum, adipisci non veniam unde officiis rerum voluptatibus eveniet odit. Veniam, nisi quibusdam? Eos tempora atque doloribus error molestiae blanditiis quasi perferendis iure necessitatibus unde tempore et beatae explicabo nesciunt nemo ab animi aliquid id sit, voluptatibus maiores quaerat suscipit? Enim totam iure aspernatur asperiores quam quibusdam voluptates sapiente illo earum repellat, molestias dolorem at quaerat libero non sed dolore fugit perspiciatis. Voluptatem voluptas error obcaecati quia quis cumque voluptate quod, odit dolorem blanditiis provident tempora eos dolor autem incidunt in. Dicta incidunt dolorem tempora saepe architecto quam delectus iusto voluptas nostrum nihil alias harum necessitatibus sint, aspernatur libero officia exercitationem. Impedit atque rem deserunt asperiores quidem consectetur officiis reprehenderit ipsam aliquid doloribus, labore necessitatibus aliquam quisquam! Aspernatur distinctio, nisi rerum dolores ut aliquam eum consectetur enim! Saepe quas corporis suscipit earum ex eos, ea voluptates ducimus hic soluta impedit voluptatum? Vel optio a doloremque consequuntur iure dolorem mollitia in quaerat hic ab nulla accusantium esse aliquid explicabo natus fugiat neque, eligendi dolor! Officia, assumenda! Quae itaque modi similique! Magnam dolore accusamus pariatur harum maxime ullam eum animi, ab ad aliquam temporibus laboriosam esse exercitationem asperiores et doloremque sequi repudiandae. Nesciunt quibusdam amet dolorum numquam quia corporis blanditiis, fuga reiciendis odio natus veritatis quae a quo adipisci atque error quam repudiandae deserunt impedit nemo. At quam fuga ex dolor autem perferendis!"
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum reprehenderit ex, modi mollitia temporibus quas culpa expedita unde blanditiis nihil velit perferendis illum eligendi maxime impedit inventore, consectetur quo deleniti, animi aliquam a quaerat sequi? Sequi assumenda harum doloremque sit inventore reprehenderit laboriosam,",
+      "viewed": 13
     },
     {
       "id": 2,
-      "title": "Sering merasa pusing? mungkin saja kamu sedang",
+      "title": "dua Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fuga?",
+      "kategory": "mental_health",
       "author": "Dr.Supratman",
       "postAt" : "11-26-2023",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum reprehenderit ex, modi mollitia temporibus quas culpa expedita unde blanditiis nihil velit perferendis illum eligendi maxime impedit inventore, consectetur quo deleniti, animi aliquam a quaerat sequi? Sequi assumenda harum doloremque sit inventore reprehenderit laboriosam, at earum autem odit velit perspiciatis deserunt. Eos, commodi consequuntur perferendis tenetur cupiditate rem temporibus quis ipsam voluptatum illo repudiandae nesciunt et debitis nobis nihil facere culpa ex accusantium eligendi repellendus iure eaque harum! Optio praesentium sequi nemo eos sit hic tempora dicta maiores quos deleniti eius cumque sapiente temporibus, ad expedita error illo ratione sed. Sapiente eius cumque nihil dicta, delectus repellendus consequuntur asperiores fuga soluta quia molestiae dignissimos quos a numquam obcaecati eveniet sunt, quidem accusamus accusantium unde, natus laboriosam vitae at hic. Obcaecati, mollitia? Error quo delectus adipisci quod, ipsum repudiandae, suscipit excepturi ex, dolorum magnam numquam eos! Adipisci accusantium rerum minima impedit enim quaerat explicabo, facilis sed molestias velit, in beatae nesciunt soluta distinctio cumque praesentium! Ipsa molestias sed facere id enim quod consequatur quo, magni quaerat laudantium quos dolorem commodi. Dolorum, adipisci non veniam unde officiis rerum voluptatibus eveniet odit. Veniam, nisi quibusdam? Eos tempora atque doloribus error molestiae blanditiis quasi perferendis iure necessitatibus unde tempore et beatae explicabo nesciunt nemo ab animi aliquid id sit, voluptatibus maiores quaerat suscipit? Enim totam iure aspernatur asperiores quam quibusdam voluptates sapiente illo earum repellat, molestias dolorem at quaerat libero non sed dolore fugit perspiciatis. Voluptatem voluptas error obcaecati quia quis cumque voluptate quod, odit dolorem blanditiis provident tempora eos dolor autem incidunt in. Dicta incidunt dolorem tempora saepe architecto quam delectus iusto voluptas nostrum nihil alias harum necessitatibus sint, aspernatur libero officia exercitationem. Impedit atque rem deserunt asperiores quidem consectetur officiis reprehenderit ipsam aliquid doloribus, labore necessitatibus aliquam quisquam! Aspernatur distinctio, nisi rerum dolores ut aliquam eum consectetur enim! Saepe quas corporis suscipit earum ex eos, ea voluptates ducimus hic soluta impedit voluptatum? Vel optio a doloremque consequuntur iure dolorem mollitia in quaerat hic ab nulla accusantium esse aliquid explicabo natus fugiat neque, eligendi dolor! Officia, assumenda! Quae itaque modi similique! Magnam dolore accusamus pariatur harum maxime ullam eum animi, ab ad aliquam temporibus laboriosam esse exercitationem asperiores et doloremque sequi repudiandae. Nesciunt quibusdam amet dolorum numquam quia corporis blanditiis, fuga reiciendis odio natus veritatis quae a quo adipisci atque error quam repudiandae deserunt impedit nemo. At quam fuga ex dolor autem perferendis!"
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum reprehenderit ex, modi mollitia temporibus quas culpa expedita unde blanditiis nihil velit perferendis illum eligendi maxime impedit inventore, consectetur quo deleniti, animi aliquam a quaerat sequi? Sequi assumenda harum doloremque sit inventore reprehenderit laboriosam,",
+      "viewed": 13
+    },
+    {
+      "id": 3,
+      "title": "tiga Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fuga?",
+      "kategory": "anxiety",
+      "author": "Dr.Supratman",
+      "postAt" : "11-26-2023",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum reprehenderit ex, modi mollitia temporibus quas culpa expedita unde blanditiis nihil velit perferendis illum eligendi maxime impedit inventore, consectetur quo deleniti, animi aliquam a quaerat sequi? Sequi assumenda harum doloremque sit inventore reprehenderit laboriosam,",
+      "viewed": 13
+    },
+    {
+      "id": 4,
+      "title": "empat Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fuga?",
+      "kategory": "introvert",
+      "author": "Dr.Supratman",
+      "postAt" : "11-26-2023",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dolorum reprehenderit ex, modi mollitia temporibus quas culpa expedita unde blanditiis nihil velit perferendis illum eligendi maxime impedit inventore, consectetur quo deleniti, animi aliquam a quaerat sequi? Sequi assumenda harum doloremque sit inventore reprehenderit laboriosam,",
+      "viewed": 13
+    }
+  ],
+  "detailArticle" : [
+    {
+      "id": 1,
+      "title": "satu Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fuga?",
+      "kategory": "mental_health",
+      "author": "Dr.Supratman",
+      "postAt" : "11-26-2023",
+      "body": "<p className=\"lead\">\r\n              Flowbite is an open-source library of UI components built with the\r\n              utility-first classes from Tailwind CSS. It also includes\r\n              interactive elements such as dropdowns, modals, datepickers.\r\n            <\/p>\r\n            <p>\r\n              Before going digital, you might benefit from scribbling down some\r\n              ideas in a sketchbook. This way, you can think things through\r\n              before committing to an actual design project.\r\n            <\/p>\r\n            <p>\r\n              But then I found a\r\n              <a href=\"https:\/\/flowbite.com\">\r\n                component library based on Tailwind CSS called Flowbite\r\n              <\/a>\r\n              . It comes with the most commonly used UI components, such as\r\n              buttons, navigation bars, cards, form elements, and more which are\r\n              conveniently built with the utility classes from Tailwind CSS.\r\n            <\/p>\r\n            <figure>\r\n              <img\r\n                src=\"https:\/\/flowbite.s3.amazonaws.com\/typography-plugin\/typography-image-1.png\"\r\n                alt=\"\"\r\n              \/>\r\n              <figcaption>Digital art by Anonymous<\/figcaption>\r\n            <\/figure>\r\n            <h2>Getting started with Flowbite<\/h2>\r\n            <p>\r\n              First of all you need to understand how Flowbite works. This\r\n              library is not another framework. Rather, it is a set of\r\n              components based on Tailwind CSS that you can just copy-paste from\r\n              the documentation.\r\n            <\/p>",
+      "viewed": 13
     }
   ],
   "dokter" : [
     {
       "id": 1,
-      "nama": "sibagus anjay",
-      "specialist": "dokter kandungan",
-      "pengalaman": "5 tahun",
+      "nama": "sibagus wow",
+      "subname": "dokter kandungan",
+      "pengalaman": 5,
+      "followers": 3000,
       "alumnus" : "universitas negeri gorontalo",
       "praktik" : "bekasi, jawa barat"
     },
     {
-      "id": 1,
+      "id": 2,
       "nama": "sibagus anjay",
-      "specialist": "dokter kandungan",
-      "pengalaman": "5 tahun",
-      "alumnus" : "universitas negeri gorontalo",
-      "praktik" : "bekasi, jawa barat"
-    },
-    {
-      "id": 1,
-      "nama": "sibagus anjay",
-      "specialist": "dokter kandungan",
-      "pengalaman": "5 tahun",
+      "subname": "dokter kandungan",
+      "pengalaman": 5,
+      "followers": 100,
       "alumnus" : "universitas negeri gorontalo",
       "praktik" : "bekasi, jawa barat"
     }

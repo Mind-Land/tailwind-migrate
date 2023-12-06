@@ -1,4 +1,4 @@
-import { Flowbite, DarkThemeToggle } from "flowbite-react";
+import { Flowbite } from "flowbite-react";
 import { Routes, Route } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import customTheme from "./custom-theme";
@@ -24,7 +24,6 @@ function App() {
             <Route path="/About" Component={About}></Route>
             <Route path="/CheckStress" Component={CheckStress}></Route>
           </Routes>
-          <DarkThemeToggle />
           <Footer />
         </Flowbite>
       </QueryClientProvider>

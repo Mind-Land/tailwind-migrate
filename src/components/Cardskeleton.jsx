@@ -1,7 +1,7 @@
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
 
-function ArticlecardSkeleton() {
+function Cardskeleton() {
   return (
     <article className="p-6 w-full bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
       <div className="flex justify-between items-center mb-5 text-gray-500">
@@ -25,4 +25,4 @@ function ArticlecardSkeleton() {
   );
 }
 
-export default ArticlecardSkeleton;
+export default Cardskeleton;
