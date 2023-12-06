@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import About from "./pages/about/About";
+import CheckStress from "./pages/CheckStress/CheckStress";
 const queryClient = new QueryClient();
 
 function App() {
@@ -21,9 +22,10 @@ function App() {
             <Route path="/login" Component={Login}></Route>
             <Route path="/register" Component={Register}></Route>
             <Route path="/About" Component={About}></Route>
+            <Route path="/CheckStress" Component={CheckStress}></Route>
           </Routes>
-          <Footer />
           <DarkThemeToggle />
+          <Footer />
         </Flowbite>
       </QueryClientProvider>
     </>
