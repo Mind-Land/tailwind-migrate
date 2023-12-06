@@ -108,22 +108,22 @@ export const navLinks = [
   },
   {
     id: 2,
-    path: "articles",
+    path: "/articles",
     text: "Artikel",
   },
   {
     id: 3,
-    path: "doctor",
+    path: "/doctor",
     text: "Dokter",
   },
   {
     id: 4,
-    path: "tentang",
+    path: "/About",
     text: "Tentang",
   },
   {
     id: 5,
-    path: "faq",
+    path: "/faq",
     text: "FAQ",
   },
 ]

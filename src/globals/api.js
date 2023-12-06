@@ -11,6 +11,19 @@ const fetchData = async (endpoint, options = {}) => {
   return data;
 };
 
+
+export const getDoctors = async () => {
+  return fetchData("/dokter");
+};
+
+export const _Getdetailarticle = async () => {
+  return fetchData("/detailArticle");
+};
+
 export const getArticles = async () => {
   return fetchData("/articles");
 };
+
+export const getDetailDokter = async () => {
+  return fetchData("/detailDokter")
+}

@@ -5,11 +5,30 @@ import {
   HiUserGroup,
   HiTrendingUp,
 } from "react-icons/hi";
-import Doctorcard from "../../components/Doctorcard";
 import HeroDoctor from "../../assets/lottie/Herodoctor.json";
 import Lottie from "lottie-react";
+import Getdokter from "../templates/Getdokter";
+import { useState } from "react";
 
 const Doctor = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [doctorsCount, setDoctorsCount] = useState(0);
+
+  const hadnleButtonSearch = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleDoctorsCountChange = (count) => {
+    setDoctorsCount(count);
+  };
+
   return (
     <>
       <div className="h-screen">
@@ -39,13 +58,13 @@ const Doctor = () => {
                   id=""
                   sizing="lg"
                   type="email"
-                  placeholder="Taukah kamu pisang dapat.."
+                  placeholder="Dr. Ahmad Ali.."
                   required
-                  onChange=""
-                  value="Cari Dokter.."
+                  onChange={handleSearch}
+                  value={searchTerm}
                   className="flex-1"
                 />
-                <Button color="primary" className="flex-2">
+                <Button color="primary" className="flex-2" onClick={() => hadnleButtonSearch('doctor-section')}>
                   <HiSearch className="h-6 w-6" />
                 </Button>
               </div>
@@ -57,15 +76,9 @@ const Doctor = () => {
         </section>
       </div>
       <div className="min-h-screen bg-white dark:bg-gray-900">
-        <section className="h-full flex flex-col items-center justify-center">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <h3 className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500">
-              Dokter Terpopuler
-            </h3>
-            <div className="grid gap-10 lg:grid-cols-1">
-              <Doctorcard />
-            </div>
-            <h3 className="mt-6 text-2xl font-bold dark:text-white mb-6 text-color-primary-500">
+        <section className="h-full flex flex-col items-center justify-center w-full">
+          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 w-full">
+            <h3 className="mt-6 text-2xl font-bold dark:text-white mb-6 text-color-primary-500" id='doctor-section'> 
               Cari Dokter
             </h3>
             <div className="mx-auto text-center lg:mb-10 mb-8">
@@ -78,25 +91,23 @@ const Doctor = () => {
                     placeholder="Nama/Spesialis"
                     required
                     icon={HiSearch}
-                    onChange=""
-                    value=""
+                    onChange={handleSearch}
+                    value={searchTerm}
                     className="flex-grow md:flex-grow-0 w-1/3"
                   />
-                  <div className="hidden md:block items-center text-center">
-                    <Button size="sm" color="primary">
-                      Cari
-                    </Button>
-                  </div>
                 </div>
                 <div className="hidden md:block">
                   <p className="text-gray-700 dark:text-gray-400 flex items-center text-sm">
-                    Menampilkan 3 daftar dokter
+                    Menampilkan {doctorsCount} daftar dokter
                   </p>
                 </div>
               </div>
             </div>
-            <div className="grid gap-10 lg:grid-cols-1">
-              <Doctorcard />
+            <div className="grid gap-10 lg:grid-cols-3">
+              <Getdokter
+                searchTerm={searchTerm}
+                onDoctorsCountChange={handleDoctorsCountChange}
+              />
             </div>
           </div>
         </section>

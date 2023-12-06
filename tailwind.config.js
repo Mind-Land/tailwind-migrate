@@ -1,15 +1,15 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js'
+    './node_modules/flowbite-react/lib/esm/**/*.js'
   ],
   plugins: [
-    // eslint-disable-next-line no-undef
     require('flowbite/plugin'),
-    // eslint-disable-next-line no-undef
     require("daisyui"),
+    require('flowbite-typography'),
   ],
   theme: {
     colors: {
@@ -60,5 +60,5 @@ export default {
       "color-danger-900": "#7A090A",
     },
   },
-  darkMode: 'class',
-}
+  darkMode: "class",
+};

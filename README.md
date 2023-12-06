@@ -10,4 +10,6 @@ Currently, two official plugins are available:
 # todo
 
 3. buat navbar active
-4. ganti footer
+5. slicing docter detail
+
+

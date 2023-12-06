@@ -9,7 +9,7 @@ const ChatAiPage = () => {
 
   const config = new Configuration({
     // eslint-disable-next-line no-undef
-    apiKey: "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",
+    // apiKey: "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",
   });
 
   const openai = new OpenAIApi(config);

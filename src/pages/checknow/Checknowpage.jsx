@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { HiFingerPrint } from "react-icons/hi";
 import HeroCheckNow from "../../assets/lottie/heroCheck.json";
 import Lottie from "lottie-react";
-import Doctorcard from "../../components/Doctorcard";
 import Featurecard from "../../components/Featurecard";
 
 const Checknowpage = () => {
@@ -59,7 +58,6 @@ const Checknowpage = () => {
                 Lihat Semua
               </p>
             </div>
-            <Doctorcard />
           </div>
           <div className="py-5 px-4 mx-auto">
             <h1 className="2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
