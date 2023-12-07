@@ -57,21 +57,86 @@
   "dokter" : [
     {
       "id": 1,
-      "nama": "sibagus wow",
-      "subname": "dokter kandungan",
+      "title": "sibagus wow",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww",
       "pengalaman": 5,
-      "followers": 3000,
-      "alumnus" : "universitas negeri gorontalo",
-      "praktik" : "bekasi, jawa barat"
+      "role": "Psikolog",
+      "alumni" : "universitas negeri gorontalo",
+      "praktik" : "bekasi, jawa barat", 
+      "pengikut" : 3000,
+      "rating" : {
+        "stars": [
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : false}
+        ],
+        "avarage": 4.95,
+        "maxRating": 5
+      }
     },
     {
       "id": 2,
-      "nama": "sibagus anjay",
-      "subname": "dokter kandungan",
+      "title": "sibagus hihi",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww",
       "pengalaman": 5,
-      "followers": 100,
-      "alumnus" : "universitas negeri gorontalo",
-      "praktik" : "bekasi, jawa barat"
+      "role": "Psikolog",
+      "alumni" : "universitas negeri gorontalo",
+      "praktik" : "bekasi, jawa barat", 
+      "pengikut" : 3000,
+      "rating" : {
+        "stars": [
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : false}
+        ],
+        "avarage": 4.95,
+        "maxRating": 5
+      }
+    },
+    {
+      "id": 3,
+      "title": "sibagus haha",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww",
+      "pengalaman": 5,
+      "role": "Psikolog",
+      "alumni" : "universitas negeri gorontalo",
+      "praktik" : "bekasi, jawa barat", 
+      "pengikut" : 3000,
+      "rating" : {
+        "stars": [
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : true},
+          {"filled" : false}
+        ],
+        "avarage": 4.95,
+        "maxRating": 5
+      }
     }
-  ]
+  ],
+  "detailDokter" : 
+    {
+      "id": 3,
+      "title": "sibagus haha",
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww",
+      "pengalaman": 5,
+      "role": "Psikolog",
+      "alumni" : "universitas negeri gorontalo",
+      "praktik" : "bekasi, jawa barat", 
+      "pengikut" : 3000,
+      "rating" : {
+        "avarage": 4.95,
+        "maxRating": 5
+      },
+      "tentang": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit dignissimos, cumque expedita in sit odio itaque culpa, perspiciatis totam quis eos maxime porro beatae id! Voluptate unde qui nisi!",
+      "kontak": {
+        "email": "mohamadrafiqd@gmail.com",
+        "nomor_telp": 81242219002
+      }
+    }
 }

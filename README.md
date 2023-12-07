@@ -9,6 +9,9 @@ Currently, two official plugins are available:
 
 # TODO
 
-Login reset password
+<!-- Login reset password -->
+
 beda img setiap login dan register
 checkstress fitur
+hero landing page ganti warna
+warna solid jangan gradient

@@ -23,3 +23,7 @@ export const _Getdetailarticle = async () => {
 export const getArticles = async () => {
   return fetchData("/articles");
 };
+
+export const getDetailDokter = async () => {
+  return fetchData("/detailDokter")
+}

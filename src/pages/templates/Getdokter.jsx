@@ -14,8 +14,8 @@ function Getdokter({ searchTerm, onDoctorsCountChange }) {
   const filteredDoctors = data
     ? data.filter(
         (dokter) =>
-          dokter.nama.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          dokter.subname.toLowerCase().includes(searchTerm.toLowerCase())
+          dokter.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          dokter.role.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : [];
 
@@ -44,7 +44,9 @@ function Getdokter({ searchTerm, onDoctorsCountChange }) {
 
 Getdokter.propTypes = {
   searchTerm: PropTypes.string,
-  onDoctorsCountChange: PropTypes.string,
+  onDoctorsCountChange: PropTypes.func,
+  setModalData:PropTypes.func,
+  setModalOpen:PropTypes.func,
 };
 
 export default Getdokter;

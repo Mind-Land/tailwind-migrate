@@ -13,7 +13,7 @@ const Featurecard = () => {
             >
               <div className="flex flex-col items-center">
                 <Lottie
-                  className="mb-3 rounded-full mt-6"
+                  className="mb-3 rounded-full mt-6 drop-shadow"
                   style={{ height: "58px", width: "58px" }}
                   animationData={fitur.image}
                   alt="feature-1"

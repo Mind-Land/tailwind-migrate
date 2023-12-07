@@ -22,10 +22,10 @@ function Articles() {
 
   const hadnleButtonSearch = (sectionId) => {
     const section = document.getElementById(sectionId);
-    if(section) {
-      section.scrollIntoView({behavior: 'smooth'})
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -49,7 +49,7 @@ function Articles() {
                 kamu mungkin akan merasa lebih baik
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge color="primary" icon={HiChatAlt2}  >
+                <Badge color="primary" icon={HiChatAlt2}>
                   Chat AI
                 </Badge>
                 <Badge color="primary" icon={HiUserGroup}>
@@ -70,7 +70,11 @@ function Articles() {
                   value={searchTerm}
                   className="flex-1"
                 />
-                <Button color="primary" className="flex-2"  onClick={() => hadnleButtonSearch('article-section')}>
+                <Button
+                  color="primary"
+                  className="flex-2"
+                  onClick={() => hadnleButtonSearch("article-section")}
+                >
                   <HiSearch className="h-6 w-6" />
                 </Button>
               </div>
@@ -90,10 +94,13 @@ function Articles() {
             <div className="grid gap-8 lg:grid-cols-2 mb-12">
               <Getpopulararticles />
             </div>
-            <h3 className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500" id="article-section">
+            <h3
+              className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500"
+              id="article-section"
+            >
               Cari Artikel
             </h3>
-            <div className="mx-auto text-center lg:mb-10 mb-8"  >
+            <div className="mx-auto text-center lg:mb-10 mb-8">
               <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-row justify-between items-center">
                 <div className="flex gap-2 flex-grow">
                   <TextInput
@@ -108,17 +115,31 @@ function Articles() {
                     className="flex-grow md:flex-grow-0 w-1/3"
                   />
                   <div className="hidden md:block">
-                    <Dropdown label={selectedCategory === '' ? 'Semua Kategori' : selectedCategory} size="sm" color="primary">
-                      <Dropdown.Item onClick={() => handleCategorySelect('mental_health')} >
+                    <Dropdown
+                      label={
+                        selectedCategory === ""
+                          ? "Semua Kategori"
+                          : selectedCategory
+                      }
+                      size="sm"
+                      color="primary"
+                    >
+                      <Dropdown.Item
+                        onClick={() => handleCategorySelect("mental_health")}
+                      >
                         Mental Health
                       </Dropdown.Item>
-                      <Dropdown.Item onClick={() => handleCategorySelect('anxiety')}>
-                      Anxiety
+                      <Dropdown.Item
+                        onClick={() => handleCategorySelect("anxiety")}
+                      >
+                        Anxiety
                       </Dropdown.Item>
-                      <Dropdown.Item onClick={() => handleCategorySelect('introvert')}>
-                      Introvert
+                      <Dropdown.Item
+                        onClick={() => handleCategorySelect("introvert")}
+                      >
+                        Introvert
                       </Dropdown.Item>
-                      <Dropdown.Item onClick={() => handleCategorySelect('')}>
+                      <Dropdown.Item onClick={() => handleCategorySelect("")}>
                         Semua kategori
                       </Dropdown.Item>
                     </Dropdown>
@@ -132,7 +153,11 @@ function Articles() {
               </div>
             </div>
             <div className="grid gap-6 lg:grid-cols-3">
-              <Getarticles searchTerm={searchTerm} selectedCategory={selectedCategory} onArticleCountChange={handleArticleCountChange}/>
+              <Getarticles
+                searchTerm={searchTerm}
+                selectedCategory={selectedCategory}
+                onArticleCountChange={handleArticleCountChange}
+              />
             </div>
           </div>
         </section>
@@ -142,4 +167,3 @@ function Articles() {
 }
 
 export default Articles;
-

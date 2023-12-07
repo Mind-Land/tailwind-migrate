@@ -32,7 +32,7 @@ const Doctor = () => {
   return (
     <>
       <div className="h-screen">
-        <section className="bg-white dark:from-gray-800 dark:bg-gray-900  h-full flex flex-col items-center justify-center">
+        <section className="bg-white dark:bg-gray-900 h-full flex flex-col items-center justify-center">
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
               <h1 className="max-w-2xl text-color-primary-500 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
@@ -64,7 +64,11 @@ const Doctor = () => {
                   value={searchTerm}
                   className="flex-1"
                 />
-                <Button color="primary" className="flex-2" onClick={() => hadnleButtonSearch('doctor-section')}>
+                <Button
+                  color="primary"
+                  className="flex-2"
+                  onClick={() => hadnleButtonSearch("doctor-section")}
+                >
                   <HiSearch className="h-6 w-6" />
                 </Button>
               </div>
@@ -78,7 +82,10 @@ const Doctor = () => {
       <div className="min-h-screen bg-white dark:bg-gray-900">
         <section className="h-full flex flex-col items-center justify-center w-full">
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 w-full">
-            <h3 className="mt-6 text-2xl font-bold dark:text-white mb-6 text-color-primary-500" id='doctor-section'> 
+            <h3
+              className="mt-6 text-2xl font-bold dark:text-white mb-6 text-color-primary-500"
+              id="doctor-section"
+            >
               Cari Dokter
             </h3>
             <div className="mx-auto text-center lg:mb-10 mb-8">

@@ -1,25 +1,32 @@
-"use client";
-
 import { Button, Navbar, DarkThemeToggle } from "flowbite-react";
-import logo from "../assets/mindlandlogo.png";
+// import logo from "../assets/mindlandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
 import { navLinks } from "../data/index";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbarcomponent() {
+  let naviget = useNavigate();
+
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10">
+    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 ">
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="/">
-          <img
+          <h1 className="font-bold text-color-primary-600 dark:text-white text-lg">
+            Mind;Land
+          </h1>
+          {/* <img
             src={logo}
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
-          />
+          /> */}
         </Navbar.Brand>
         <div className="flex md:order-2 gap-2">
           <DarkThemeToggle></DarkThemeToggle>
-          <Button color="primary" className="justify-center">
+          <Button
+            color="primary"
+            className="justify-center"
+            onClick={() => naviget("/Login")}
+          >
             Masuk
             <HiChevronRight className="ml-2 h-5 w-5" />
           </Button>
