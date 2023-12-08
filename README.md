@@ -12,4 +12,24 @@ Currently, two official plugins are available:
 3. buat navbar active
 5. slicing docter detail
 
+src
+|-- pages
+|   |-- user
+|   |   |-- Dashboard.jsx
+|   |-- auth
+|   |   |-- login.jsx
+|   |   |-- register.jsx
+|   |-- articles
+|   |   |-- articles.jsx
+|   |   |-- detailarticles.jsx
+|   |-- doctor
+|   |   |-- doctor.jsx
+|   |   |-- detaildoctor.jsx
+|   |-- checknow
+|   |   |-- checknow.jsx
+|   |-- homepage.jsx
+|-- components
+|-- App.jsx
+|-- ...
+
 

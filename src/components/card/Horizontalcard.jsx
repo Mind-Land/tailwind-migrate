@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Horizontalcard({ article }) {
   const {title, author, postAt, body} = article;
@@ -48,8 +49,8 @@ function Horizontalcard({ article }) {
           />
           <span className="font-medium dark:text-white">{author}</span>
         </div>
-        <a
-          href="#"
+        <Link
+          to="/detailarticles"
           className="inline-flex items-center font-medium text-color-primary-600 dark:text-primary-500 hover:underline"
         >
           Selengkapnya
@@ -65,7 +66,7 @@ function Horizontalcard({ article }) {
               clipRule="evenodd"
             ></path>
           </svg>
-        </a>
+        </Link>
       </div>
     </article>
   );

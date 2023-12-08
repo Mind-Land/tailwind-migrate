@@ -1,9 +1,9 @@
 "use client";
 
 import { Button, Navbar, DarkThemeToggle } from "flowbite-react";
-import logo from "../assets/mindlandlogo.png";
+import logo from "../../assets/mindlandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
-import { navLinks } from "../data/index";
+import { navLinks } from "../../data/index";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbarcomponent() {

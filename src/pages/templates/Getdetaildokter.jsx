@@ -1,6 +1,6 @@
 import { getDetailDokter } from "../../globals/api";
 import { useQuery } from "@tanstack/react-query";
-import Profiledetailmodal from "../../components/Profiledetailmodal";
+import Profiledetailmodal from "../../components/modal/Profiledetailmodal";
 import PropTypes from "prop-types";
 
 

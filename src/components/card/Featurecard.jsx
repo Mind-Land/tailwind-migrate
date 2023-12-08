@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import { MyFeature } from "../data";
+import { MyFeature } from "../../data";
 
 const Featurecard = () => {
   return (

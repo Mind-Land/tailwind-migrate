@@ -3,8 +3,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import customTheme from "./custom-theme";
 import Homepage from "./pages/Homepage";
-import Navbarcomponent from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbarcomponent from "./components/navigation/Navbar";
+import Footer from "./components/footer/Footer";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import About from "./pages/about/About";
@@ -12,31 +12,34 @@ import Checknowpage from "./pages/checknow/Checknowpage";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
-import Faqcomponent from "./components/Faq";
+import Faqcomponent from "./components/accordion/Faq";
+import User from "./pages/user/user";
 
 const queryClient = new QueryClient();
-const pagesWithoutNavbarFooter = ["/login", "/register"];
+const pagesWithoutNavbarFooter = ["/login", "/register", "/user", "/user/*"];
 
 function App() {
   const location = useLocation();
-  const shouldShowNavbarFooter = !pagesWithoutNavbarFooter.includes(
-    location.pathname
+  const shouldShowNavbarFooter = !pagesWithoutNavbarFooter.some((path) =>
+    location.pathname.startsWith(path)
   );
+
   return (
     <>
       <QueryClientProvider client={queryClient}>
         <Flowbite theme={{ theme: customTheme }}>
           {shouldShowNavbarFooter && <Navbarcomponent />}
           <Routes>
-            <Route path="/" Component={Homepage}></Route>
-            <Route path="/login" Component={Login}></Route>
-            <Route path="/register" Component={Register}></Route>
-            <Route path="/About" Component={About}></Route>
-            <Route path="/checknow" Component={Checknowpage}></Route>
-            <Route path="/articles" Component={Articles}></Route>
-            <Route path="/detailarticles" Component={Detailarticles}></Route>
-            <Route path="/doctor" Component={Doctor}></Route>
-            <Route path="/faq" Component={Faqcomponent}></Route>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/checknow" element={<Checknowpage />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/detailarticles" element={<Detailarticles />} />
+            <Route path="/doctor" element={<Doctor />} />
+            <Route path="/faq" element={<Faqcomponent />} />
+            <Route path="/user/*" element={<User />} /> 
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>

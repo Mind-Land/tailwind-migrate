@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { HiFingerPrint } from "react-icons/hi";
 import HeroCheckNow from "../../assets/lottie/heroCheck.json";
 import Lottie from "lottie-react";
-import Featurecard from "../../components/Featurecard";
+import Featurecard from "../../components/card/Featurecard";
 
 const Checknowpage = () => {
   let naviget = useNavigate();

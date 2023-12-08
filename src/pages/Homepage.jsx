@@ -4,7 +4,7 @@ import Getpopulararticles from "../pages/templates/Getpopulararticles";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import HeroImage from "../assets/lottie/Hero.json";
-import Faqcomponent from "../components/Faq";
+import Faqcomponent from "../components/accordion/Faq";
 
 function Homepage() {
   let naviget = useNavigate();

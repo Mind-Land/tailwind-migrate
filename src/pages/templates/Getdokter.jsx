@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { getDoctors } from "../../globals/api";
-import ArticlecardSkeleton from "../../components/Cardskeleton";
+import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
 import PropTypes from "prop-types";
-import Profilecard from "../../components/Profilecard";
+import Profilecard from "../../components/card/Profilecard";
 import { useEffect } from "react";
 
 function Getdokter({ searchTerm, onDoctorsCountChange }) {
@@ -45,8 +45,8 @@ function Getdokter({ searchTerm, onDoctorsCountChange }) {
 Getdokter.propTypes = {
   searchTerm: PropTypes.string,
   onDoctorsCountChange: PropTypes.func,
-  setModalData:PropTypes.func,
-  setModalOpen:PropTypes.func,
+  setModalData: PropTypes.func,
+  setModalOpen: PropTypes.func,
 };
 
 export default Getdokter;
