@@ -10,7 +10,11 @@ function Navbarcomponent() {
   let naviget = useNavigate();
 
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 ">
+    <div
+      className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 "
+      data-aos="fade-down"
+      data-aos-duration="1700"
+    >
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="/">
           <img
@@ -21,7 +25,11 @@ function Navbarcomponent() {
         </Navbar.Brand>
         <div className="flex md:order-2 gap-2">
           <DarkThemeToggle></DarkThemeToggle>
-          <Button color="primary" className="justify-center" onClick={() => naviget("/login")}>
+          <Button
+            color="primary"
+            className="justify-center"
+            onClick={() => naviget("/login")}
+          >
             Masuk
             <HiChevronRight className="ml-2 h-5 w-5" />
           </Button>
@@ -56,7 +64,7 @@ function Navbarcomponent() {
               return (
                 <li key={link.id}>
                   <Link
-                    to={link.path} 
+                    to={link.path}
                     aria-current="page"
                     className="block py-2 px-3 md:p-0 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color-primary-700 dark:text-white md:dark:hover:text-color-primary-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent cursor-pointer"
                   >

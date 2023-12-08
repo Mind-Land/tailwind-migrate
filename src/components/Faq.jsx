@@ -5,7 +5,7 @@ import { faq } from "../data/index";
 
 function Faqcomponent() {
   return (
-    <div className=" px-10 py-20 ">
+    <div className=" px-10 py-20 min-h-screen bg-white dark:bg-gray-900">
       <div className="flex flex-col pb-5 text-center">
         <h1 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
           Pertanyaan yang sering di tanyakan

@@ -9,25 +9,25 @@ export const MyFeature = [
     id: 1,
     image: StressIcon,
     title: "Stress",
-    link: "/stress-page" // Tautan untuk fitur Stress
+    link: "/stress-page"
   },
   {
     id: 2,
     image: AnxietyIcon,
     title: "Gangguan Kecemasan",
-    link: "/anxiety-page" // Tautan untuk fitur Gangguan Kecemasan
+    link: "/anxiety-page"
   },
   {
     id: 3,
     image: DepressionIcon,
     title: "Depresi",
-    link: "/depression-page" // Tautan untuk fitur Depresi
+    link: "/depression-page"
   },
   {
     id: 4,
     image: TraumaIcon,
     title: "Chat AI",
-    link: "/chatai" // Tautan untuk fitur Trauma
+    link: "/chatai"
   },
 ];
 
