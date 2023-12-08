@@ -45,8 +45,8 @@ function Getdokter({ searchTerm, onDoctorsCountChange }) {
 Getdokter.propTypes = {
   searchTerm: PropTypes.string,
   onDoctorsCountChange: PropTypes.func,
-  setModalData:PropTypes.func,
-  setModalOpen:PropTypes.func,
+  setModalData: PropTypes.func,
+  setModalOpen: PropTypes.func,
 };
 
 export default Getdokter;

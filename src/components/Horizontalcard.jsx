@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 function Horizontalcard({ article }) {
-  const {title, author, postAt, body} = article;
+  const { title, author, postAt, body } = article;
 
   console.log(article);
 
@@ -13,7 +13,10 @@ function Horizontalcard({ article }) {
   const daysAgo = Math.floor((currentDate - postDate) / (1000 * 60 * 60 * 24));
 
   return (
-    <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <article
+      className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700"
+      data-aos="fade-up"
+    >
       <div className="flex justify-between items-center mb-5 text-gray-500">
         <span className="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
           <svg

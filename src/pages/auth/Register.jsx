@@ -3,6 +3,8 @@
 import { Button, Label, TextInput } from "flowbite-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import HeroRegister from "../../assets/lottie/Register.json";
 
 function Register() {
   const [password, setPassword] = useState("");
@@ -31,11 +33,7 @@ function Register() {
     <>
       <div className="h-screen flex flex-row items-center justify-center">
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center">
-          <img
-            className="w-2/4 -scale-x-100 w-"
-            src="./public/img/hero-image.png"
-            alt=""
-          />
+          <Lottie animationData={HeroRegister} alt="hero" />
         </div>
         <div className="dark:bg-gray-900  h-screen w-full px-6 flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center mb-10">
