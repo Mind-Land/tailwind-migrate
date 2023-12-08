@@ -8,24 +8,29 @@ export const MyFeature = [
   {
     id: 1,
     image: StressIcon,
-    title: "Stress"
+    title: "Stress",
+    link: "/stress-page" // Tautan untuk fitur Stress
   },
   {
     id: 2,
     image: AnxietyIcon,
-    title: "Gangguan Kecemasan"
+    title: "Gangguan Kecemasan",
+    link: "/anxiety-page" // Tautan untuk fitur Gangguan Kecemasan
   },
   {
     id: 3,
     image: DepressionIcon,
-    title: "Depresi"
+    title: "Depresi",
+    link: "/depression-page" // Tautan untuk fitur Depresi
   },
   {
     id: 4,
     image: TraumaIcon,
-    title: "Trauma"
+    title: "Chat AI",
+    link: "/chatai" // Tautan untuk fitur Trauma
   },
-]
+];
+
 
 export const DokterUnggulan = [
   {
