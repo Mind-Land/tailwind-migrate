@@ -8,24 +8,29 @@ export const MyFeature = [
   {
     id: 1,
     image: StressIcon,
-    title: "Stress"
+    title: "Stress",
+    link: "/stress-page"
   },
   {
     id: 2,
     image: AnxietyIcon,
-    title: "Gangguan Kecemasan"
+    title: "Gangguan Kecemasan",
+    link: "/anxiety-page"
   },
   {
     id: 3,
     image: DepressionIcon,
-    title: "Depresi"
+    title: "Depresi",
+    link: "/depression-page"
   },
   {
     id: 4,
     image: TraumaIcon,
-    title: "Trauma"
+    title: "Chat AI",
+    link: "/chatai"
   },
-]
+];
+
 
 export const navLinks = [
   {
@@ -52,6 +57,16 @@ export const navLinks = [
     id: 5,
     path: "/faq",
     text: "FAQ",
+  },
+  {
+    id: 6,
+    path: "/chatai",
+    text: "ai",
+  },
+  {
+    id: 7,
+    path: "/user",
+    text: "user",
   },
 ]
 

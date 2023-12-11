@@ -93,7 +93,7 @@ function Chatdokter() {
             </div>
           </div>
 
-          <form className="flex-none pb-10 lg:pb-5 flex gap-2 mb-5">
+          <form className="flex-none pb-2 pt-2 lg:pb-2 flex gap-2 mb-5">
             <input
               type="text"
               id="large-input"

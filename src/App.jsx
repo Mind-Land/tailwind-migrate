@@ -14,6 +14,7 @@ import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import Faqcomponent from "./components/accordion/Faq";
 import User from "./pages/user/user";
+import Chat from "./pages/Ai/Chat";
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = ["/login", "/register", "/user", "/user/*"];
@@ -30,15 +31,16 @@ function App() {
         <Flowbite theme={{ theme: customTheme }}>
           {shouldShowNavbarFooter && <Navbarcomponent />}
           <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/checknow" element={<Checknowpage />} />
-            <Route path="/articles" element={<Articles />} />
-            <Route path="/detailarticles" element={<Detailarticles />} />
-            <Route path="/doctor" element={<Doctor />} />
-            <Route path="/faq" element={<Faqcomponent />} />
+            <Route path="/" Component={Homepage}></Route>
+            <Route path="/login" Component={Login}></Route>
+            <Route path="/register" Component={Register}></Route>
+            <Route path="/About" Component={About}></Route>
+            <Route path="/checknow" Component={Checknowpage}></Route>
+            <Route path="/articles" Component={Articles}></Route>
+            <Route path="/detailarticles" Component={Detailarticles}></Route>
+            <Route path="/doctor" Component={Doctor}></Route>
+            <Route path="/faq" Component={Faqcomponent}></Route>
+            <Route path="/chatai" Component={Chat}></Route>
             <Route path="/user/*" element={<User />} /> 
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
