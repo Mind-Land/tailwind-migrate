@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "./components/ScrollTop.jsx";
+import "flowbite"
 
 // Animate on scroll
 import AOS from "aos";

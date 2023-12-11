@@ -14,6 +14,7 @@ import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import Faqcomponent from "./components/Faq";
 import ChatAiPage from "./pages/Ai/chatAi";
+import Chat from "./pages/Ai/Chat";
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = ["/login", "/register"];
@@ -38,7 +39,7 @@ function App() {
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/faq" Component={Faqcomponent}></Route>
-            <Route path="/chatai" Component={ChatAiPage}></Route>
+            <Route path="/chatai" Component={Chat}></Route>
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>
