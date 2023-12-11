@@ -10,6 +10,7 @@ export default {
   plugins: [
     require('flowbite/plugin'),
     require('flowbite-typography'),
+    require('tailwind-scrollbar-hide')
   ],
   theme: {
     colors: {
