@@ -11,7 +11,7 @@ function Navbarcomponent() {
     <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 ">
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="/">
-          <h1 className="font-bold text-color-primary-600 dark:text-white text-lg">
+          <h1 className="font-bold text-gray-700 dark:text-white text-lg">
             Mind;Land
           </h1>
           {/* <img

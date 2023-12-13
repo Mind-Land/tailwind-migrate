@@ -14,6 +14,7 @@ import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import Faqcomponent from "./components/Faq";
 import ResetPassword from "./pages/auth/Reset";
+import CheckStress from "./pages/CheckStress/CheckStress";
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = ["/Login", "/Register", "/Reset"];
@@ -39,6 +40,7 @@ function App() {
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/faq" Component={Faqcomponent}></Route>
+            <Route path="/CheckStress" Component={CheckStress}></Route>
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>
