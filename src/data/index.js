@@ -1,27 +1,26 @@
-import StressIcon from "../assets/icons/stressIcon.json"
+import StressIcon from "../assets/icons/stressIcon.json";
 import AnxietyIcon from "../assets/icons/anxietyIcon.json";
-import DepressionIcon from "../assets/icons/depressionIcon.json"
-import TraumaIcon from "../assets/icons/traumaIcon.json"
-
+import DepressionIcon from "../assets/icons/depressionIcon.json";
+import TraumaIcon from "../assets/icons/traumaIcon.json";
 
 export const MyFeature = [
   {
     id: 1,
     image: StressIcon,
-    title: "Stress",
-    link: "/stress-page"
+    title: "Chat dokter",
+    link: "/doctor"
   },
   {
     id: 2,
     image: AnxietyIcon,
-    title: "Gangguan Kecemasan",
-    link: "/anxiety-page"
+    title: "Cek Stress",
+    link: "/checkstress"
   },
   {
     id: 3,
     image: DepressionIcon,
-    title: "Depresi",
-    link: "/depression-page"
+    title: "Artikel",
+    link: "/articles"
   },
   {
     id: 4,
@@ -35,7 +34,7 @@ export const MyFeature = [
 export const navLinks = [
   {
     id: 1,
-    path: "",
+    path: "/",
     text: "Beranda",
   },
   {
@@ -50,7 +49,7 @@ export const navLinks = [
   },
   {
     id: 4,
-    path: "/About",
+    path: "/about",
     text: "Tentang",
   },
   {
@@ -63,7 +62,7 @@ export const navLinks = [
     path: "/user",
     text: "user",
   },
-]
+];
 
 export const navLinksAfterLogin = [
   {
@@ -149,4 +148,4 @@ export const faq = [
     title: "Apakah Boleh punya pacar 6?",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
-]
+];

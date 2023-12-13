@@ -41,8 +41,8 @@ function Navbarcomponent() {
               <Dropdown
                 label=""
                 renderTrigger={() => (
-                  <Button color="primary" size="sm" className="mr-2">
-                    <HiChatAlt2 className="h-6 w-6" />
+                  <Button color="primary" size="sm" className="mr-4">
+                    <HiChatAlt2 className="h-4 w-4" />
                   </Button>
                 )}
                 color="primary"
