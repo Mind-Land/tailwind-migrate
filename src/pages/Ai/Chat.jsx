@@ -1,16 +1,30 @@
 import { Button } from "flowbite-react";
-import { useState } from "react";
 import { HiPaperAirplane } from "react-icons/hi";
-import Typingskeleton from "../../components/Typingskeleton";
-import Bubblechatsend from "../../components/Bubblechatsend";
+import { useState } from "react";
+import Recievechat from "../../components/Recievechat";
+import Sendchat from "../../components/Sendchat";
 import { Configuration, OpenAIApi } from "openai";
-import Bubblechatreply from "../../components/Bubblechatreply";
+import "react-loading-skeleton/dist/skeleton.css";
+import { useRef, useEffect } from "react";
 
-function Chat() {
+function Chatsample() {
   const [userInput, setUserInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const scrollContainerRef = useRef();
+
+  const scrollToBottom = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop =
+        scrollContainerRef.current.scrollHeight;
+    }
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, loading, isTyping]);
 
   const handleInputChange = (event) => {
     const inputText = event.target.value;
@@ -34,17 +48,20 @@ function Chat() {
     }
   };
 
-  const config = new Configuration({
-    apiKey: "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",
-  });
+  console.log(messages)
 
+  const config = new Configuration({
+    apiKey: "",
+  });
   const openai = new OpenAIApi(config);
 
   const handleOpenAi = async (input) => {
     try {
       const response = await openai.createCompletion({
         model: "text-davinci-002",
-        prompt: input,
+        prompt: `${input} 
+        jelaskan secara singkat seakan kamu adalah seorang mental health konsultan
+        `,
         temperature: 0.5,
         max_tokens: 500,
       });
@@ -60,81 +77,90 @@ function Chat() {
       // Use the functional form of setMessages to ensure correct state update
       setMessages((prevMessages) => [...prevMessages, errorMessage]);
     }
+
+    setLoading(false);
+    scrollToBottom();
   };
 
   return (
     <>
-      <div className="bg-white  dark:bg-gray-900 ">
-        <div className="max-h-screen min-h-screen flex flex-col   max-w-screen-md  mx-auto">
-          <div className="flex-1 pt-20 px-4 overflow-auto max-h-screen scrollbar-hide">
-            <div className="flex justify-start mb-5">
-              <div className="flex items-start gap-2.5">
-                <img
-                  className="w-8 h-8 rounded-full object-cover"
-                  src="/img/rafiq.jpg"
-                  alt="Jese image"
-                />
-                <div className="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-xl dark:bg-gray-700">
-                  <div className="flex items-center space-x-2 rtl:space-x-reverse">
-                    <span className="text-sm font-semibold text-gray-900 dark:text-white">
-                      AI
-                    </span>
+      <div className="bg-white dark:bg-gray-900">
+        <section className="max-w-screen-lg mx-auto ">
+          <div className="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
+            <div
+              id="messages"
+              className="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch scrollbar-hide pt-20"
+              ref={scrollContainerRef}
+            >
+              <div className="chat-message">
+                <div className="flex items-end">
+                  <div className="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start">
+                    <div>
+                      <span className="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
+                        Hai, Kenalin aku Rafiq. kalau ada yang kamu pikirin
+                        mendingan kamu ngomongin aja ke aku, aku bakal jadi
+                        temen yang setia dengerin keluhan kamu
+                      </span>
+                    </div>
                   </div>
-                  <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">
-                    Hai, Kenalin aku Rafiq. kalau ada yang kamu pikirin
-                    mendingan kamu ngomongin aja ke aku, aku bakal jadi temen
-                    yang setia dengerin keluhan kamu
-                  </p>
+                  <img
+                    src="/img/rafiq.jpg"
+                    alt="My profile"
+                    className="w-6 h-6 rounded-full order-1"
+                  />
                 </div>
               </div>
+              {messages.map((message, index) => (
+                <div className="chat-message" key={index}>
+                  <div
+                    className={
+                      message.type === "user"
+                        ? "flex items-end justify-end"
+                        : "flex items-end"
+                    }
+                  >
+                    {message.type === "user" ? (
+                      <Sendchat name="Guest" text={message.text} />
+                    ) : (
+                      <Recievechat name="AI" text={message.text} />
+                    )}
+                  </div>
+                </div>
+              ))}
+              {isTyping && (
+                <div className="kiriman flex justify-end mb-5">
+                  <Sendchat name="Guest" text={<>Sedang mengetik...</>} />
+                </div>
+              )}
+              {loading && (
+                <div className="balasan flex justify-start mb-5">
+                  <Recievechat name="AI" text={<>Sedang Mengetik...</>} />
+                </div>
+              )}
             </div>
-            {messages.map((message, index) => (
-              <div
-                key={index}
-                className={
-                  message.type === "user"
-                    ? "kiriman flex justify-end mb-5"
-                    : "balasan flex justify-start mb-5"
-                }
-              >
-                {message.type === "user" ? (
-                  <Bubblechatsend name="Guest" text={message.text} />
-                ) : (
-                  <Bubblechatreply name="AI" text={message.text} />
-                )}
+            <div className="border-t-2 border-gray-200 dark:border-gray-700 px-4 pt-4 mb-2 sm:mb-0">
+              <div className="relative flex">
+                <form className="flex gap-2 w-full" onSubmit={handleSubmit}>
+                  <input
+                    autoComplete="off"
+                    id="large-input"
+                    className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-color-primary-500 focus:border-color-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-color-primary-500 dark:focus:border-color-primary-500
+                    "
+                    onChange={handleInputChange}
+                    value={userInput}
+                    placeholder="Apa yang kamu rasakan hari ini?...."
+                  />
+                  <Button color="primary" onClick={handleSubmit}>
+                    <HiPaperAirplane className="w-6 h-6" />
+                  </Button>
+                </form>
               </div>
-            ))}
-            {isTyping && (
-              <div className="kiriman flex justify-end mb-5">
-                <Bubblechatsend name="Guest" text={<Typingskeleton />} />
-              </div>
-            )}
-            {loading && (
-              <div className="balasan flex justify-start mb-5">
-                <Bubblechatreply name="AI" text={<Typingskeleton />} />
-              </div>
-            )}
+            </div>
           </div>
-
-          <form
-            className="flex-none p-4 flex gap-2 mb-5"
-            onSubmit={handleSubmit}
-          >
-            <input
-              type="text"
-              id="large-input"
-              className="block w-full p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              onChange={handleInputChange}
-              value={userInput}
-            />
-            <Button color="primary">
-              <HiPaperAirplane className="w-6 h-6" />
-            </Button>
-          </form>
-        </div>
+        </section>
       </div>
     </>
   );
 }
 
-export default Chat;
+export default Chatsample;

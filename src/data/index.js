@@ -54,11 +54,6 @@ export const navLinks = [
     text: "Tentang",
   },
   {
-    id: 5,
-    path: "/faq",
-    text: "FAQ",
-  },
-  {
     id: 6,
     path: "/chatai",
     text: "ai",
@@ -67,6 +62,31 @@ export const navLinks = [
     id: 7,
     path: "/user",
     text: "user",
+  },
+]
+
+export const navLinksAfterLogin = [
+  {
+    id: 1,
+    path: "/user/",
+    text: "Beranda",
+  },
+  {
+    id: 2,
+    path: "/user/article",
+    text: "Article",
+  },
+  {
+    id: 3,
+    path: "/user/dokter",
+    text: "Dokter",
+    icon: "HiUsers"
+  },
+  {
+    id: 4,
+    path: "/chatai",
+    text: "Chat Ai",
+    icon: "HiGlobeAlt"
   },
 ]
 

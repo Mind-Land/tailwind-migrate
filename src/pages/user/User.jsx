@@ -1,24 +1,23 @@
-import Sidebar from "../../components/navigation/Sidebar";
+// import Sidebar from "../../components/navigation/Sidebar";
 import { Outlet, Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Showarticles from "../articles/Showarticles";
 import Showdoctor from "../doctor/Showdoctor";
 import Chatdokter from "./chatdokter/Chatdokter";
+import Navbar from "../../components/navigation/Navbar";
 
 function User() {
   return (
     <>
-      <Sidebar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route
           path="article"
           element={
             <>
-              <div className="p-4 sm:ml-64 bg-white dark:bg-gray-900 min-h-screen">
-                <div className="p-2 lg:p-4 rounded-lg mt-14 lg:mt-10">
-                  <Showarticles />
-                </div>
+              <div className="bg-white dark:bg-gray-900 min-h-screen px-4 pt-20 md:pt-10">
+                <Showarticles />
               </div>
             </>
           }
@@ -27,10 +26,8 @@ function User() {
           path="dokter"
           element={
             <>
-              <div className="p-4 sm:ml-64 bg-white dark:bg-gray-900 min-h-screen">
-                <div className="p-2 lg:p-4 rounded-lg mt-14 lg:mt-10">
-                  <Showdoctor />
-                </div>
+              <div className=" bg-white dark:bg-gray-900 min-h-screen px-4 pt-20 md:pt-10">
+                <Showdoctor />
               </div>
             </>
           }
@@ -39,7 +36,7 @@ function User() {
           path="chatdokter"
           element={
             <>
-              <div className="p-4 sm:ml-64 bg-white dark:bg-gray-900 h-screen overflow-hidden">
+              <div className="bg-white dark:bg-gray-900 h-screen overflow-hidden">
                 <div className="rounded-lg">
                   <Chatdokter />
                 </div>
