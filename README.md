@@ -11,7 +11,4 @@ Currently, two official plugins are available:
 
 <!-- Login reset password -->
 
-beda img setiap login dan register
-checkstress fitur
-hero landing page ganti warna
-warna solid jangan gradient
+buatkan cari dokter ketika depresi ringan
