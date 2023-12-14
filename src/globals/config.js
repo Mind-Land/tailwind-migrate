@@ -1,5 +1,5 @@
 const CONFIG = {
-  BASE_URL: 'https://api.mindland.repl.co/api',
+  BASE_URL: 'http://localhost:3000',
 };
 
 export default CONFIG;
