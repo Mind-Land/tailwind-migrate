@@ -5,6 +5,7 @@ import Showarticles from "../articles/Showarticles";
 import Showdoctor from "../doctor/Showdoctor";
 import Chatdokter from "./chatdokter/Chatdokter";
 import Navbar from "../../components/navigation/Navbar";
+import Createarticle from "./article/Createarticle";
 
 function User() {
   return (
@@ -37,13 +38,16 @@ function User() {
           element={
             <>
               <div className="bg-white dark:bg-gray-900 h-screen overflow-hidden">
-                <div className="rounded-lg">
-                  <Chatdokter />
-                </div>
+                <Chatdokter />
               </div>
             </>
           }
         />
+        <Route path="tambahartikel" element={
+          <>
+            <Createarticle />
+          </>
+        }></Route>
       </Routes>
       <Outlet />
     </>

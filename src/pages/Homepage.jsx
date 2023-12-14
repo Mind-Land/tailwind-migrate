@@ -3,11 +3,11 @@ import { HiChatAlt2, HiTrendingUp, HiUserGroup, HiFingerPrint } from "react-icon
 import Getpopulararticles from "../pages/templates/Getpopulararticles";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import HeroImage from "../assets/lottie/new.json";
 import { Accordion } from "flowbite-react";
 import { faq } from "../data";
 import HeroCheckNow from "../assets/lottie/heroCheck.json";
 import Featurecard from "../components/card/Featurecard";
+import Sample from "../assets/lottie/Sample.json";
 
 function Homepage() {
   let naviget = useNavigate();
@@ -31,7 +31,7 @@ function Homepage() {
                 href="#"
                 className="inline-flex items-center justify-center"
                 color="primary"
-                onClick={() => naviget("/checknow")}
+                onClick={() => naviget("/login")}
               >
                 Periksa Sekarang
               </Button>
@@ -107,7 +107,7 @@ function Homepage() {
               </div>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <Lottie className="dark:" animationData={HeroImage} alt="hero" />
+              <Lottie className="dark:" animationData={Sample} alt="hero" />
             </div>
           </div>
         </section>

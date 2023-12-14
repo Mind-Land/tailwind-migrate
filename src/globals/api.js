@@ -21,7 +21,7 @@ export const _Getdetailarticle = async () => {
 };
 
 export const getArticles = async () => {
-  return fetchData("/articles");
+  return fetchData(`/article`);
 };
 
 export const getDetailDokter = async () => {

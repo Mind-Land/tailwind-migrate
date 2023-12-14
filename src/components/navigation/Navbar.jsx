@@ -117,7 +117,9 @@ function Navbarcomponent() {
                 <NavLink to="/user/">
                   <Dropdown.Item>Beranda</Dropdown.Item>
                 </NavLink>
-                <Dropdown.Item>Settings</Dropdown.Item>
+                <NavLink to="/user/tambahartikel">
+                  <Dropdown.Item>Buat artikel</Dropdown.Item>
+                </NavLink>
                 <Dropdown.Divider />
                 <NavLink to="/">
                   <Dropdown.Item>Keluar</Dropdown.Item>
