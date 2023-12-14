@@ -7,12 +7,11 @@ import {
 } from "react-icons/hi";
 import HeroDoctor from "../../assets/lottie/Herodoctor.json";
 import Lottie from "lottie-react";
-import Getdokter from "../templates/Getdokter";
 import { useState } from "react";
+import Showdoctor from "./Showdoctor";
 
 const Doctor = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [doctorsCount, setDoctorsCount] = useState(0);
 
   const hadnleButtonSearch = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -25,10 +24,7 @@ const Doctor = () => {
     setSearchTerm(e.target.value);
   };
 
-  const handleDoctorsCountChange = (count) => {
-    setDoctorsCount(count);
-  };
-
+  
   return (
     <>
       <div className="h-screen">
@@ -88,46 +84,7 @@ const Doctor = () => {
           </div>
         </section>
       </div>
-      <div className="min-h-screen bg-white dark:bg-gray-900">
-        <section className="h-full flex flex-col items-center justify-center w-full">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 w-full">
-            <h3
-              className="mt-6 text-2xl font-bold dark:text-white mb-6 text-color-primary-500"
-              id="doctor-section"
-            >
-              Cari Dokter
-            </h3>
-            <div className="mx-auto text-center lg:mb-10 mb-8">
-              <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-row justify-between items-center">
-                <div className="flex gap-2 flex-grow">
-                  <TextInput
-                    id=""
-                    sizing="sm"
-                    type="email"
-                    placeholder="Nama/Spesialis"
-                    required
-                    icon={HiSearch}
-                    onChange={handleSearch}
-                    value={searchTerm}
-                    className="flex-grow md:flex-grow-0 w-1/3"
-                  />
-                </div>
-                <div className="hidden md:block">
-                  <p className="text-gray-700 dark:text-gray-400 flex items-center text-sm">
-                    Menampilkan {doctorsCount} daftar dokter
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="grid gap-10 lg:grid-cols-3" data-aos="fade-up">
-              <Getdokter
-                searchTerm={searchTerm}
-                onDoctorsCountChange={handleDoctorsCountChange}
-              />
-            </div>
-          </div>
-        </section>
-      </div>
+      <Showdoctor />
     </>
   );
 };

@@ -3,27 +3,28 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import customTheme from "./custom-theme";
 import Homepage from "./pages/Homepage";
-import Navbarcomponent from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbarcomponent from "./components/navigation/Navbar";
+import Footer from "./components/footer/Footer";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import About from "./pages/about/About";
-import Checknowpage from "./pages/checknow/Checknowpage";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
-import Faqcomponent from "./components/Faq";
-import ChatAiPage from "./pages/Ai/chatAi";
-import Chat from "./pages/Ai/Chat";
+import User from "./pages/user/user";
+import Chat from "./pages/ai/Chat";
+import ResetPassword from "./pages/auth/Reset";
+import CheckStress from "./pages/CheckStress/CheckStress";
 
 const queryClient = new QueryClient();
-const pagesWithoutNavbarFooter = ["/login", "/register"];
+const pagesWithoutNavbarFooter = ["/login", "/login","/reset", "/register", "/user", "/user/*"];
 
 function App() {
   const location = useLocation();
-  const shouldShowNavbarFooter = !pagesWithoutNavbarFooter.includes(
-    location.pathname
+  const shouldShowNavbarFooter = !pagesWithoutNavbarFooter.some((path) =>
+    location.pathname.startsWith(path)
   );
+
   return (
     <>
       <QueryClientProvider client={queryClient}>
@@ -33,13 +34,14 @@ function App() {
             <Route path="/" Component={Homepage}></Route>
             <Route path="/login" Component={Login}></Route>
             <Route path="/register" Component={Register}></Route>
-            <Route path="/About" Component={About}></Route>
-            <Route path="/checknow" Component={Checknowpage}></Route>
+            <Route path="/reset" Component={ResetPassword}></Route>
+            <Route path="/about" Component={About}></Route>
             <Route path="/articles" Component={Articles}></Route>
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
-            <Route path="/faq" Component={Faqcomponent}></Route>
             <Route path="/chatai" Component={Chat}></Route>
+            <Route path="/user/*" element={<User />} />
+            <Route path="/checkstress" Component={CheckStress}></Route>
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>

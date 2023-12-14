@@ -1,4 +1,4 @@
-import Logo from "../assets/mindlandlogo.png";
+import Logo from "../../assets/mindlandlogo.png";
 
 function Footer() {
   return (

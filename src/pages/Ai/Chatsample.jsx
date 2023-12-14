@@ -1,9 +1,9 @@
 import { Button } from "flowbite-react";
 import { HiPaperAirplane } from "react-icons/hi";
 import { useState } from "react";
-import Recievechat from "../../components/Recievechat";
-import Sendchat from "../../components/Sendchat";
 import { Configuration, OpenAIApi } from "openai";
+import Sendchat from "./dummycomp/Sendchat";
+import Recievechat from "./dummycomp/Recievechat";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useRef, useEffect } from "react";
 
@@ -48,10 +48,8 @@ function Chatsample() {
     }
   };
 
-  console.log(messages)
-
   const config = new Configuration({
-    apiKey: "",
+    apiKey: "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",
   });
   const openai = new OpenAIApi(config);
 
@@ -97,9 +95,9 @@ function Chatsample() {
                   <div className="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start">
                     <div>
                       <span className="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
-                        Hai, Kenalin aku Rafiq. kalau ada yang kamu pikirin
-                        mendingan kamu ngomongin aja ke aku, aku bakal jadi
-                        temen yang setia dengerin keluhan kamu
+                      Hai, Kenalin aku Rafiq. kalau ada yang kamu pikirin
+                    mendingan kamu ngomongin aja ke aku, aku bakal jadi temen
+                    yang setia dengerin keluhan kamu
                       </span>
                     </div>
                   </div>
@@ -148,7 +146,6 @@ function Chatsample() {
                     "
                     onChange={handleInputChange}
                     value={userInput}
-                    placeholder="Apa yang kamu rasakan hari ini?...."
                   />
                   <Button color="primary" onClick={handleSubmit}>
                     <HiPaperAirplane className="w-6 h-6" />

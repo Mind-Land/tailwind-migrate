@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import { MyFeature } from "../data";
+import { MyFeature } from "../../data";
 import { Link } from "react-router-dom"; // Import Link dari React Router jika digunakan
 
 const Featurecard = () => {
@@ -10,7 +10,7 @@ const Featurecard = () => {
           <div key={fitur.id}>
             <Link to={fitur.link} className="group">
               <div
-                className="shadow-lg w-full max-w-sm bg-white border border-gray-200 rounded-lg hover:bg-color-primary-500 transition duration-300 ease-in-out hover:text-white cursor-pointer"
+                className="shadow-lg w-full max-w-sm bg-white  rounded-lg hover:bg-color-primary-500 transition duration-300 ease-in-out hover:text-white cursor-pointer"
                 style={{ width: "97px", height: "137px" }}
               >
                 <div className="flex flex-col items-center">
