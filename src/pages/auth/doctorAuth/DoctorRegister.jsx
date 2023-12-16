@@ -50,7 +50,7 @@ const DoctorRegister = () => {
 
   return (
     <div className="flex flex-col lg:flex-row h-screen">
-      <div className="hidden lg:flex items-center justify-center w-full lg:w-1/2 bg-primary-400 dark:bg-primary-700">
+      <div className="hidden lg:flex items-center justify-center w-full lg:w-1/2 bg-color-primary-400 dark:bg-color-primary-700">
         {/* Your image or content here */}
       </div>
 
