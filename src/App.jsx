@@ -13,12 +13,14 @@ import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import Faqcomponent from "./components/Faq";
+import ResetPassword from "./pages/auth/Reset";
+import CheckStress from "./pages/CheckStress/CheckStress";
 import ChatAiPage from "./pages/Ai/chatAi";
 import DoctorLogin from "./pages/auth/doctorAuth/DoctorLogin";
 import DoctorRegister from "./pages/auth/doctorAuth/DoctorRegister";
 
 const queryClient = new QueryClient();
-const pagesWithoutNavbarFooter = ["/login", "/register"];
+const pagesWithoutNavbarFooter = ["/Login", "/Register", "/Reset"];
 
 function App() {
   const location = useLocation();
@@ -32,16 +34,20 @@ function App() {
           {shouldShowNavbarFooter && <Navbarcomponent />}
           <Routes>
             <Route path="/" Component={Homepage}></Route>
-            <Route path="/login" Component={Login}></Route>
+            <Route path="/Login" Component={Login}></Route>
+            <Route path="/Register" Component={Register}></Route>
+            <Route path="/Reset" Component={ResetPassword}></Route>
+
             <Route path="/logindoctor" Component={DoctorLogin}></Route>
             <Route path="/registerdoctor" Component={DoctorRegister}></Route>
-            <Route path="/register" Component={Register}></Route>
+
             <Route path="/About" Component={About}></Route>
             <Route path="/checknow" Component={Checknowpage}></Route>
             <Route path="/articles" Component={Articles}></Route>
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/faq" Component={Faqcomponent}></Route>
+            <Route path="/CheckStress" Component={CheckStress}></Route>
             <Route path="/chatai" Component={ChatAiPage}></Route>
           </Routes>
           {shouldShowNavbarFooter && <Footer />}

@@ -1,110 +1,119 @@
-"use client";
-
-import { Button, Label, TextInput } from "flowbite-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Lottie from "lottie-react";
-import HeroRegister from "../../assets/lottie/Register.json";
+import { HiArrowSmLeft } from "react-icons/hi";
 
 function Register() {
   const [password, setPassword] = useState("");
-  const [repeatPassword, setRepeatPassword] = useState("");
   const [validPassword, setValidPassword] = useState(false);
-  const [passwordsMatch, setPasswordsMatch] = useState(true);
 
   const handlePasswordChange = (event) => {
     const newPassword = event.target.value;
-    setPassword(newPassword);
-    setValidPassword(validatePassword(newPassword));
-    setPasswordsMatch(newPassword === repeatPassword);
-  };
-
-  const handleRepeatPasswordChange = (event) => {
-    const newRepeatPassword = event.target.value;
-    setRepeatPassword(newRepeatPassword);
-    setPasswordsMatch(newRepeatPassword === password);
-  };
-
-  const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
-    return passwordRegex.test(password);
+
+    setPassword(newPassword);
+    setValidPassword(passwordRegex.test(newPassword));
   };
   return (
     <>
-      <div className="h-screen flex flex-row items-center justify-center">
-        <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center">
-          <Lottie animationData={HeroRegister} alt="hero" />
+      <div className="h-screen flex flex-row-reverse items-center justify-center">
+        <div className="absolute top-0 left-0 p-8 md:p-8 xl:p-12">
+          <Link
+            to="/"
+            className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white"
+            type="submit"
+          >
+            <HiArrowSmLeft />
+          </Link>
         </div>
-        <div className="dark:bg-gray-900  h-screen w-full px-6 flex flex-col items-center justify-center">
-          <div className="flex flex-col items-center justify-center mb-10">
-            <img className="w-12" src="./public/img/Logo-noText.png" alt="" />
-            <h1 className="max-w-2xl text-color-primary-500 mb-4 font-bold tracking-tight leading-none md:text-sm lg:text-base xl:text-3xl dark:text-white">
-              Create an account
-            </h1>
-            <p className="md:text-sm  dark:text-white">
-              Please enter your details.
-            </p>
-          </div>
-          <form className="flex w-full max-w-md flex-col gap-4  hover:border-color-primary-900">
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="email1" value="Email" />
-              </div>
-              <TextInput
-                id="email1"
-                type="email"
-                placeholder="example@gmail.com"
-                required
-              />
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="password1" value="Password" />
-              </div>
-              <TextInput
-                id="password1"
-                type="password"
-                required
-                placeholder="password"
-                onChange={handlePasswordChange}
-              />
-              {!validPassword && password.length > 0 && (
-                <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
-                  Password must contain 1 uppercase letter, 8 characters, and 1
-                  or 2 digits.
-                </p>
-              )}
-            </div>
-            <div>
-              <div className="mb-2 block">
-                <Label htmlFor="repeat-password" value="Repeat Password" />
-              </div>
-              <TextInput
-                id="repeat-password"
-                type="Password"
-                placeholder="confirm password"
-                required
-                onChange={handleRepeatPasswordChange}
-              />
-              {!passwordsMatch && repeatPassword.length > 0 && (
-                <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
-                  Passwords do not match.
-                </p>
-              )}
-            </div>
+        <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center">
 
-            <Button color="primary">Submit</Button>
-            <div className="flex items-center gap-2">
-              <Link
-                to="/login"
-                style={{ background: "none", border: "none" }}
-                className="dark:text-white"
-                type="submit"
-              >
-                Masuk
-              </Link>
+          <img className="w-2/4" src="./public/img/hero-image.png" alt="" />
+
+        </div>
+        <div className="dark:bg-gray-900 h-screen w-full px-6 flex flex-col items-center justify-center ">
+          <div className="flex flex-col items-center justify-center">
+            <img className="w-12" src="./public/img/Logo-noText.png" alt="" />
+            <h1 className="max-w-2xl text-color-primary-500 font-bold mt-5 mb-3 dark:text-white">
+              Selamat datang di Mindland
+            </h1>
+            <p className="text-xs dark:text-white">Buat akun Anda</p>
+          </div>
+          <div className="w-full bg-white  md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-900">
+            <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <form className="space-y-4 md:space-y-6" action="#">
+                <div>
+                  <label
+                    htmlFor="username"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Username
+                  </label>
+                  <input
+                    type="username"
+                    name="username"
+                    id="username"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="BudiyantoSiregar46"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="nama@gmail.com"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="password"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Kata Sandi
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 $"
+                    onChange={handlePasswordChange}
+                    required
+                  />
+                  {!validPassword && password.length > 0 && (
+                    <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
+                      Password harus mengandung 1 huruf kapital, 8 karakter, dan
+                      1 atau 2 angka.
+                    </p>
+                  )}
+                </div>
+                <button
+                  type="submit"
+                  className="w-full text-white bg-color-primary-500 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                >
+                  Daftar
+                </button>
+                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                  Sudah punya akun?{" "}
+                  <a
+                    href="#"
+                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  >
+                    <Link to="/Login">Masuk disini</Link>
+                  </a>
+                </p>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </>
