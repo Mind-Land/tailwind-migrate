@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getArticles } from "../../globals/api";
-import Horizontalcard from "../../components/Horizontalcard";
-import ArticlecardSkeleton from "../../components/Cardskeleton";
+import Horizontalcard from "../../components/card/Horizontalcard";
+import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
 
 function Getpopulararticles() {
   const { data, isError, isLoading } = useQuery({

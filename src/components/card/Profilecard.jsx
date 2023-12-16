@@ -2,7 +2,7 @@ import { Card, Button } from "flowbite-react";
 import { HiOutlineChat, HiOutlineInformationCircle } from "react-icons/hi";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import Getdetaildokter from "../pages/templates/Getdetaildokter";
+import Getdetaildokter from "../../pages/templates/Getdetaildokter";
 
 function Profilecard({ profile }) {
   const { title, role, pengalaman, pengikut, image } = profile;

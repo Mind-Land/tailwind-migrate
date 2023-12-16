@@ -29,7 +29,7 @@ const DoctorLogin = () => {
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center ">
           <img
             className="w-3/5 -scale-x-100"
-            src="./public/img/LoginDoctor.png"
+            src="./public/img/doctorauth.png"
             alt=""
           />
         </div>

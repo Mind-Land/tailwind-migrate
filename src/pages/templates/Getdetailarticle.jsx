@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import Articleskeleton from "../../components/Articleskeleton";
+import Articleskeleton from "../../components/skeleton/Articleskeleton";
 import Templatearticledetail from "../../components/Templatearticledetail";
 import { _Getdetailarticle } from "../../globals/api";
 
@@ -24,12 +24,12 @@ function Getdetailarticle() {
   }
 
   return (
-  <>
-    {data.map((article) => (
-      <Templatearticledetail key={article.id} article={article} />
-    ))}
-  </>
-);
+    <>
+      {data.map((article) => (
+        <Templatearticledetail key={article.id} article={article} />
+      ))}
+    </>
+  );
 }
 
 export default Getdetailarticle;

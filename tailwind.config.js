@@ -4,9 +4,10 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/flowbite-react/lib/esm/**/*.js",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
-  plugins: [require("flowbite/plugin"), require("flowbite-typography")],
+  plugins: [require("flowbite/plugin"), require("tailwind-scrollbar-hide")],
   theme: {
     colors: {
       "color-primary-100": "#D5FBFE",
@@ -56,5 +57,4 @@ export default {
       "color-danger-900": "#7A090A",
     },
   },
-  darkMode: "class",
 };

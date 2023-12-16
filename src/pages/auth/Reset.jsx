@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 import logo from "../../assets/mindlandlogo.png";
-
 function ResetPassword() {
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
@@ -29,17 +28,17 @@ function ResetPassword() {
 
   return (
     <div className="h-screen">
-      <div className="absolute top-0 left-0 p-8 md:p-8 xl:p-12">
+      <div className="absolute top-0 left-0 p-6 md:p-8 xl:p-12">
         <Link
-          to="/Login"
+          to="/login"
           className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white"
           type="submit"
         >
           <HiArrowSmLeft />
         </Link>
       </div>
-      <section className="h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-        <div className="flex flex-col items-center justify-center mx-auto md:h-screen lg:py-0">
+      <section className="h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 ">
+        <div className="flex flex-col items-center justify-center mx-auto  lg:py-0">
           <a
             href="#"
             className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
@@ -49,7 +48,7 @@ function ResetPassword() {
               Mind;Land
             </span>
           </a>
-          <div className="md:mx-auto sm:mx-auto w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+          <div className="w-screen p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
             <h2 className="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
               Ganti Kata Sandi
             </h2>

@@ -16,9 +16,9 @@ function Register() {
   return (
     <>
       <div className="h-screen flex flex-row-reverse items-center justify-center">
-        <div className="absolute top-0 left-0 p-8 md:p-8 xl:p-12">
+        <div className="absolute top-0 left-0 p-6 md:p-8 xl:p-12">
           <Link
-            to="/Login"
+            to="/"
             className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white"
             type="submit"
           >
@@ -101,14 +101,12 @@ function Register() {
                   Daftar
                 </button>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Sudah punya akun?
+                  Sudah punya akun?{" "}
                   <a
                     href="#"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
-                    <Link className="ml-1" to="/Login">
-                      Masuk disini
-                    </Link>
+                    <Link to="/login">Masuk disini</Link>
                   </a>
                 </p>
               </form>

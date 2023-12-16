@@ -14,40 +14,57 @@ function Homepage() {
         <section className="bg-color-primary-500 dark:bg-gray-800 h-full flex flex-col items-center justify-center">
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
-              <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-white">
-                Mindland
-                <br />
-                Teman Setia Kamu
-              </h1>
-              <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
-                Chat psikolog, test tingkat stress, forum diskusi, artikel
-                kesehatan mental, dan chat bersama exppert.
-              </p>
-              <Button
-                href="#"
-                className="inline-flex items-center justify-center"
-                color="light"
-                onClick={() => naviget("/checknow")}
+              <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-white" />
+              <div
+                className="mr-auto place-self-center lg:col-span-7"
+                data-aos="fade-right"
+                data-aos-duration="1500"
               >
-                Periksa Sekarang
-              </Button>
-              <p className="mt-6 mb-4 font-bold text-white dark:text-white">
-                Layanan Favorite Kami
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <Badge color="primary" icon={HiChatAlt2}>
-                  Chat AI
-                </Badge>
-                <Badge color="primary" icon={HiUserGroup}>
-                  Forum Diskusi
-                </Badge>
-                <Badge color="primary" icon={HiTrendingUp}>
-                  Cek Tingkat Stress
-                </Badge>
+                <h1 className="max-w-2xl text-color-primary-500 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
+                  Mindland
+                  <br />
+                  Teman Setia Kamu
+                </h1>
+                <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
+                  Chat psikolog, test tingkat stress, forum diskusi, artikel
+                  kesehatan mental, dan chat bersama exppert.
+                </p>
+                <Button
+                  href="#"
+                  className="inline-flex items-center justify-center"
+                  color="light"
+                  onClick={() => naviget("/checknow")}
+                >
+                  Periksa Sekarang
+                </Button>
+                <p className="mt-6 mb-4 font-bold text-white dark:text-white">
+                  Layanan Favorite Kami
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <Badge color="primary" icon={HiChatAlt2}>
+                    Chat AI
+                  </Badge>
+                  <Badge color="primary" icon={HiUserGroup}>
+                    Forum Diskusi
+                  </Badge>
+                  <Badge color="primary" icon={HiTrendingUp}>
+                    Cek Tingkat Stress
+                  </Badge>
+                </div>
               </div>
-            </div>
-            <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <Lottie className="dark:" animationData={HeroImage} alt="hero" />
+              <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <Lottie
+                  className="dark:"
+                  animationData={HeroImage}
+                  alt="hero"
+                />
+                <Lottie
+                  animationData={HeroImage}
+                  alt="hero"
+                  data-aos="fade-left"
+                  data-aos-duration="1500"
+                />
+              </div>
             </div>
           </div>
         </section>

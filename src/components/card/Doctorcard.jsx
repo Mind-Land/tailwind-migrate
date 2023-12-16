@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Card, Modal, Button } from "flowbite-react";
-import { DokterUnggulan } from "../data/index";
+import { DokterUnggulan } from "../../data/index";
 import { HiOutlineInformationCircle, HiOutlineChatAlt } from "react-icons/hi";
 import { Rating } from "flowbite-react";
 

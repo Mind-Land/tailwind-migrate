@@ -1,10 +1,9 @@
 import { getDetailDokter } from "../../globals/api";
 import { useQuery } from "@tanstack/react-query";
-import Profiledetailmodal from "../../components/Profiledetailmodal";
+import Profiledetailmodal from "../../components/modal/Profiledetailmodal";
 import PropTypes from "prop-types";
 
-
-function Getdetaildokter({openModal, closeModal}) {
+function Getdetaildokter({ openModal, closeModal }) {
   const { data, isError, isLoading } = useQuery({
     queryKey: ["DetailDokterQuery"],
     queryFn: getDetailDokter,
@@ -20,7 +19,12 @@ function Getdetaildokter({openModal, closeModal}) {
 
   return (
     <>
-        <Profiledetailmodal key={data.id} profileDetail={data}  openModal={openModal} closeModal={closeModal}/>
+      <Profiledetailmodal
+        key={data.id}
+        profileDetail={data}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
     </>
   );
 }

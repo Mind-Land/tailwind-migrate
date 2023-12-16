@@ -11,7 +11,5 @@ Currently, two official plugins are available:
 
 <!-- Login reset password -->
 
-- [ ] buatkan cari dokter ketika depresi ringan
 - [ ] buat bold setiap depresi jadi bold
 - [ ] Buat lagi check kecemasan berlebihan
-- [ ] Auth dokter

@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 
 function Login() {
+  let naviget = useNavigate();
+
   const [password, setPassword] = useState("");
   const [validPassword, setValidPassword] = useState(false);
 
@@ -117,29 +119,25 @@ function Login() {
                 >
                   Masuk
                 </button>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Belum mempunyai akun?
-                  <a
-                    href="#"
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
-                    <Link className="ml-1" to="/Register">
-                      Daftar sekarang
-                    </Link>
-                  </a>
-                </p>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Masuk Sebagai
-                  <a
-                    href="#"
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
-                    <Link className="ml-1" to="/DoctorLogin">
-                      Dokter
-                    </Link>
-                  </a>
-                </p>
               </form>
+              <button
+                type="submit"
+                className="w-full text-color-primary-500 hover:text-white border border-color-primary-500 hover:bg-color-primary-500 focus:ring-4 focus:outline-none focus:ring-color-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-color-primary-500 dark:text-color-primary-500 dark:hover:text-white dark:hover:bg-color-primary-500 dark:focus:ring-color-primary-500"
+                onClick={() => naviget("/DoctorLogin")}
+              >
+                Masuk sebagai dokter
+              </button>
+              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                Belum mempunyai akun?
+                <a
+                  href="#"
+                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                >
+                  <Link className="ml-1" to="/Register">
+                    Daftar sekarang
+                  </Link>
+                </a>
+              </p>
             </div>
           </div>
         </div>

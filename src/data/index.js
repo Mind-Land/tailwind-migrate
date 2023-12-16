@@ -7,95 +7,33 @@ export const MyFeature = [
   {
     id: 1,
     image: StressIcon,
-    title: "Stress",
+    title: "Chat dokter",
+    link: "/doctor",
   },
   {
     id: 2,
     image: AnxietyIcon,
-    title: "Gangguan Kecemasan",
+    title: "Cek Stress",
+    link: "/checkstress",
   },
   {
     id: 3,
     image: DepressionIcon,
-    title: "Depresi",
+    title: "Artikel",
+    link: "/articles",
   },
   {
     id: 4,
     image: TraumaIcon,
-    title: "Trauma",
-  },
-];
-
-export const DokterUnggulan = [
-  {
-    id: 1,
-    image:
-      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww",
-    title: "Dr. Dokteran",
-    experience: "5 Thn Pengalaman",
-    specialist: "Psikolog",
-    alumni: "Universitas Brawijaya",
-    practice: "Los Angeles",
-    rating: {
-      stars: [
-        { filled: true },
-        { filled: true },
-        { filled: true },
-        { filled: true },
-        { filled: false },
-      ],
-      average: 4.95,
-      maxRating: 5,
-    },
-  },
-  {
-    id: 2,
-    image:
-      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
-    title: "Dr. Stone",
-    experience: "7 Thn Pengalaman",
-    specialist: "Spesialis Otak",
-    alumni: "Institut Teknologi Bandung",
-    practice: "Gorontalo",
-    rating: {
-      stars: [
-        { filled: true },
-        { filled: true },
-        { filled: true },
-        { filled: true },
-        { filled: false },
-      ],
-      average: 4.65,
-      maxRating: 5,
-    },
-  },
-  {
-    id: 3,
-    image:
-      "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGRvY3RvcnxlbnwwfHwwfHx8MA%3D%3D",
-    title: "Dr. Dicoding",
-    experience: "4 Thn Pengalaman",
-    specialist: "Spesialis bootcamp",
-    alumni: "Bina Nusantara",
-    practice: "Mataram",
-    rating: {
-      stars: [
-        { filled: true },
-        { filled: true },
-        { filled: true },
-        { filled: false },
-        { filled: false },
-      ],
-      average: 3.95,
-      maxRating: 5,
-    },
+    title: "Chat AI",
+    link: "/chatai",
   },
 ];
 
 export const navLinks = [
   {
     id: 1,
-    path: "",
+    path: "/",
     text: "Beranda",
   },
   {
@@ -110,13 +48,70 @@ export const navLinks = [
   },
   {
     id: 4,
-    path: "/About",
+    path: "/about",
     text: "Tentang",
   },
   {
-    id: 5,
-    path: "/faq",
-    text: "FAQ",
+    id: 6,
+    path: "/chatai",
+    text: "ai",
+  },
+  {
+    id: 7,
+    path: "/user",
+    text: "user",
+  },
+];
+
+export const navLinksAfterLogin = [
+  {
+    id: 1,
+    path: "/user/",
+    text: "Beranda",
+  },
+  {
+    id: 2,
+    path: "/user/article",
+    text: "Article",
+  },
+  {
+    id: 3,
+    path: "/user/dokter",
+    text: "Dokter",
+    icon: "HiUsers",
+  },
+  {
+    id: 4,
+    path: "/chatai",
+    text: "Chat Ai",
+    icon: "HiGlobeAlt",
+  },
+];
+
+export const sidebarLinks = [
+  {
+    id: 1,
+    path: "/user/",
+    text: "Beranda",
+    icon: "HiHome",
+  },
+  {
+    id: 2,
+    path: "/user/article",
+    text: "Article",
+    icon: "HiBookOpen",
+  },
+  {
+    id: 3,
+    path: "/user/dokter",
+    text: "Dokter",
+    icon: "HiUsers",
+  },
+  {
+    id: 4,
+    path: "/user/ai",
+    text: "Chat Ai",
+    icon: "HiGlobeAlt",
   },
 ];
 
@@ -124,7 +119,7 @@ export const faq = [
   {
     id: 1,
     title: "Apakah Boleh punya pacar 1?",
-    desc: "boleh",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
   },
   {
     id: 2,

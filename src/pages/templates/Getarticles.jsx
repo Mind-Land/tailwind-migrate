@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getArticles } from "../../globals/api";
-import ArticlecardSkeleton from "../../components/Cardskeleton";
-import Imagecard from "../../components/Imagecard";
+import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
+import Imagecard from "../../components/card/Imagecard";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 

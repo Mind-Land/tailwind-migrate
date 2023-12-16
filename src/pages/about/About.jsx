@@ -15,7 +15,7 @@ const people = [
   {
     name: "M. Diki Iswari",
     role: "Frontend Developer",
-    imageUrl: "./public/img/malik.png",
+    imageUrl: "./public/img/Diky.jpg",
   },
   {
     name: "Yanuar Faturahman",
@@ -125,7 +125,7 @@ function About() {
                 </div>
                 <div className="mt-3 sm:pe-8">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Cek Tingkat Stress
+                    Test Mental
                   </h3>
                   <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                     Merupakan fitur untuk check seberapa besar tingkat depresi

@@ -1,7 +1,7 @@
 "use client";
 
 import { Accordion } from "flowbite-react";
-import { faq } from "../data/index";
+import { faq } from "../../data/index";
 
 function Faqcomponent() {
   return (
