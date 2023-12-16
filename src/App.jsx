@@ -14,6 +14,8 @@ import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import Faqcomponent from "./components/Faq";
 import ChatAiPage from "./pages/Ai/chatAi";
+import DoctorLogin from "./pages/auth/doctorAuth/DoctorLogin";
+import DoctorRegister from "./pages/auth/doctorAuth/DoctorRegister";
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = ["/login", "/register"];
@@ -31,6 +33,8 @@ function App() {
           <Routes>
             <Route path="/" Component={Homepage}></Route>
             <Route path="/login" Component={Login}></Route>
+            <Route path="/logindoctor" Component={DoctorLogin}></Route>
+            <Route path="/registerdoctor" Component={DoctorRegister}></Route>
             <Route path="/register" Component={Register}></Route>
             <Route path="/About" Component={About}></Route>
             <Route path="/checknow" Component={Checknowpage}></Route>
