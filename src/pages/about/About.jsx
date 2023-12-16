@@ -103,7 +103,7 @@ function About() {
             <ol className="items-center sm:flex px-8">
               <li className="relative mb-6 sm:mb-0">
                 <div className="flex items-center">
-                  <div className=" flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                     <Badge color="primary" icon={HiChatAlt2}></Badge>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ function About() {
               </li>
               <li className="relative mb-6 sm:mb-0">
                 <div className="flex items-center">
-                  <div className=" flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                     <Badge color="primary" icon={HiTrendingUp}></Badge>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ function About() {
               </li>
               <li className="relative mb-6 sm:mb-0">
                 <div className="flex items-center">
-                  <div className="flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <div className="z-10 flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
                     <Badge color="primary" icon={HiUserGroup}></Badge>
                   </div>
                 </div>
