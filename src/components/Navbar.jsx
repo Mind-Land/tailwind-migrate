@@ -8,7 +8,11 @@ function Navbarcomponent() {
   let naviget = useNavigate();
 
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 ">
+    <div
+      className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 "
+      data-aos="fade-down"
+      data-aos-duration="1700"
+    >
       <Navbar fluid rounded className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="/">
           <h1 className="font-bold text-gray-700 dark:text-white text-lg">

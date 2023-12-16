@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { HiFingerPrint } from "react-icons/hi";
 import HeroCheckNow from "../../assets/lottie/heroCheck.json";
 import Lottie from "lottie-react";
+
 import Featurecard from "../../components/Featurecard";
 
 const Checknowpage = () => {
@@ -12,7 +13,11 @@ const Checknowpage = () => {
       <div className="h-screen">
         <section className="bg-gradient-to-br from-white via-color-primary-100 to-red-200 dark:from-gray-800 dark:via-color-primary-900 dark:to-gray-800  h-full flex flex-col items-center justify-center">
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div className="mr-auto place-self-center lg:col-span-7">
+            <div
+              className="mr-auto place-self-center lg:col-span-7"
+              data-aos="fade-right"
+              data-aos-duration="1500"
+            >
               <h1 className=" text-lg max-w-2xl mb-5 font-light text-gray-800 lg:mb-5 md:text-lg tracking-tight leading-none lg:text-xl dark:text-gray-100">
                 Cobain Fitur Unggulan di <strong>MindLand</strong>
               </h1>
@@ -39,31 +44,10 @@ const Checknowpage = () => {
                 animationData={HeroCheckNow}
                 alt="hero"
                 className="drop-shadow"
+                data-aos="fade-left"
+                data-aos-duration="1500"
               />
             </div>
-          </div>
-        </section>
-      </div>
-      <div className="min-h-screen bg-white dark:bg-gray-900">
-        <section className="h-full flex flex-col items-center justify-center">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <div className="flex justify-between text-gray-500 mx-auto lg:mb-16 mb-8">
-              <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white">
-                Daftar Dokter
-              </h2>
-              <p
-                className=" text-gray-500  dark:text-gray-400 hover:text-color-primary-500 cursor-pointer"
-                onClick={() => naviget("/doctor")}
-              >
-                Lihat Semua
-              </p>
-            </div>
-          </div>
-          <div className="py-5 px-4 mx-auto">
-            <h1 className="2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
-              Dimohon untuk menggunakan bahasa yang sopan ketika mengirim pesan
-              ke Dokter.
-            </h1>
           </div>
         </section>
       </div>

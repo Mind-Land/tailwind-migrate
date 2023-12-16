@@ -15,7 +15,7 @@ const people = [
   {
     name: "M. Diki Iswari",
     role: "Frontend Developer",
-    imageUrl: "./public/img/malik.png",
+    imageUrl: "./public/img/Diky.jpg",
   },
   {
     name: "Yanuar Faturahman",
