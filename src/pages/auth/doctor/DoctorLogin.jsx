@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
 
-function Login() {
+const DoctorLogin = () => {
   const [password, setPassword] = useState("");
   const [validPassword, setValidPassword] = useState(false);
 
@@ -13,12 +13,13 @@ function Login() {
     setPassword(newPassword);
     setValidPassword(passwordRegex.test(newPassword));
   };
+
   return (
     <>
       <div className="h-screen flex items-center justify-center">
         <div className="top-0 left-0 p-8 md:p-12 xl:p-12 absolute">
           <Link
-            to="/"
+            to="/Login"
             className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800  xl:text-color-primary-500 xl:bg-gray-100 xl:hover:bg-gray-400 xl:hover:text-color-primary-100 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white "
             type="submit"
           >
@@ -28,7 +29,7 @@ function Login() {
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center ">
           <img
             className="w-3/5 -scale-x-100"
-            src="./public/img/hero-image.png"
+            src="./public/img/LoginDoctor.png"
             alt=""
           />
         </div>
@@ -38,9 +39,7 @@ function Login() {
             <h1 className="max-w-2xl text-color-primary-500 font-bold mt-5 mb-3 dark:text-white">
               Selamat datang di Mindland
             </h1>
-            <p className="text-xs dark:text-white">
-              Lengkapi email dan password
-            </p>
+            <p className="text-xs dark:text-white">Login sebagai dokter</p>
           </div>
           <div className="w-full bg-white  md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-900">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -123,19 +122,8 @@ function Login() {
                     href="#"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
-                    <Link className="ml-1" to="/Register">
+                    <Link className="ml-1" to="/DoctorRegister">
                       Daftar sekarang
-                    </Link>
-                  </a>
-                </p>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Masuk Sebagai
-                  <a
-                    href="#"
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
-                    <Link className="ml-1" to="/DoctorLogin">
-                      Dokter
                     </Link>
                   </a>
                 </p>
@@ -146,6 +134,6 @@ function Login() {
       </div>
     </>
   );
-}
+};
 
-export default Login;
+export default DoctorLogin;

@@ -14,10 +14,18 @@ import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import Faqcomponent from "./components/Faq";
 import ResetPassword from "./pages/auth/Reset";
-import CheckStress from "./pages/CheckStress/CheckStress";
+import CheckDepresi from "./pages/CheckDepresi/CheckDepresi";
+import DoctorLogin from "./pages/auth/doctor/DoctorLogin";
+import DoctorRegister from "./pages/auth/doctor/DoctorRegister";
 
 const queryClient = new QueryClient();
-const pagesWithoutNavbarFooter = ["/Login", "/Register", "/Reset"];
+const pagesWithoutNavbarFooter = [
+  "/Login",
+  "/Register",
+  "/Reset",
+  "/DoctorLogin",
+  "/DoctorRegister",
+];
 
 function App() {
   const location = useLocation();
@@ -33,6 +41,8 @@ function App() {
             <Route path="/" Component={Homepage}></Route>
             <Route path="/Login" Component={Login}></Route>
             <Route path="/Register" Component={Register}></Route>
+            <Route path="/DoctorLogin" Component={DoctorLogin}></Route>
+            <Route path="/DoctorRegister" Component={DoctorRegister}></Route>
             <Route path="/Reset" Component={ResetPassword}></Route>
             <Route path="/About" Component={About}></Route>
             <Route path="/checknow" Component={Checknowpage}></Route>
@@ -40,7 +50,7 @@ function App() {
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/faq" Component={Faqcomponent}></Route>
-            <Route path="/CheckStress" Component={CheckStress}></Route>
+            <Route path="/CheckDepresi" Component={CheckDepresi}></Route>
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>

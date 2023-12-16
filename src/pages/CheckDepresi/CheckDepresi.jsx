@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import RadioQuestion from "../../components/RadioQuestion";
 
-function CheckStress() {
+function CheckDepresi() {
   const [scores, setScores] = useState({
     Question1: -1,
     Question2: -1,
@@ -182,4 +182,4 @@ function CheckStress() {
   );
 }
 
-export default CheckStress;
+export default CheckDepresi;
