@@ -8,6 +8,7 @@ import {
 // import heroarticle from "../../assets/heroarticle.png";
 import Showarticles from "./Showarticles";
 import { useState } from "react";
+import artikel from "/img/hero/artikel.png"
 
 function Articles() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -72,7 +73,7 @@ function Articles() {
               </div>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              {/* <img src={heroarticle} alt="mockup" className="" /> */}
+              <img src={artikel} alt="mockup" className="" />
             </div>
           </div>
         </section>

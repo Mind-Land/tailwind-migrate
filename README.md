@@ -30,7 +30,5 @@ src
 |-- ...
 
 
-beda img setiap login dan register
-checkstress fitur
-hero landing page ganti warna
-warna solid jangan gradient
+- [ ] buat bold setiap depresi jadi bold
+- [ ] Buat lagi check kecemasan berlebihan

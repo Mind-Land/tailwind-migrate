@@ -24,12 +24,12 @@ function Getdetailarticle() {
   }
 
   return (
-  <>
-    {data.map((article) => (
-      <Templatearticledetail key={article.id} article={article} />
-    ))}
-  </>
-);
+    <>
+      {data.map((article) => (
+        <Templatearticledetail key={article.id} article={article} />
+      ))}
+    </>
+  );
 }
 
 export default Getdetailarticle;

@@ -38,7 +38,7 @@ function Detailarticles() {
                 Best practices for successful prototypes
               </h1>
             </header>
-            <Getdetailarticle ></Getdetailarticle>
+            <Getdetailarticle></Getdetailarticle>
             <section className="not-format">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">
@@ -59,9 +59,7 @@ function Detailarticles() {
                     defaultValue={""}
                   />
                 </div>
-                <Button color="primary">
-                  Kirim komentar
-                </Button>
+                <Button color="primary">Kirim komentar</Button>
               </form>
               <article className="p-6 mb-6 text-base bg-white rounded-lg dark:bg-gray-900">
                 <footer className="flex justify-between items-center mb-2">

@@ -13,14 +13,14 @@ export const MyFeature = [
   {
     id: 2,
     image: cekstress,
-    title: "Cek Stress",
-    link: "/checkstress"
+    title: "Cek Depresi",
+    link: "/checkdepression"
   },
   {
     id: 3,
     image: artikel,
-    title: "Artikel",
-    link: "/articles"
+    title: "Cek Kecemasan",
+    link: "/checkanxiety"
   },
   {
     id: 4,

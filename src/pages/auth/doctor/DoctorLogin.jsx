@@ -1,11 +1,9 @@
-"use client";
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
-import logindoctor from "/img/hero/logindoctor.png"
+import hero from "/img/hero/logindoctor.png"
 
-const Doctorlogin = () => {
+const DoctorLogin = () => {
   const [password, setPassword] = useState("");
   const [validPassword, setValidPassword] = useState(false);
 
@@ -22,7 +20,7 @@ const Doctorlogin = () => {
       <div className="h-screen flex items-center justify-center">
         <div className="top-0 left-0 p-8 md:p-12 xl:p-12 absolute">
           <Link
-            to="/"
+            to="/login"
             className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800  xl:text-color-primary-500 xl:bg-gray-100 xl:hover:bg-gray-400 xl:hover:text-color-primary-100 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white "
             type="submit"
           >
@@ -32,8 +30,8 @@ const Doctorlogin = () => {
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center ">
           <img
             className="w-3/5 -scale-x-100"
-            src={logindoctor}
-            alt=""
+            src={hero}
+            alt="login hero image"
           />
         </div>
         <div className="dark:bg-gray-900 h-screen w-full px-6 flex flex-col items-center justify-center ">
@@ -42,7 +40,7 @@ const Doctorlogin = () => {
             <h1 className="max-w-2xl text-color-primary-500 font-bold mt-5 mb-3 dark:text-white">
               Selamat datang di Mindland
             </h1>
-            <p className="text-xs dark:text-white">Login sebagai dokter?</p>
+            <p className="text-xs dark:text-white">Login sebagai dokter</p>
           </div>
           <div className="w-full bg-white  md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-900">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -120,12 +118,14 @@ const Doctorlogin = () => {
                   Masuk
                 </button>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Belum mempunyai akun?{" "}
+                  Belum mempunyai akun?
                   <a
                     href="#"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
-                    <Link to="/registerdoctor">Daftar sekarang</Link>
+                    <Link className="ml-1" to="/doctorregister">
+                      Daftar sekarang
+                    </Link>
                   </a>
                 </p>
               </form>
@@ -137,4 +137,4 @@ const Doctorlogin = () => {
   );
 };
 
-export default Doctorlogin;
+export default DoctorLogin;

@@ -11,16 +11,25 @@ import About from "./pages/about/About";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
-import User from "./pages/user/user";
-import Chat from "./pages/ai/Chat";
+import User from "./pages/User/User";
+import Chat from "./pages/Ai/Chat";
 import ResetPassword from "./pages/auth/Reset";
-import CheckStress from "./pages/CheckStress/CheckStress";
-import Doctorlogin from "./pages/auth/doctor-auth/Doctorlogin";
-import Doctorregister from "./pages/auth/doctor-auth/Doctorregister";
-
+import DoctorLogin from "./pages/auth/doctor/DoctorLogin";
+import DoctorRegister from "./pages/auth/doctor/DoctorRegister";
+import CheckDepression from "./pages/MentalTest/CheckDepression";
+import CheckAnxiety from "./pages/MentalTest/CheckAnxiety";
 
 const queryClient = new QueryClient();
-const pagesWithoutNavbarFooter = ["/login", "/login","/reset", "/register", "/user", "/user/*"];
+const pagesWithoutNavbarFooter = [
+  "/login",
+  "/login",
+  "/reset",
+  "/register",
+  "/doctorlogin",
+  "/doctorregister",
+  "/user",
+  "/user/*",
+];
 
 function App() {
   const location = useLocation();
@@ -37,16 +46,17 @@ function App() {
             <Route path="/" Component={Homepage}></Route>
             <Route path="/login" Component={Login}></Route>
             <Route path="/register" Component={Register}></Route>
+            <Route path="/doctorlogin" Component={DoctorLogin}></Route>
+            <Route path="/doctorregister" Component={DoctorRegister}></Route>
             <Route path="/reset" Component={ResetPassword}></Route>
-            <Route path="/logindoctor" Component={Doctorlogin}></Route>
-            <Route path="/registerdoctor" Component={Doctorregister}></Route>
             <Route path="/about" Component={About}></Route>
+            <Route path="/checkdepression" Component={CheckDepression}></Route>
+            <Route path="/checkanxiety" Component={CheckAnxiety}></Route>
             <Route path="/articles" Component={Articles}></Route>
             <Route path="/detailarticles" Component={Detailarticles}></Route>
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/chatai" Component={Chat}></Route>
             <Route path="/user/*" element={<User />} />
-            <Route path="/checkstress" Component={CheckStress}></Route>
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>

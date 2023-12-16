@@ -4,7 +4,7 @@ import { Label, Radio } from "flowbite-react";
 const RadioQuestion = ({ Question, QuestionType, Id, onChange }) => {
   return (
     <>
-      <legend className="mb-4 dark:text-white">{Question}</legend>
+      <legend className="mt-4 dark:text-white">{Question}</legend>
       <div className="flex items-center gap-2">
         <Radio
           onChange={() => onChange(0)}

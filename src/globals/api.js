@@ -11,7 +11,6 @@ const fetchData = async (endpoint, options = {}) => {
   return data;
 };
 
-
 export const getDoctors = async () => {
   return fetchData("/dokter");
 };
@@ -25,5 +24,5 @@ export const getArticles = async () => {
 };
 
 export const getDetailDokter = async () => {
-  return fetchData("/detailDokter")
-}
+  return fetchData("/detailDokter");
+};
