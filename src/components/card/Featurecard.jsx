@@ -1,4 +1,3 @@
-import Lottie from "lottie-react";
 import { MyFeature } from "../../data";
 import { Link } from "react-router-dom"; // Import Link dari React Router jika digunakan
 
@@ -14,10 +13,10 @@ const Featurecard = () => {
                 style={{ width: "97px", height: "137px" }}
               >
                 <div className="flex flex-col items-center">
-                  <Lottie
+                  <img
+                    src={fitur.image}
                     className="mb-3 rounded-full mt-6 drop-shadow"
                     style={{ height: "58px", width: "58px" }}
-                    animationData={fitur.image}
                     alt={`feature-${fitur.id}`}
                   />
                   <h5 className="mb-2 text-xs font-medium text-gray-900 dark:text-black transition duration-300 ease-in-out group-hover:text-white text-center">

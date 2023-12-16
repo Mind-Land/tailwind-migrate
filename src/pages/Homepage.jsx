@@ -1,5 +1,10 @@
 import { Badge, Button } from "flowbite-react";
-import { HiChatAlt2, HiTrendingUp, HiUserGroup, HiFingerPrint } from "react-icons/hi";
+import {
+  HiChatAlt2,
+  HiTrendingUp,
+  HiUserGroup,
+  HiFingerPrint,
+} from "react-icons/hi";
 import Getpopulararticles from "../pages/templates/Getpopulararticles";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
@@ -7,7 +12,7 @@ import { Accordion } from "flowbite-react";
 import { faq } from "../data";
 import HeroCheckNow from "../assets/lottie/heroCheck.json";
 import Featurecard from "../components/card/Featurecard";
-import key from "/img/key.png"
+import key from "/img/hero/key.png";
 
 function Homepage() {
   let naviget = useNavigate();
@@ -80,14 +85,10 @@ function Homepage() {
           </div>
         </section>
       </div>
-      <div className="">
-        <section className="bg-color-primary-500 dark:bg-gray-800  h-full flex flex-col items-center justify-center">
+      <div className="bg-color-primary-500 dark:bg-gray-800 ">
+        <section className=" h-full flex flex-col items-center justify-center">
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-20 lg:grid-cols-12">
-            <div
-              className="mr-auto place-self-center lg:col-span-7"
-              data-aos="fade-right"
-              data-aos-duration="1000"
-            >
+            <div className="mr-auto place-self-center lg:col-span-7">
               <h2 className=" text-lg max-w-2xl mb-5 font-semibold text-white lg:mb-10 md:text-lg tracking-tight leading-none lg:text-3xl dark:text-gray-100">
                 Cobain Fitur Unggulan di <strong>MindLand</strong>
               </h2>
@@ -107,7 +108,7 @@ function Homepage() {
               </div>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-              <img src={key} alt="" />
+              <img src={key} alt="hero image for feature section" />
             </div>
           </div>
         </section>

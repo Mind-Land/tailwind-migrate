@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { HiArrowSmLeft, HiChevronLeft } from "react-icons/hi";
-import { useNavigate } from "react-router-dom";
-import { Button } from "flowbite-react";
+import { HiArrowSmLeft } from "react-icons/hi";
+import login from "/img/hero/login.png";
 
 function Login() {
   const [password, setPassword] = useState("");
   const [validPassword, setValidPassword] = useState(false);
-
-  let naviget = useNavigate();
 
   const handlePasswordChange = (event) => {
     const newPassword = event.target.value;
@@ -31,11 +28,7 @@ function Login() {
         </div>
 
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-800 w-full hidden lg:flex items-center justify-center ">
-          <img
-            className="w-3/5 -scale-x-100"
-            src="./public/img/hero-image.png"
-            alt=""
-          />
+          <img className="w-3/5 -scale-x-100" src={login} alt="" />
         </div>
         <div className="dark:bg-gray-900 h-screen w-full px-6 flex flex-col items-center justify-center ">
           <div className="flex flex-col items-center justify-center">
@@ -124,12 +117,20 @@ function Login() {
                 </button>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Belum mempunyai akun?{" "}
-                  <a
-                    href="#"
+                  <Link
+                    to="/register"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
-                    <Link to="/register">Daftar sekarang</Link>
-                  </a>
+                    Daftar sekarang
+                  </Link>
+                  <br />
+                 {" "}
+                  <Link
+                    to="/logindoctor"
+                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  >
+                     masuk dengan akun dokter
+                  </Link>
                 </p>
               </form>
             </div>

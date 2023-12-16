@@ -15,6 +15,9 @@ import User from "./pages/user/user";
 import Chat from "./pages/ai/Chat";
 import ResetPassword from "./pages/auth/Reset";
 import CheckStress from "./pages/CheckStress/CheckStress";
+import Doctorlogin from "./pages/auth/doctor-auth/Doctorlogin";
+import Doctorregister from "./pages/auth/doctor-auth/Doctorregister";
+
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = ["/login", "/login","/reset", "/register", "/user", "/user/*"];
@@ -35,6 +38,8 @@ function App() {
             <Route path="/login" Component={Login}></Route>
             <Route path="/register" Component={Register}></Route>
             <Route path="/reset" Component={ResetPassword}></Route>
+            <Route path="/logindoctor" Component={Doctorlogin}></Route>
+            <Route path="/registerdoctor" Component={Doctorregister}></Route>
             <Route path="/about" Component={About}></Route>
             <Route path="/articles" Component={Articles}></Route>
             <Route path="/detailarticles" Component={Detailarticles}></Route>

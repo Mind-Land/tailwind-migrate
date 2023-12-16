@@ -1,8 +1,8 @@
 import { Button } from "flowbite-react";
 import { HiPaperAirplane } from "react-icons/hi";
 import { useState } from "react";
-import Recievechat from "../../components/Recievechat";
-import Sendchat from "../../components/Sendchat";
+import Recievechat from "../../components/chat-bubble/Recievechat";
+import Sendchat from "../../components/chat-bubble/Sendchat";
 import { Configuration, OpenAIApi } from "openai";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useRef, useEffect } from "react";

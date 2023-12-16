@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
-import logo from "../../assets/mindlandlogo.png";
+import logo from "/img/brandlogo.png";
 function ResetPassword() {
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
