@@ -8,6 +8,7 @@ function Imagecard({ article }) {
   const truncatedBody = body.slice(0, 100) + " ...";
   const truncatedTitle = title.slice(0, 70) + "...";
 
+  // Logika untuk menghitung selisih hari antara postAt dan tanggal sekarang
   const postDate = new Date(postAt);
   const currentDate = new Date();
   const daysAgo = Math.floor((currentDate - postDate) / (1000 * 60 * 60 * 24));
@@ -28,6 +29,7 @@ function Imagecard({ article }) {
               {truncatedTitle}
             </h5>
           </a>
+          {/* <div className="inline-flex mb-2"></div> */}
           <p className="text-gray-500 dark:text-gray-400 mb-4">{author}</p>
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {truncatedBody}
