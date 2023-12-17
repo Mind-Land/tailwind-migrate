@@ -1,30 +1,30 @@
-import StressIcon from "../assets/icons/stressIcon.json";
-import AnxietyIcon from "../assets/icons/anxietyIcon.json";
-import DepressionIcon from "../assets/icons/depressionIcon.json";
-import TraumaIcon from "../assets/icons/traumaIcon.json";
+import chatdokter from "../assets/icons/chatdokter.png";
+import cekstress from "../assets/icons/cekstress.png";
+import artikel from "../assets/icons/artikel.png";
+import chatai from "../assets/icons/chatai.png";
 
 export const MyFeature = [
   {
     id: 1,
-    image: StressIcon,
+    image: chatdokter,
     title: "Chat dokter",
     link: "/doctor",
   },
   {
     id: 2,
-    image: AnxietyIcon,
-    title: "Cek Stress",
-    link: "/checkstress",
+    image: cekstress,
+    title: "Cek Depresi",
+    link: "/checkdepression"
   },
   {
     id: 3,
-    image: DepressionIcon,
-    title: "Artikel",
-    link: "/articles",
+    image: artikel,
+    title: "Cek Kecemasan",
+    link: "/checkanxiety"
   },
   {
     id: 4,
-    image: TraumaIcon,
+    image: chatai,
     title: "Chat AI",
     link: "/chatai",
   },

@@ -126,17 +126,17 @@ const DoctorProfile = () => {
             </h3>
             <div className="flex justify-center gap-4">
               <Button color="failure" onClick={() => handleYesButton(id)}>
-                {"Ya"}
+                Iya, hapus
               </Button>
               <Button color="gray" onClick={() => setIsModalOpen(false)}>
-                Tidak
+                Tidak, jangan hapus
               </Button>
             </div>
           </div>
         </Modal.Body>
       </Modal>
       <div className="bg-gray-100 dark:bg-gray-900 py-10">
-        <div className="container mx-auto py-8">
+        <div className="container mx-auto py-8 min-h-screen">
           <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
             <div className="col-span-4 sm:col-span-3">
               {isLoadingProfileData ? (

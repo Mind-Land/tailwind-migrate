@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
+import registerhero from "/img/hero/login.png"
 
 import { useRegister } from "../../hooks/useRegister";
 
@@ -43,7 +44,7 @@ function Register() {
           </Link>
         </div>
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-700 w-full hidden lg:flex items-center justify-center">
-          <img className="w-2/4" src="./public/img/hero-image.png" alt="" />
+          <img className="w-2/4" src={registerhero} alt="" />
         </div>
         <div className="bg-white dark:bg-gray-900 h-screen w-full px-6 flex flex-col items-center justify-center ">
           <div className="flex flex-col items-center justify-center">

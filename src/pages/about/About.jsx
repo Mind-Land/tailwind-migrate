@@ -43,7 +43,7 @@ function About() {
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
               <h1 className="max-w-2xl text-color-primary-500 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
-                About Us
+                Tentang kami 
               </h1>
               <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
                 Mind Land merupakan pusat kesehatan mental di era digital.
@@ -67,7 +67,7 @@ function About() {
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
           <div className="max-w-2xl">
             <h2 className="max-w-2xl text-color-primary-500 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
-              Meet our Team
+              Kenali tim kami
             </h2>
             <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
               Tim kami terdiri dari Front-End Developer, Back-End Developer &

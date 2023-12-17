@@ -1,7 +1,6 @@
 import { HiSearch } from "react-icons/hi";
 import { useState } from "react";
 import { TextInput } from "flowbite-react";
-
 import GetDoctor from "../templates/GetDoctor";
 
 function Showdoctor() {
@@ -15,7 +14,6 @@ function Showdoctor() {
   const handleDoctorsCountChange = (count) => {
     setDoctorsCount(count);
   };
-
   return (
     <>
       <div className="min-h-screen bg-white dark:bg-gray-900">

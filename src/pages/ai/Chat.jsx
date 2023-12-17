@@ -1,19 +1,21 @@
 import { Button } from "flowbite-react";
 import { HiPaperAirplane } from "react-icons/hi";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Configuration, OpenAIApi } from "openai";
-import Sendchat from "./dummycomp/Sendchat";
-import Recievechat from "./dummycomp/Recievechat";
-import "react-loading-skeleton/dist/skeleton.css";
-import { useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Chatsample() {
+import Sendchat from "../../components/chat-bubble/Sendchat";
+import Recievechat from "../../components/chat-bubble/Recievechat";
+import "react-loading-skeleton/dist/skeleton.css";
+
+function Chat() {
   const [userInput, setUserInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const scrollContainerRef = useRef();
+  const navigate = useNavigate();
 
   const scrollToBottom = () => {
     if (scrollContainerRef.current) {
@@ -24,7 +26,10 @@ function Chatsample() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages, loading, isTyping]);
+    if (!localStorage.getItem("user")) {
+      navigate("/login");
+    }
+  }, [messages, loading, isTyping, navigate]);
 
   const handleInputChange = (event) => {
     const inputText = event.target.value;
@@ -48,8 +53,10 @@ function Chatsample() {
     }
   };
 
+  console.log(messages);
+
   const config = new Configuration({
-    apiKey: "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",
+    apiKey: "",
   });
   const openai = new OpenAIApi(config);
 
@@ -95,9 +102,9 @@ function Chatsample() {
                   <div className="flex flex-col space-y-2 text-sm max-w-xs mx-2 order-2 items-start">
                     <div>
                       <span className="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
-                      Hai, Kenalin aku Rafiq. kalau ada yang kamu pikirin
-                    mendingan kamu ngomongin aja ke aku, aku bakal jadi temen
-                    yang setia dengerin keluhan kamu
+                        Hai, Kenalin aku Rafiq. kalau ada yang kamu pikirin
+                        mendingan kamu ngomongin aja ke aku, aku bakal jadi
+                        temen yang setia dengerin keluhan kamu
                       </span>
                     </div>
                   </div>
@@ -146,6 +153,7 @@ function Chatsample() {
                     "
                     onChange={handleInputChange}
                     value={userInput}
+                    placeholder="Apa yang kamu rasakan hari ini?...."
                   />
                   <Button color="primary" onClick={handleSubmit}>
                     <HiPaperAirplane className="w-6 h-6" />
@@ -160,4 +168,4 @@ function Chatsample() {
   );
 }
 
-export default Chatsample;
+export default Chat;

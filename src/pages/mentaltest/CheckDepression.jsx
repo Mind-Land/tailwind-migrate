@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import RadioQuestion from "../../components/RadioQuestion";
+import { Link } from "react-router-dom";
+import { HiX } from "react-icons/hi";
 
-function CheckStress() {
+function CheckDepression() {
   const [scores, setScores] = useState({
     Question1: -1,
     Question2: -1,
@@ -35,20 +37,52 @@ function CheckStress() {
   const showResults = (scores) => {
     let result = "";
     if (scores >= 0 && scores <= 4) {
-      result =
-        "Hore! Skor kamu menunjukkan tidak ada gejala depresi. Jika kamu merasa ada gejala yang berkembang atau perlu ruang aman untuk curhat, konsultasi pada ahli.";
+      result = (
+        <span>
+          Hore! Skor kamu menunjukkan <strong>tidak ada gejala depresi</strong>.
+          Jika kamu merasa ada gejala yang berkembang atau perlu ruang aman
+          untuk curhat, konsultasi pada ahli
+        </span>
+      );
     } else if (scores >= 5 && scores <= 9) {
-      result =
-        "Skor kamu menandakan depresi ringan. Kamu masih menjalani kegiatan sehari-hari, namun dengan kurang bersemangat atau merasa tertarik. Konsultasi dengan ahli kesehatan mental untuk mencari tahu penyebab dan solusinya.";
+      result = (
+        <span>
+          Skor kamu menandakan <strong>depresi ringan</strong>. Kamu masih
+          menjalani kegiatan sehari-hari, namun dengan kurang bersemangat atau
+          merasa tertarik. Konsultasi dengan ahli kesehatan mental untuk mencari
+          tahu penyebab dan solusinya.
+        </span>
+      );
     } else if (scores >= 10 && scores <= 14) {
-      result =
-        "Skor kamu menandakan depresi sedang. Kamu masih menjalani kegiatan sehari-hari, namun dengan bersusah payah. Mungkin, kamu merasa lelah secara fisik dan emosional pada akhir hari. Dapatkan bantuan ahli untuk memahami pikiran, perasaan, dan gejala yang kamu alami.";
+      result = (
+        <span>
+          Skor kamu menandakan <strong>depresi sedang</strong>. Kamu masih
+          menjalani kegiatan sehari-hari, namun dengan bersusah payah. Mungkin,
+          kamu merasa lelah secara fisik dan emosional pada akhir hari. Dapatkan
+          bantuan ahli untuk memahami pikiran, perasaan, dan gejala yang kamu
+          alami.
+        </span>
+      );
     } else if (scores >= 15 && scores <= 19) {
-      result =
-        "Skor kamu menandakan depresi sedang menuju berat. Mungkin kamu mengalami mood yang buruk dan terus menerus & gejala fisik yang terasa semakin berat. Kamu merasa rendah motivasi & menghindari aktivitas yang sebelumnya menyenangkanmu. Dapatkan bantuan ahli sekarang untuk mencari tahu langkah yang harus kamu ambil.";
+      result = (
+        <span>
+          Skor kamu menandakan <strong>depresi sedang menuju berat</strong>.
+          Mungkin kamu mengalami mood yang buruk dan terus menerus & gejala
+          fisik yang terasa semakin berat. Kamu merasa rendah motivasi &
+          menghindari aktivitas yang sebelumnya menyenangkanmu. Dapatkan bantuan
+          ahli sekarang untuk mencari tahu langkah yang harus kamu ambil.
+        </span>
+      );
     } else if (scores >= 20 && scores <= 27) {
-      result =
-        "Skor kamu menunjukkan depresi berat. Dapatkan bantuan ahli kesehatan mental sekarang untuk diperiksa secara mendetail & mendapat bantuan mengatasi keadaanmu. Jika tidak diatasi, depresi berat dapat membuatmu kehilangan orang tersayang & menurunkan kemampuanmu beraktivitas sehari-hari.";
+      result = (
+        <span>
+          Skor kamu menunjukkan <strong>depresi berat</strong>. Dapatkan bantuan
+          ahli kesehatan mental sekarang untuk diperiksa secara mendetail &
+          mendapat bantuan mengatasi keadaanmu. Jika tidak diatasi, depresi
+          berat dapat membuatmu kehilangan orang tersayang & menurunkan
+          kemampuanmu beraktivitas sehari-hari.
+        </span>
+      );
     }
     return result;
   };
@@ -74,8 +108,8 @@ function CheckStress() {
   };
 
   return (
-    <div className="h-auto dark:bg-gray-900 px-5">
-      <div className="flex flex-col items-center justify-center">
+    <div className="h-auto dark:bg-gray-900">
+      <div className="flex flex-col items-center justify-center px-4">
         <div className="pt-20 mr-7">
           <div className="flex flex-col">
             <p className="dark:text-color-primary-200 text-gray-700">
@@ -148,11 +182,17 @@ function CheckStress() {
               onClick={handleResult}
               disabled={!allChecked}
             >
-              Kirim
+              Check Depresi
             </button>
             {modalOpen && (
               <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-75">
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-lg w-full max-w-md">
+                  <div className="flex justify-end">
+                    <HiX
+                      onClick={closeModal}
+                      className="dark:bg-color-primary-500 w-5 h-5 rounded-sm"
+                    ></HiX>
+                  </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                     Hasil Test Depresi
                   </h3>
@@ -164,13 +204,14 @@ function CheckStress() {
                       {modalContent.result}
                     </p>
                   </div>
-                  <div className="flex justify-end mt-6">
-                    <button
+                  <div className="flex justify-between mt-6">
+                    <Link
                       onClick={closeModal}
+                      to="/doctor"
                       className="bg-color-primary-500 p-3 text-white hover:bg-color-primary-600 focus:ring-4 focus:outline-none focus:ring-color-primary-300 font-medium rounded-lg text-sm px-5 py-2.5"
                     >
-                      Tutup
-                    </button>
+                      Cari Dokter
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -182,4 +223,4 @@ function CheckStress() {
   );
 }
 
-export default CheckStress;
+export default CheckDepression;
