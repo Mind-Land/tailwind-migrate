@@ -58,8 +58,8 @@ const deleteData = async (headers, endpoint) => {
   return data;
 };
 
-export const getDoctors = async () => {
-  return fetchData("/doctor");
+export const getDoctors = async (page) => {
+  return fetchData(`/doctor?page=${page}`);
 };
 
 export const getArticleBySlug = async (slug) => {
