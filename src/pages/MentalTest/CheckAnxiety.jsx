@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import RadioQuestion from "../../components/RadioQuestion";
+import { Link } from "react-router-dom";
+import { HiX } from "react-icons/hi";
 
-function CheckStress() {
+function CheckAnxiety() {
   const [scores, setScores] = useState({
     Question1: -1,
     Question2: -1,
@@ -10,8 +12,6 @@ function CheckStress() {
     Question5: -1,
     Question6: -1,
     Question7: -1,
-    Question8: -1,
-    Question9: -1,
   });
 
   const [allChecked, setAllChecked] = useState(false);
@@ -35,20 +35,43 @@ function CheckStress() {
   const showResults = (scores) => {
     let result = "";
     if (scores >= 0 && scores <= 4) {
-      result =
-        "Hore! Skor kamu menunjukkan tidak ada gejala depresi. Jika kamu merasa ada gejala yang berkembang atau perlu ruang aman untuk curhat, konsultasi pada ahli.";
+      result = (
+        <span>
+          Hore! Skor kamu menunjukkan
+          <strong>tidak ada gejala gangguan kecemasan.</strong> Jika kamu merasa
+          ada gejala yang berkembang atau perlu ruang aman untuk curhat,
+          konsultasi pada ahli.
+        </span>
+      );
     } else if (scores >= 5 && scores <= 9) {
-      result =
-        "Skor kamu menandakan depresi ringan. Kamu masih menjalani kegiatan sehari-hari, namun dengan kurang bersemangat atau merasa tertarik. Konsultasi dengan ahli kesehatan mental untuk mencari tahu penyebab dan solusinya.";
+      result = (
+        <span>
+          Skor kamu menandakan <strong> gangguan kecemasan ringan.</strong>
+          Biasanya kamu masih dapat mengontrol kecemasanmu, namun kamu merasakan
+          keresahan yang tidak dapat dijelaskan. Konsultasi dengan ahli
+          kesehatan mental untuk mencari tahu penyebab dan solusinya.
+        </span>
+      );
     } else if (scores >= 10 && scores <= 14) {
-      result =
-        "Skor kamu menandakan depresi sedang. Kamu masih menjalani kegiatan sehari-hari, namun dengan bersusah payah. Mungkin, kamu merasa lelah secara fisik dan emosional pada akhir hari. Dapatkan bantuan ahli untuk memahami pikiran, perasaan, dan gejala yang kamu alami.";
-    } else if (scores >= 15 && scores <= 19) {
-      result =
-        "Skor kamu menandakan depresi sedang menuju berat. Mungkin kamu mengalami mood yang buruk dan terus menerus & gejala fisik yang terasa semakin berat. Kamu merasa rendah motivasi & menghindari aktivitas yang sebelumnya menyenangkanmu. Dapatkan bantuan ahli sekarang untuk mencari tahu langkah yang harus kamu ambil.";
-    } else if (scores >= 20 && scores <= 27) {
-      result =
-        "Skor kamu menunjukkan depresi berat. Dapatkan bantuan ahli kesehatan mental sekarang untuk diperiksa secara mendetail & mendapat bantuan mengatasi keadaanmu. Jika tidak diatasi, depresi berat dapat membuatmu kehilangan orang tersayang & menurunkan kemampuanmu beraktivitas sehari-hari.";
+      result = (
+        <span>
+          Skor kamu menandakan <strong>gangguan kecemasan sedang.</strong> Skor
+          kamu menandakan . Kamu sering merasa gelisah dan kesulitan mengontrol
+          kecemasanmu. Gejala fisik seperti gangguan tidur dan kesulitan
+          berfokus mungkin lebih terasa, dan meningkat pada saat stres. Dapatkan
+          bantuan ahli untuk memahami pikiran, perasaan, dan gejala yang kamu
+          alami.
+        </span>
+      );
+    } else if (scores >= 15 && scores <= 21) {
+      result = (
+        <span>
+          Skor kamu menandakan <strong>gangguan kecemasan berat.</strong> Segera
+          dapatkan pemeriksaan dari ahli kesehatan mental. Jika tidak diatasi,
+          gangguan kecemasan berat dapat memengaruhi kemampuanmu melakukan
+          aktivitas sehari-hari, mengambil keputusan, & merawat diri.
+        </span>
+      );
     }
     return result;
   };
@@ -74,8 +97,8 @@ function CheckStress() {
   };
 
   return (
-    <div className="h-auto dark:bg-gray-900 px-5">
-      <div className="flex flex-col items-center justify-center">
+    <div className="h-auto dark:bg-gray-900">
+      <div className="flex flex-col items-center justify-center px-4">
         <div className="pt-20 mr-7">
           <div className="flex flex-col">
             <p className="dark:text-color-primary-200 text-gray-700">
@@ -89,58 +112,46 @@ function CheckStress() {
         <div className="pt-4">
           <fieldset className="flex max-w-md flex-col gap-4">
             <RadioQuestion
-              Question="Kurang senang atau tertarik dalam kegiatan sehari-hari?"
+              Question="Merasa gugup, cemas, atau gelisah?"
               QuestionType="Question1"
               onChange={(value) => handleRadioChange("Question1", value)}
               Id="Question1"
             />
             <RadioQuestion
-              Question="Merasa sedih, muram, dan putus asa?"
+              Question="Tidak dapat menghentikan atau mengontrol kekhawatiran?"
               QuestionType="Question2"
               onChange={(value) => handleRadioChange("Question2", value)}
               Id="Question2"
             />
             <RadioQuestion
-              Question="Sulit tidur atau tidur nyenyak; atau terlalu banyak tidur?"
+              Question="Terlalu banyak mengkhawatirkan berbagai hal?"
               QuestionType="Question3"
               onChange={(value) => handleRadioChange("Question3", value)}
               Id="Question3"
             />
             <RadioQuestion
-              Question="Merasa lelah atau kekurangan energi?"
+              Question="Sulit merasa santai?"
               QuestionType="Question4"
               onChange={(value) => handleRadioChange("Question4", value)}
               Id="Question4"
             />
             <RadioQuestion
-              Question="Tidak napsu makan, atau terlalu banyak makan?"
+              Question="Merasa kurang istirahat hingga sulit untuk diam?"
               QuestionType="Question5"
               onChange={(value) => handleRadioChange("Question5", value)}
               Id="Question5"
             />
             <RadioQuestion
-              Question="Merasa buruk tentang diri sendiri, atau merasa gagal atau mengecewakan diri atau keluargamu?"
+              Question="Mudah kesal atau marah?"
               QuestionType="Question6"
               onChange={(value) => handleRadioChange("Question6", value)}
               Id="Question6"
             />
             <RadioQuestion
-              Question="Kesulitan berkonsentrasi, seperti saat membaca koran atau menonton TV?"
+              Question="Merasa takut hal buruk akan terjadi?"
               QuestionType="Question7"
               onChange={(value) => handleRadioChange("Question7", value)}
               Id="Question7"
-            />
-            <RadioQuestion
-              Question="Bergerak atau berbicara dengan lambat hingga orang lain menyadarinya? Atau merasa kurang istirahat dan tidak bisa diam lebih dari biasanya?"
-              QuestionType="Question8"
-              onChange={(value) => handleRadioChange("Question8", value)}
-              Id="Question8"
-            />
-            <RadioQuestion
-              Question="Merasa lebih baik mati, atau berpikir ingin menyakiti diri sendiri?"
-              QuestionType="Question9"
-              onChange={(value) => handleRadioChange("Question9", value)}
-              Id="Question9"
             />
             <button
               type="submit"
@@ -148,13 +159,19 @@ function CheckStress() {
               onClick={handleResult}
               disabled={!allChecked}
             >
-              Kirim
+              Check Kecemasan Berlebihan
             </button>
             {modalOpen && (
               <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-75">
                 <div className="bg-white dark:bg-gray-800 p-8 rounded-lg w-full max-w-md">
+                  <div className="flex justify-end">
+                    <HiX
+                      onClick={closeModal}
+                      className="dark:bg-color-primary-500 w-5 h-5 rounded-sm"
+                    ></HiX>
+                  </div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Hasil Test Depresi
+                    Hasil Test Kecemasan Berlebihan
                   </h3>
                   <div className="space-y-4">
                     <p className="text-base leading-relaxed text-gray-500 dark:text-white">
@@ -164,13 +181,14 @@ function CheckStress() {
                       {modalContent.result}
                     </p>
                   </div>
-                  <div className="flex justify-end mt-6">
-                    <button
+                  <div className="flex justify-between mt-6">
+                    <Link
                       onClick={closeModal}
+                      to="/doctor"
                       className="bg-color-primary-500 p-3 text-white hover:bg-color-primary-600 focus:ring-4 focus:outline-none focus:ring-color-primary-300 font-medium rounded-lg text-sm px-5 py-2.5"
                     >
-                      Tutup
-                    </button>
+                      Cari Dokter
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -182,4 +200,4 @@ function CheckStress() {
   );
 }
 
-export default CheckStress;
+export default CheckAnxiety;

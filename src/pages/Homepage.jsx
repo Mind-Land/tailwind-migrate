@@ -1,5 +1,10 @@
 import { Badge, Button } from "flowbite-react";
-import { HiChatAlt2, HiTrendingUp, HiUserGroup, HiFingerPrint } from "react-icons/hi";
+import {
+  HiChatAlt2,
+  HiTrendingUp,
+  HiUserGroup,
+  HiFingerPrint,
+} from "react-icons/hi";
 import Getpopulararticles from "../pages/templates/Getpopulararticles";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
@@ -7,10 +12,10 @@ import { Accordion } from "flowbite-react";
 import { faq } from "../data";
 import HeroCheckNow from "../assets/lottie/heroCheck.json";
 import Featurecard from "../components/card/Featurecard";
-import key from "/img/key.png"
+import key from "/img/key.png";
 
 function Homepage() {
-  let naviget = useNavigate();
+  let navigate = useNavigate();
 
   return (
     <>
@@ -28,10 +33,9 @@ function Homepage() {
                 kesehatan mental, dan chat bersama exppert.
               </p>
               <Button
-                href="#"
                 className="inline-flex items-center justify-center"
                 color="primary"
-                onClick={() => naviget("/login")}
+                onClick={() => navigate("/checkstress")}
               >
                 Periksa Sekarang
               </Button>
@@ -100,7 +104,7 @@ function Homepage() {
                   mengklik tombol di bawah.!
                 </p>
 
-                <Button color="light" onClick={() => naviget("/doctor")}>
+                <Button color="light" onClick={() => navigate("/doctor")}>
                   <HiFingerPrint className="mr-2 h-5 w-5" />
                   Cari Ahli
                 </Button>

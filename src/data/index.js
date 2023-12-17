@@ -8,28 +8,27 @@ export const MyFeature = [
     id: 1,
     image: StressIcon,
     title: "Chat dokter",
-    link: "/doctor"
+    link: "/doctor",
   },
   {
     id: 2,
     image: AnxietyIcon,
     title: "Cek Stress",
-    link: "/checkstress"
+    link: "/checkstress",
   },
   {
     id: 3,
     image: DepressionIcon,
     title: "Artikel",
-    link: "/articles"
+    link: "/articles",
   },
   {
     id: 4,
     image: TraumaIcon,
     title: "Chat AI",
-    link: "/chatai"
+    link: "/chatai",
   },
 ];
-
 
 export const navLinks = [
   {
@@ -52,70 +51,58 @@ export const navLinks = [
     path: "/about",
     text: "Tentang",
   },
-  {
-    id: 6,
-    path: "/chatai",
-    text: "ai",
-  },
-  {
-    id: 7,
-    path: "/user",
-    text: "user",
-  },
 ];
 
 export const navLinksAfterLogin = [
   {
     id: 1,
-    path: "/user/",
+    path: "/",
     text: "Beranda",
   },
   {
     id: 2,
-    path: "/user/article",
-    text: "Article",
+    path: "/articles",
+    text: "Artikel",
   },
   {
     id: 3,
-    path: "/user/dokter",
+    path: "/doctor",
     text: "Dokter",
-    icon: "HiUsers"
+    icon: "HiUsers",
   },
   {
-    id: 4,
+    id: 5,
     path: "/chatai",
-    text: "Chat Ai",
-    icon: "HiGlobeAlt"
+    text: "Chat AI",
   },
-]
+];
 
 export const sidebarLinks = [
   {
     id: 1,
     path: "/user/",
     text: "Beranda",
-    icon: "HiHome"
+    icon: "HiHome",
   },
   {
     id: 2,
     path: "/user/article",
     text: "Article",
-    icon: "HiBookOpen"
+    icon: "HiBookOpen",
   },
   {
     id: 3,
     path: "/user/dokter",
     text: "Dokter",
-    icon: "HiUsers"
+    icon: "HiUsers",
   },
   {
     id: 4,
     path: "/user/ai",
     text: "Chat Ai",
-    icon: "HiGlobeAlt"
+    icon: "HiGlobeAlt",
   },
-]
-
+];
 
 export const faq = [
   {

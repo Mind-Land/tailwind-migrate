@@ -2,14 +2,12 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function Horizontalcard({ article }) {
-  const { title, author, postAt, body } = article;
+  const { slug, title, author, timestamp, summary } = article;
 
-  console.log(article);
-
-  const truncatedBody = body.slice(0, 200) + " ...";
+  const truncatedBody = summary.slice(0, 200) + " ...";
 
   // Logika untuk menghitung selisih hari antara postAt dan tanggal sekarang
-  const postDate = new Date(postAt);
+  const postDate = new Date(timestamp);
   const currentDate = new Date();
   const daysAgo = Math.floor((currentDate - postDate) / (1000 * 60 * 60 * 24));
 
@@ -38,7 +36,7 @@ function Horizontalcard({ article }) {
         <span className="text-sm">{`${daysAgo} hari yang lalu`}</span>
       </div>
       <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        <a href="#">{title}</a>
+        <a>{title}</a>
       </h2>
       <p className="mb-5 font-light text-gray-500 dark:text-gray-400">
         {truncatedBody}
@@ -47,13 +45,13 @@ function Horizontalcard({ article }) {
         <div className="flex items-center space-x-4">
           <img
             className="w-7 h-7 rounded-full"
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
-            alt="Bonnie Green avatar"
+            src={author.avatar}
+            alt={author.fullName}
           />
-          <span className="font-medium dark:text-white">{author}</span>
+          <span className="font-medium dark:text-white">{author.fullName}</span>
         </div>
         <Link
-          to="/detailarticles"
+          to={`/articles/detailarticles/${slug}`}
           className="inline-flex items-center font-medium text-color-primary-600 dark:text-primary-500 hover:underline"
         >
           Selengkapnya
@@ -77,10 +75,11 @@ function Horizontalcard({ article }) {
 
 Horizontalcard.propTypes = {
   article: PropTypes.shape({
+    slug: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    postAt: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
+    author: PropTypes.object.isRequired,
+    timestamp: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
   }).isRequired,
 };
 

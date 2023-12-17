@@ -1,11 +1,15 @@
-import { Button, Navbar, DarkThemeToggle } from "flowbite-react";
+import { Button, Navbar, DarkThemeToggle, Dropdown } from "flowbite-react";
 // import logo from "../assets/mindlandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
-import { navLinks } from "../data/index";
 import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+
+import { navLinks } from "../data/index";
+import { AuthContext } from "../context/AuthContext";
 
 function Navbarcomponent() {
   let naviget = useNavigate();
+  const { user } = useContext(AuthContext);
 
   return (
     <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-10 ">
@@ -22,14 +26,24 @@ function Navbarcomponent() {
         </Navbar.Brand>
         <div className="flex md:order-2 gap-2">
           <DarkThemeToggle></DarkThemeToggle>
-          <Button
-            color="primary"
-            className="justify-center"
-            onClick={() => naviget("/Login")}
-          >
-            Masuk
-            <HiChevronRight className="ml-2 h-5 w-5" />
-          </Button>
+          {user ? (
+            <Dropdown label="Dropdown button" dismissOnClick={false}>
+              <Dropdown.Item>Dashboard</Dropdown.Item>
+              <Dropdown.Item>Settings</Dropdown.Item>
+              <Dropdown.Item>Earnings</Dropdown.Item>
+              <Dropdown.Item>Sign out</Dropdown.Item>
+            </Dropdown>
+          ) : (
+            <Button
+              color="primary"
+              className="justify-center"
+              onClick={() => naviget("/Login")}
+            >
+              Masuk
+              <HiChevronRight className="ml-2 h-5 w-5" />
+            </Button>
+          )}
+
           <button
             data-collapse-toggle="navbar-solid-bg"
             type="button"

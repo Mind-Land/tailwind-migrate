@@ -1,16 +1,29 @@
 // import Sidebar from "../../components/navigation/Sidebar";
-import { Outlet, Routes, Route } from "react-router-dom";
+import { Outlet, Routes, Route, useNavigate } from "react-router-dom";
+import { useEffect, useContext } from "react";
+
 import Dashboard from "./Dashboard";
 import Showarticles from "../articles/Showarticles";
 import Showdoctor from "../doctor/Showdoctor";
 import Chatdokter from "./chatdokter/Chatdokter";
-import Navbar from "../../components/navigation/Navbar";
+// import Navbar from "../../components/navigation/Navbar";
 import Createarticle from "./article/Createarticle";
+import { AuthContext } from "../../context/AuthContext";
+import EditProfile from "./EditProfile";
 
 function User() {
+  const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (!localStorage.getItem("user")) {
+      navigate("/");
+    }
+  }, [user, navigate]);
+
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route
@@ -43,11 +56,22 @@ function User() {
             </>
           }
         />
-        <Route path="tambahartikel" element={
-          <>
-            <Createarticle />
-          </>
-        }></Route>
+        <Route
+          path="tambahartikel"
+          element={
+            <>
+              <Createarticle />
+            </>
+          }
+        />
+        <Route
+          path="ubah-profil/:userId"
+          element={
+            <>
+              <EditProfile />
+            </>
+          }
+        />
       </Routes>
       <Outlet />
     </>

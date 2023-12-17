@@ -1,12 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
+import PropTypes from "prop-types";
+
 import Articleskeleton from "../../components/skeleton/Articleskeleton";
 import Templatearticledetail from "../../components/Templatearticledetail";
-import { _Getdetailarticle } from "../../globals/api";
+import { getArticleBySlug } from "../../globals/api";
 
-function Getdetailarticle() {
+function Getdetailarticle({ slug }) {
   const { data, isError, isLoading } = useQuery({
-    queryKey: ["DetailArticleQuery"],
-    queryFn: _Getdetailarticle,
+    queryKey: ["DetailArticleQuery", slug],
+    queryFn: () => getArticleBySlug(slug),
   });
 
   if (isLoading) {
@@ -24,12 +26,17 @@ function Getdetailarticle() {
   }
 
   return (
-  <>
-    {data.map((article) => (
-      <Templatearticledetail key={article.id} article={article} />
-    ))}
-  </>
-);
+    <>
+      {/* {data.map((article) => (
+        <Templatearticledetail key={article.id} article={article} />
+      ))} */}
+      <Templatearticledetail article={data} />
+    </>
+  );
 }
+
+Getdetailarticle.propTypes = {
+  slug: PropTypes.string.isRequired,
+};
 
 export default Getdetailarticle;

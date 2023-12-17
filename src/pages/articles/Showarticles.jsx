@@ -61,6 +61,9 @@ function Showarticles() {
                         selectedCategory === ""
                           ? "Semua Kategori"
                           : selectedCategory
+                              .split("_")
+                              .join(" ")
+                              .replace(/\b\w/g, (l) => l.toUpperCase())
                       }
                       size="sm"
                       color="primary"
@@ -81,7 +84,7 @@ function Showarticles() {
                         Introvert
                       </Dropdown.Item>
                       <Dropdown.Item onClick={() => handleCategorySelect("")}>
-                        Semua kategori
+                        Semua Kategori
                       </Dropdown.Item>
                     </Dropdown>
                   </div>
@@ -93,7 +96,7 @@ function Showarticles() {
                 </div>
               </div>
             </div>
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="grid gap-6 lg:grid-cols-3 sm:grid-cols-2 sm:place-items-center">
               <Getarticles
                 searchTerm={searchTerm}
                 selectedCategory={selectedCategory}

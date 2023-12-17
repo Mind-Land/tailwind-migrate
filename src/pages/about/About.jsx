@@ -1,31 +1,37 @@
 import { Badge } from "flowbite-react";
 import { HiChatAlt2, HiTrendingUp, HiUserGroup } from "react-icons/hi";
+import aboutus from "/img/hero/aboutus.png";
 
 const people = [
   {
+    id: 1,
     name: "Abdul Malik Matoha",
     role: "UI Designer / Frontend Developer",
-    imageUrl: "./public/img/malik.png",
+    imageUrl: "img/avatar/malik.png",
   },
   {
+    id: 2,
     name: "Mohamad Rafiq Daud",
     role: "Frontend Developer",
-    imageUrl: "./public/img/rafiq.jpg",
+    imageUrl: "img/avatar/rafiq.jpg",
   },
   {
+    id: 3,
     name: "M. Diki Iswari",
     role: "Frontend Developer",
-    imageUrl: "./public/img/Diky.jpg",
+    imageUrl: "img/avatar/diki.jpg",
   },
   {
+    id: 4,
     name: "Yanuar Faturahman",
     role: "Backend Developer",
-    imageUrl: "./public/img/rafiq.jpg",
+    imageUrl: "img/avatar/yanuar.jpg",
   },
   {
+    id: 5,
     name: "Azmi Maulidan",
     role: "Frontend Developer",
-    imageUrl: "./public/img/malik.png",
+    imageUrl: "img/avatar/malik.png",
   },
 ];
 
@@ -49,9 +55,9 @@ function About() {
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
               <img
-                src="./public/img/AboutUs2.png"
+                src={aboutus}
                 style={{ mixBlendMode: "luminosity" }}
-                alt="mockup"
+                alt="about us hero image"
               />
             </div>
           </div>
@@ -73,7 +79,7 @@ function About() {
             className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
           >
             {people.map((person) => (
-              <li key={person.name}>
+              <li key={person.id}>
                 <div className="flex items-center gap-x-6">
                   <img
                     className="h-16 w-16 rounded-full"
@@ -125,7 +131,7 @@ function About() {
                 </div>
                 <div className="mt-3 sm:pe-8">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Cek Tingkat Stress
+                    Test Mental
                   </h3>
                   <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                     Merupakan fitur untuk check seberapa besar tingkat depresi

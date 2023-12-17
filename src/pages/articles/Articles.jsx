@@ -15,7 +15,7 @@ function Articles() {
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
-  
+
   const hadnleButtonSearch = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {

@@ -4,28 +4,32 @@ import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
 import Imagecard from "../../components/card/Imagecard";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
+import { Pagination } from "flowbite-react";
 
 function Getarticles({ searchTerm, selectedCategory, onArticleCountChange }) {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const { data, isError, isLoading } = useQuery({
-    queryKey: ["ArticleQuery"],
-    queryFn: getArticles,
+    queryKey: ["ArticleQuery", currentPage],
+    queryFn: () => getArticles(currentPage),
   });
+
+  const onPageChange = (page) => setCurrentPage(page);
 
   const [filteredArticles, setFilteredArticles] = useState([]);
 
   useEffect(() => {
     // Lakukan sesuatu ketika data dari query berubah
     if (data) {
-      const filtered = data.filter((article) => {
+      const filtered = data.results.filter((article) => {
         const isTitleMatch = article.title
           .toLowerCase()
           .includes(searchTerm.toLowerCase());
-        const isAuthorMatch = article.author
+        const isAuthorMatch = article.author.fullName
           .toLowerCase()
           .includes(searchTerm.toLowerCase());
         const isCategoryMatch =
-          selectedCategory === "" ||
-          article.kategory.toLowerCase() === selectedCategory.toLowerCase();
+          selectedCategory === "" || article.category === selectedCategory;
 
         return (
           (searchTerm === "" && selectedCategory === "") ||
@@ -38,6 +42,8 @@ function Getarticles({ searchTerm, selectedCategory, onArticleCountChange }) {
       });
 
       setFilteredArticles(filtered);
+
+      // console.log(filtered);
 
       // Update jumlah artikel dengan memanggil onArticleCountChange
       onArticleCountChange(filtered.length);
@@ -80,12 +86,26 @@ function Getarticles({ searchTerm, selectedCategory, onArticleCountChange }) {
           <ArticlecardSkeleton />
         </>
       )}
-      {isError && <p>Error fetching data</p>}
+      {isError && <p>Gagal mengambil data artikel!</p>}
       {!isLoading &&
         !isError &&
         filteredArticles.map((article) => (
           <Imagecard key={article.id} article={article} />
         ))}
+      {filteredArticles.length === 0 && (
+        <div className="text-center w-screen">
+          <p className="text-gray-500 dark:text-gray-400">Artikel kosong!</p>
+        </div>
+      )}
+      {!isLoading && !isError && (
+        <div className="flex overflow-x-auto sm:justify-center pt-5">
+          <Pagination
+            currentPage={data.currentPage}
+            totalPages={data.totalPages}
+            onPageChange={onPageChange}
+          />
+        </div>
+      )}
     </>
   );
 }

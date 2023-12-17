@@ -1,21 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
-import { getDoctors } from "../../globals/api";
-import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
-import PropTypes from "prop-types";
-import Profilecard from "../../components/card/Profilecard";
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
-function Getdokter({ searchTerm, onDoctorsCountChange }) {
+import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
+import Profilecard from "../../components/card/Profilecard";
+import { getDoctors } from "../../globals/api";
+
+function GetDoctor({ searchTerm, onDoctorsCountChange }) {
   const { data, isError, isLoading } = useQuery({
-    queryKey: ["DokterQuery"],
+    queryKey: ["DoctorQuery"],
     queryFn: getDoctors,
   });
 
   const filteredDoctors = data
-    ? data.filter(
+    ? data.results.filter(
         (dokter) =>
-          dokter.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          dokter.role.toLowerCase().includes(searchTerm.toLowerCase())
+          dokter.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          dokter.job.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : [];
 
@@ -42,11 +43,11 @@ function Getdokter({ searchTerm, onDoctorsCountChange }) {
   );
 }
 
-Getdokter.propTypes = {
+GetDoctor.propTypes = {
   searchTerm: PropTypes.string,
   onDoctorsCountChange: PropTypes.func,
   setModalData: PropTypes.func,
   setModalOpen: PropTypes.func,
 };
 
-export default Getdokter;
+export default GetDoctor;

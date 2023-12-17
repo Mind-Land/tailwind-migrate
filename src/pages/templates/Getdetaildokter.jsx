@@ -1,31 +1,48 @@
-import { getDetailDokter } from "../../globals/api";
 import { useQuery } from "@tanstack/react-query";
-import Profiledetailmodal from "../../components/modal/Profiledetailmodal";
 import PropTypes from "prop-types";
+import { Button } from "flowbite-react";
 
+import { getDetailDokter } from "../../globals/api";
+import Profiledetailmodal from "../../components/modal/Profiledetailmodal";
 
-function Getdetaildokter({openModal, closeModal}) {
+function Getdetaildokter({ id, openModal, closeModal }) {
   const { data, isError, isLoading } = useQuery({
-    queryKey: ["DetailDokterQuery"],
-    queryFn: getDetailDokter,
+    queryKey: ["DetailDokterQuery", id],
+    queryFn: () => getDetailDokter(id),
   });
 
+  if (data) console.log(data);
+
   if (isLoading) {
-    return <>Loading</>;
+    return (
+      <Button disabled>
+        <span className="loading loading-spinner loading-md"></span>
+      </Button>
+    );
   }
 
   if (isError) {
-    return <p>Error fetching data</p>;
+    return (
+      <Button disabled color="failure">
+        Error
+      </Button>
+    );
   }
 
   return (
     <>
-        <Profiledetailmodal key={data.id} profileDetail={data}  openModal={openModal} closeModal={closeModal}/>
+      <Profiledetailmodal
+        key={data.id}
+        profileDetail={data}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
     </>
   );
 }
 
 Getdetaildokter.propTypes = {
+  id: PropTypes.string,
   openModal: PropTypes.bool,
   closeModal: PropTypes.func,
 };
