@@ -52,16 +52,6 @@ export const navLinks = [
     path: "/about",
     text: "Tentang",
   },
-  {
-    id: 6,
-    path: "/chatai",
-    text: "ai",
-  },
-  {
-    id: 7,
-    path: "/user",
-    text: "user",
-  },
 ];
 
 export const navLinksAfterLogin = [

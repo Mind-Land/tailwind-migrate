@@ -7,7 +7,7 @@ import { Configuration, OpenAIApi } from "openai";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useRef, useEffect } from "react";
 
-function Chatsample() {
+function Chat() {
   const [userInput, setUserInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -163,4 +163,4 @@ function Chatsample() {
   );
 }
 
-export default Chatsample;
+export default Chat;

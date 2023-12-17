@@ -159,7 +159,7 @@ const DoctorRegister = () => {
               href="#"
               className="font-medium text-primary-600 hover:underline dark:text-primary-500"
             >
-              <Link className="ml-1" to="/DoctorLogin">
+              <Link className="ml-1" to="/doctorlogin">
                 Masuk disini
               </Link>
             </a>
