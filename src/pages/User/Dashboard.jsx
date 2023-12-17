@@ -6,21 +6,21 @@ function Dashboard() {
           <div className="mx-auto max-w-screen-xl lg:py-10 lg:px-4">
             <div className="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
               <h2 className="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">
-                Powering innovation at{" "}
-                <span className="font-extrabold">200,000+</span> companies
-                worldwide
+                Temukan Keseimbangan Hidupmu Bersama Aplikasi Kesehatan Mental
+                MIND LAND
               </h2>
               <p className="mb-4 font-light">
-                Track work across the enterprise through an open, collaborative
-                platform. Link issues across Jira and ingest data from other
-                software development tools, so your IT support and operations
-                teams have richer contextual information to rapidly respond to
-                requests, incidents, and changes.
-              </p>
-              <p className="mb-4 font-medium">
-                Deliver great service experiences fast - without the complexity
-                of traditional ITSM solutions.Accelerate critical development
-                work, eliminate toil, and deploy changes with ease.
+                Selamat datang di MIND LAND, platform konsultasi kesehatan
+                mental revolusioner yang merangkul teknologi untuk mendukung
+                kesejahteraan emosional Anda. Kami memahami bahwa kesehatan
+                mental adalah bagian integral dari kebahagiaan dan kesuksesan
+                hidup, dan itulah mengapa MIND LAND hadir untuk memberikan akses
+                mudah ke layanan konsultasi melalui chat dengan dokter terkemuka
+                dan asisten virtual cerdas. Di sini, kami tidak hanya membantu
+                Anda menjaga keseimbangan pikiran, tetapi juga memberikan alat
+                untuk mengukur tingkat stres Anda dan menyediakan artikel
+                bermutu tentang kesehatan mental. Temukan keseimbangan hidup
+                yang optimal dengan MIND LAND!
               </p>
             </div>
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
@@ -37,8 +37,9 @@ function Dashboard() {
                   Baca artikel populer mengenai mental health
                 </h5>
                 <p className="font-normal group-hover:text-white text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  Temukan wawasan baru melalui artikel populer tentang kesehatan
+                  mental. Pahami tips praktis untuk menjaga kesehatan pikiran
+                  dan emosimu.
                 </p>
               </a>
               <a
@@ -49,8 +50,9 @@ function Dashboard() {
                   Konsultasi bersama dokter yang expert di bidangnya
                 </h5>
                 <p className="font-normal group-hover:text-white text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  Hubungi dokter terkemuka untuk mendapatkan pandangan
+                  profesional tentang kesehatan mental Anda. Mulai perjalanan
+                  menuju kehidupan yang lebih sehat hari ini.
                 </p>
               </a>
               <a
@@ -61,8 +63,9 @@ function Dashboard() {
                   Tidak perlu khawatir jika kamu butuh teman bicara
                 </h5>
                 <p className="font-normal group-hover:text-white text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of
-                  2021 so far, in reverse chronological order.
+                  Kami di sini untuk mendengarkan. Tak perlu merasa sendiri;
+                  temukan teman bicara yang siap mendukungmu melalui setiap
+                  perjalanan emosionalmu.
                 </p>
               </a>
             </div>

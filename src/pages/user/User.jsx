@@ -1,8 +1,8 @@
 // import Sidebar from "../../components/navigation/Sidebar";
 import { Outlet, Routes, Route } from "react-router-dom";
-import Dashboard from "./dashboard";
-import Showarticles from "../articles/ShowArticles";
-import Showdoctor from "../doctor/ShowDoctor";
+import Dashboard from "./Dashboard";
+import Showarticles from "../articles/Showarticles";
+import Showdoctor from "../doctor/Showdoctor";
 import Chatdokter from "./chatdokter/Chatdokter";
 import Navbar from "../../components/navigation/Navbar";
 import Createarticle from "./article/Cratearticle";

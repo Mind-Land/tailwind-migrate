@@ -11,13 +11,13 @@ import About from "./pages/about/About";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
-import User from "./pages/User/User";
+import User from "./pages/user/User";
 import Chat from "./pages/Ai/Chat";
 import ResetPassword from "./pages/auth/Reset";
 import DoctorLogin from "./pages/auth/doctor/DoctorLogin";
 import DoctorRegister from "./pages/auth/doctor/DoctorRegister";
-import CheckDepression from "./pages/MentalTest/CheckDepression";
-import CheckAnxiety from "./pages/MentalTest/CheckAnxiety";
+import CheckDepression from "./pages/mentaltest/CheckDepression";
+import CheckAnxiety from "./pages/mentaltest/CheckAnxiety";
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = [
