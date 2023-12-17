@@ -1,16 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { Pagination } from "flowbite-react";
 
 import ArticlecardSkeleton from "../../components/skeleton/Cardskeleton";
 import Profilecard from "../../components/card/Profilecard";
 import { getDoctors } from "../../globals/api";
 
 function GetDoctor({ searchTerm, onDoctorsCountChange }) {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const { data, isError, isLoading } = useQuery({
-    queryKey: ["DoctorQuery"],
-    queryFn: getDoctors,
+    queryKey: ["DoctorQuery", currentPage],
+    queryFn: () => getDoctors(currentPage),
   });
+
+  const onPageChange = (page) => setCurrentPage(page);
 
   const filteredDoctors = data
     ? data.results.filter(
@@ -39,6 +44,15 @@ function GetDoctor({ searchTerm, onDoctorsCountChange }) {
         filteredDoctors.map((dokter) => (
           <Profilecard key={dokter.id} profile={dokter} />
         ))}
+      {!isLoading && !isError && (
+        <div className="flex overflow-x-auto sm:justify-center pt-5">
+          <Pagination
+            currentPage={data.currentPage}
+            totalPages={data.totalPages}
+            onPageChange={onPageChange}
+          />
+        </div>
+      )}
     </>
   );
 }
