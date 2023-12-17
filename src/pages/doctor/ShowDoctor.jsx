@@ -47,12 +47,11 @@ function Showdoctor() {
                 </div>
               </div>
             </div>
-            <div className="grid gap-10 md:grid-cols-3">
-              <GetDoctor
-                searchTerm={searchTerm}
-                onDoctorsCountChange={handleDoctorsCountChange}
-              />
-            </div>
+
+            <GetDoctor
+              searchTerm={searchTerm}
+              onDoctorsCountChange={handleDoctorsCountChange}
+            />
           </div>
         </section>
       </div>
