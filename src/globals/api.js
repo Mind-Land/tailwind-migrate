@@ -102,7 +102,6 @@ export const postArticle = async ({
   imageUrl,
   token,
 }) => {
-  console.log(token);
   return postData(
     {
       Accept: "application/json",

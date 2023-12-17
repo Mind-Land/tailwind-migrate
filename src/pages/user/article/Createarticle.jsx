@@ -28,7 +28,7 @@ function Createarticle() {
   const [summary, setSummary] = useState("");
   const [category, setCategory] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
-  // const [errors, setErrors] = useState(null);
+  const [errors, setErrors] = useState(null);
   const imageInputRef = useRef(null);
   const navigate = useNavigate();
 
@@ -68,8 +68,12 @@ function Createarticle() {
   const onSubmit = async (e) => {
     e.preventDefault();
     setOpenModal(false);
+    setErrors(null);
 
-    if (!selectedFile) return;
+    if (!selectedFile) {
+      setErrors("Gambar harus diisi");
+      return;
+    }
 
     const articleData = {
       title,
@@ -93,7 +97,7 @@ function Createarticle() {
   const handleClearAll = () => {
     setContent("");
     setTitle("");
-    // setErrors(null);
+    setErrors(null);
     setSummary("");
     setCategory("");
     setSelectedFile("");
@@ -275,6 +279,7 @@ function Createarticle() {
                       id="category"
                       value={category}
                       onChange={(e) => setCategory(e.target.value)}
+                      required
                     >
                       {" "}
                       <option disabled hidden value="">
@@ -299,6 +304,11 @@ function Createarticle() {
                       onChange={handleFileInputChange}
                       ref={imageInputRef}
                     />
+                    {errors && (
+                      <p className="text-color-danger-700 dark:text-color-warning-200 text-sm mt-2">
+                        {errors}
+                      </p>
+                    )}
                   </div>
                   <div className="mb-2">
                     <div className="block">
