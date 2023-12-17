@@ -11,8 +11,6 @@ function Getdetaildokter({ id, openModal, closeModal }) {
     queryFn: () => getDetailDokter(id),
   });
 
-  if (data) console.log(data);
-
   if (isLoading) {
     return (
       <Button disabled>

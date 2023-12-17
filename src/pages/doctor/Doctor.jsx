@@ -5,13 +5,16 @@ import {
   HiUserGroup,
   HiTrendingUp,
 } from "react-icons/hi";
-import HeroDoctor from "../../assets/lottie/Herodoctor.json";
 import Lottie from "lottie-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import HeroDoctor from "../../assets/lottie/Herodoctor.json";
 import Showdoctor from "./Showdoctor";
 
 const Doctor = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const hadnleButtonSearch = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -24,7 +27,12 @@ const Doctor = () => {
     setSearchTerm(e.target.value);
   };
 
-  
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate("/user/dokter");
+    }
+  }, [navigate]);
+
   return (
     <>
       <div className="h-screen">

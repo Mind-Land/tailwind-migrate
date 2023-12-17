@@ -56,7 +56,7 @@ export const navLinks = [
 export const navLinksAfterLogin = [
   {
     id: 1,
-    path: "/user/",
+    path: "/user",
     text: "Beranda",
   },
   {
@@ -81,7 +81,7 @@ export const navLinksAfterLogin = [
 export const sidebarLinks = [
   {
     id: 1,
-    path: "/user/",
+    path: "/user",
     text: "Beranda",
     icon: "HiHome",
   },

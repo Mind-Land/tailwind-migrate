@@ -5,12 +5,14 @@ import {
   HiUserGroup,
   HiTrendingUp,
 } from "react-icons/hi";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 // import heroarticle from "../../assets/heroarticle.png";
 import Showarticles from "./Showarticles";
-import { useState } from "react";
 
 function Articles() {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
@@ -22,6 +24,12 @@ function Articles() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate("/user/article");
+    }
+  }, [navigate]);
 
   return (
     <>

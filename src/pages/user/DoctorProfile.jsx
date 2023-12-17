@@ -51,14 +51,14 @@ const DoctorProfile = () => {
     queryFn: () => getDetailDokter(JSON.parse(localStorage.getItem("user")).id),
   });
 
-  // const {
-  //   data: userData,
-  //   isLoading: isLoadingUserData,
-  //   error: errorUsereData,
-  // } = useQuery({
-  //   queryKey: ["userData"],
-  //   queryFn: () => getDetailUser(JSON.parse(localStorage.getItem("user")).id),
-  // });
+  //   const {
+  //     data: userData,
+  //     isLoading: isLoadingUserData,
+  //     error: errorUsereData,
+  //   } = useQuery({
+  //     queryKey: ["userData"],
+  //     queryFn: () => getDetailUser(JSON.parse(localStorage.getItem("user")).id),
+  //   });
 
   const {
     data: userArticlesData,
@@ -160,7 +160,7 @@ const DoctorProfile = () => {
                     </p>
                     <div className="mt-6 flex flex-wrap gap-4 justify-center">
                       <Link
-                        to={`/user/ubah-profil/${userProfileData?.id}`}
+                        to={`/user/ubah-profil-dokter/${userProfileData?.id}`}
                         className="font-medium text-primary-600 bg-color-primary-500 dark:text-primary-500 text-white py-2 px-4 rounded-md"
                       >
                         Ubah data profil
@@ -194,10 +194,10 @@ const DoctorProfile = () => {
               <div className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 overflow-hidden shadow rounded-lg border col-span-4 sm:col-span-9">
                 <div className="px-4 py-5 sm:px-6">
                   <h3 className="text-lg leading-6 font-bold text-black dark:text-white">
-                    Profil User
+                    Profil Dokter
                   </h3>
                   <p className="mt-1 max-w-2xl text-sm text-gray-500 dark:text-gray-200">
-                    Informasi user yang terdaftar di sistem
+                    Informasi dokter yang terdaftar di sistem
                   </p>
                 </div>
                 <div className="border-y border-y-gray-200 dark:border-y-gray-600 border-gray-200 dark:border-gray-600 px-4 py-5 sm:p-0">

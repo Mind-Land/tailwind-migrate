@@ -11,6 +11,8 @@ import Createarticle from "./article/Createarticle";
 import { AuthContext } from "../../context/AuthContext";
 import EditProfile from "./EditProfile";
 import DoctorProfile from "./DoctorProfile";
+import UserProfile from "./UserProfile";
+import EditUserProfile from "./EditUserProfile";
 
 function User() {
   const navigate = useNavigate();
@@ -68,19 +70,26 @@ function User() {
         <Route
           path="profil"
           element={
-            <>
+            JSON.parse(localStorage.getItem("user"))?.roles === "user" ? (
+              <UserProfile />
+            ) : (
               <DoctorProfile />
-            </>
+            )
+            // <>
+            //   <DoctorProfile />
+            // </>
           }
         />
         <Route
-          path="ubah-profil/:userId"
+          path="ubah-profil-dokter/:userId"
           element={
             <>
               <EditProfile />
             </>
           }
         />
+
+        <Route path="ubah-profil/:userId" element={<EditUserProfile />} />
       </Routes>
       <Outlet />
     </>

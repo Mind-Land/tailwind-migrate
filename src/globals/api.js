@@ -86,6 +86,10 @@ export const getPopularArticle = async (currentPage = 1, hit = 50) => {
   return fetchData(`/article?page=${currentPage}&${hit ? `?hit=${hit}` : ""}`);
 };
 
+export const getDetailUser = async (id) => {
+  return fetchData(`/user/${id}`);
+};
+
 export const getDetailDokter = async (id) => {
   return fetchData(`/doctor/${id}`);
 };

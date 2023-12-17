@@ -5,6 +5,7 @@ import {
   HiUserGroup,
   HiFingerPrint,
 } from "react-icons/hi";
+import { useEffect } from "react";
 import Getpopulararticles from "../pages/templates/Getpopulararticles";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
@@ -16,6 +17,12 @@ import key from "/img/key.png";
 
 function Homepage() {
   let navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      navigate("/user");
+    }
+  }, [navigate]);
 
   return (
     <>

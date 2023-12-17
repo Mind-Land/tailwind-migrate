@@ -25,8 +25,10 @@ function Navbarcomponent() {
   const { user } = useContext(AuthContext);
   const { logout } = useLogout();
 
-  const handleLogout = () => {
+  const handleLogout = (e) => {
+    e.preventDefault();
     logout();
+    navigate("/");
   };
 
   // useEffect(() => {
@@ -130,7 +132,7 @@ function Navbarcomponent() {
                     {user.email}
                   </span>
                 </Dropdown.Header>
-                <NavLink to="/user/">
+                <NavLink to="/user">
                   <Dropdown.Item>Beranda</Dropdown.Item>
                 </NavLink>
                 <NavLink to="/user/profil">
