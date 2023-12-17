@@ -11,6 +11,7 @@ import logo from "../../assets/mindlandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
 import { HiChatAlt2 } from "react-icons/hi";
 import { navLinks } from "../../data/index";
+// import { useEffect } from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import { navLinksAfterLogin } from "../../data/index";
 import { useContext } from "react";
@@ -114,7 +115,7 @@ function Navbarcomponent() {
                 inline
                 label={
                   <Avatar
-                    alt={user.fullName ? user.fullName : user.username}
+                    alt={user.name || user.username}
                     img={user.avatar}
                     rounded
                     className="mr-2"
@@ -123,13 +124,16 @@ function Navbarcomponent() {
               >
                 <Dropdown.Header>
                   <span className="block text-sm">
-                    {user.name ? user.name : user.username}
+                    {user.username || user.name}
                   </span>
                   <span className="block truncate text-sm font-medium">
                     {user.email}
                   </span>
                 </Dropdown.Header>
-                <NavLink to="/user">
+                <NavLink to="/user/">
+                  <Dropdown.Item>Beranda</Dropdown.Item>
+                </NavLink>
+                <NavLink to="/user/profil">
                   <Dropdown.Item>Profile</Dropdown.Item>
                 </NavLink>
                 {user.roles === "doctor" && (
@@ -138,8 +142,8 @@ function Navbarcomponent() {
                   </NavLink>
                 )}
                 <Dropdown.Divider />
-                <NavLink>
-                  <Dropdown.Item onClick={handleLogout}>Keluar</Dropdown.Item>
+                <NavLink onClick={handleLogout}>
+                  <Dropdown.Item>Keluar</Dropdown.Item>
                 </NavLink>
               </Dropdown>
             </>

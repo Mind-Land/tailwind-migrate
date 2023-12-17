@@ -1,13 +1,18 @@
 import { Card, Button } from "flowbite-react";
 import { HiOutlineChat, HiOutlineInformationCircle } from "react-icons/hi";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Getdetaildokter from "../../pages/templates/Getdetaildokter";
+import { AuthContext } from "../../context/AuthContext";
 
 function Profilecard({ profile }) {
   const { id, name, job, pengalaman, followers, avatar } = profile;
 
   const [isModalOpen, setModalOpen] = useState(false);
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const openModal = () => {
     setModalOpen(true);
@@ -23,6 +28,16 @@ function Profilecard({ profile }) {
     } else {
       return followers.toString();
     }
+  };
+
+  const handleChat = (e) => {
+    e.preventDefault();
+
+    if (user) {
+      return navigate("/user/chatdokter");
+    }
+
+    return navigate("/login");
   };
 
   return (
@@ -70,7 +85,7 @@ function Profilecard({ profile }) {
               <HiOutlineInformationCircle className="mr-1 h-4 w-4" />
               Cek Detail
             </Button>
-            <Button color="light">
+            <Button color="light" onClick={handleChat}>
               <HiOutlineChat className="mr-1 h-4 w-4" />
               Kirim Pesan
             </Button>

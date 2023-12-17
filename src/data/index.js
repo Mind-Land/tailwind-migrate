@@ -56,24 +56,25 @@ export const navLinks = [
 export const navLinksAfterLogin = [
   {
     id: 1,
-    path: "/",
+    path: "/user/",
     text: "Beranda",
   },
   {
     id: 2,
-    path: "/articles",
-    text: "Artikel",
+    path: "/user/article",
+    text: "Article",
   },
   {
     id: 3,
-    path: "/doctor",
+    path: "/user/dokter",
     text: "Dokter",
     icon: "HiUsers",
   },
   {
-    id: 5,
+    id: 4,
     path: "/chatai",
     text: "Chat AI",
+    icon: "HiGlobeAlt",
   },
 ];
 

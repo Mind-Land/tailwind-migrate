@@ -103,8 +103,12 @@ function Createarticle() {
   useEffect(() => {
     const isDoctor = JSON.parse(localStorage.getItem("user"));
 
+    if (!isDoctor) {
+      return navigate(-1);
+    }
+
     if (isDoctor.roles !== "doctor") {
-      navigate("/");
+      return navigate(-1);
     }
   }, [navigate]);
 

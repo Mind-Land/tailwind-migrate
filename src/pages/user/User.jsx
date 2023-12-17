@@ -6,10 +6,11 @@ import Dashboard from "./Dashboard";
 import Showarticles from "../articles/Showarticles";
 import Showdoctor from "../doctor/Showdoctor";
 import Chatdokter from "./chatdokter/Chatdokter";
-// import Navbar from "../../components/navigation/Navbar";
+import Navbar from "../../components/navigation/Navbar";
 import Createarticle from "./article/Createarticle";
 import { AuthContext } from "../../context/AuthContext";
 import EditProfile from "./EditProfile";
+import DoctorProfile from "./DoctorProfile";
 
 function User() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ function User() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route
@@ -61,6 +62,14 @@ function User() {
           element={
             <>
               <Createarticle />
+            </>
+          }
+        />
+        <Route
+          path="profil"
+          element={
+            <>
+              <DoctorProfile />
             </>
           }
         />

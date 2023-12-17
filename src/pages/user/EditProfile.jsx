@@ -274,7 +274,7 @@ const EditProfile = () => {
                       <Button
                         color="danger"
                         className="w-full"
-                        onClick={() => navigation("/user")}
+                        onClick={() => navigation("/user/profil")}
                       >
                         Kembali
                       </Button>

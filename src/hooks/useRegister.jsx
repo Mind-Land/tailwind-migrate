@@ -90,7 +90,7 @@ export const useRegister = () => {
 
       setIsLoading(false);
       notify("success");
-      navigate("/");
+      navigate("/user");
     }
   };
 

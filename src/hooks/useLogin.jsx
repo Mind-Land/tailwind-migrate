@@ -81,7 +81,7 @@ export const useLogin = () => {
 
       setIsLoading(false);
       notify("success");
-      navigate("/");
+      navigate("/user");
     }
   };
 

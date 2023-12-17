@@ -14,7 +14,7 @@ import About from "./pages/about/About";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
-import User from "./pages/user/user";
+import User from "./pages/user/User";
 import Chat from "./pages/ai/Chat";
 import ResetPassword from "./pages/auth/Reset";
 import CheckStress from "./pages/CheckStress/CheckStress";
@@ -29,6 +29,8 @@ const pagesWithoutNavbarFooter = [
   "/reset",
   "/register",
   "/register-doctor",
+  "/user",
+  "/user/*",
 ];
 
 function App() {
