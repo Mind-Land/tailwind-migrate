@@ -1,13 +1,16 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/flowbite-react/lib/esm/**/*.js'
+    "node_modules/flowbite-react/lib/esm/**/*.js",
+    "./node_modules/flowbite/**/*.js",
   ],
   plugins: [
-    // eslint-disable-next-line no-undef
-    require('flowbite/plugin'),
+    require("flowbite/plugin"),
+    require("tailwind-scrollbar-hide"),
+    require("daisyui"),
   ],
   theme: {
     colors: {
@@ -56,7 +59,6 @@ export default {
       "color-danger-700": "#B72D19",
       "color-danger-800": "#93170F",
       "color-danger-900": "#7A090A",
-    }
+    },
   },
-  darkMode: 'class',
-}
+};

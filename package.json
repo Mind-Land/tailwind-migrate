@@ -7,26 +7,51 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json": "json-server --watch db.json",
+    "serve": "http-server dist --port 9000"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.8.7",
+    "aos": "^3.0.0-beta.6",
+    "dotenv": "^16.3.1",
     "flowbite": "^2.2.0",
     "flowbite-react": "^0.7.0",
+    "http-server": "^14.1.1",
+    "lottie-react": "^2.4.0",
+    "next-images": "^1.8.5",
+    "openai": "^3.1.0",
+    "quill": "^1.3.7",
+    "quill-image-resize": "^3.0.9",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-lazy-load": "^4.0.1",
+    "react-loading-skeleton": "^3.3.1",
+    "react-quill": "^2.0.0",
+    "react-toastify": "^9.1.3",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.16",
+    "axios": "^1.6.2",
+    "daisyui": "^4.4.19",
     "eslint": "^8.53.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "flowbite-typography": "^1.0.3",
     "json-server": "^0.17.4",
     "postcss": "^8.4.31",
+    "react-router-dom": "^6.20.0",
+    "sharp": "^0.33.0",
+    "svgo": "^3.1.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss": "^3.3.5",
-    "vite": "^5.0.0"
+    "vite": "^5.0.0",
+    "vite-plugin-html": "^2.0.0",
+    "vite-plugin-image-optimizer": "^1.1.7"
   }
 }
