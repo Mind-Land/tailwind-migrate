@@ -8,7 +8,7 @@ import {
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import heroarticle from "../../assets/heroarticle.png";
-import ShowArticles from "./Showarticles";
+import Articleshow from "./Articleshow";
 import artikel from "/img/hero/artikel.png";
 
 function Articles() {
@@ -86,7 +86,7 @@ function Articles() {
           </div>
         </section>
       </div>
-      <ShowArticles />
+      <Articleshow />
     </>
   );
 }

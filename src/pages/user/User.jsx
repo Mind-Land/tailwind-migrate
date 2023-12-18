@@ -3,8 +3,6 @@ import { Outlet, Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect, useContext } from "react";
 
 import Dashboard from "./Dashboard";
-import Showarticles from "../articles/Showarticles";
-import Showdoctor from "../doctor/Showdoctor";
 import Chatdokter from "./chatdokter/Chatdokter";
 import Navbar from "../../components/navigation/Navbar";
 import Createarticle from "./article/Createarticle";
@@ -13,6 +11,8 @@ import EditProfile from "./EditProfile";
 import DoctorProfile from "./DoctorProfile";
 import UserProfile from "./UserProfile";
 import EditUserProfile from "./EditUserProfile";
+import Articleshow from "../articles/Articleshow";
+import DoctorShow from "../doctor/Doctorshow";
 
 
 function User() {
@@ -35,7 +35,7 @@ function User() {
           element={
             <>
               <div className="bg-white dark:bg-gray-900 min-h-screen px-4 pt-20 md:pt-10">
-                <Showarticles />
+                <Articleshow />
               </div>
             </>
           }
@@ -45,7 +45,7 @@ function User() {
           element={
             <>
               <div className=" bg-white dark:bg-gray-900 min-h-screen px-4 pt-20 md:pt-10">
-                <Showdoctor />
+                <DoctorShow />
               </div>
             </>
           }

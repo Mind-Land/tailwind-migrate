@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import HeroDoctor from "../../assets/lottie/Herodoctor.json";
-import ShowDoctor from "./ShowDoctor";
+import DoctorShow from "./Doctorshow";
 
 const Doctor = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -92,7 +92,7 @@ const Doctor = () => {
           </div>
         </section>
       </div>
-      <ShowDoctor />
+      <DoctorShow />
     </>
   );
 };

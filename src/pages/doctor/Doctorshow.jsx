@@ -3,7 +3,7 @@ import { useState } from "react";
 import { TextInput } from "flowbite-react";
 import GetDoctor from "../templates/GetDoctor";
 
-function ShowDoctor() {
+function DoctorShow() {
   const [searchTerm, setSearchTerm] = useState("");
   const [doctorsCount, setDoctorsCount] = useState(0);
 
@@ -58,4 +58,4 @@ function ShowDoctor() {
   );
 }
 
-export default ShowDoctor;
+export default DoctorShow;

@@ -6,7 +6,7 @@ import Getpopulararticles from "../templates/Getpopulararticles";
 
 import { useState } from "react";
 
-function ShowArticles() {
+function Articleshow() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [articleCount, setArticleCount] = useState(0);
@@ -106,4 +106,4 @@ function ShowArticles() {
   );
 }
 
-export default ShowArticles;
+export default Articleshow;
