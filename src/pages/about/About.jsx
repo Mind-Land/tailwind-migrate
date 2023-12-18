@@ -1,39 +1,8 @@
 import { Badge } from "flowbite-react";
 import { HiChatAlt2, HiTrendingUp, HiUserGroup } from "react-icons/hi";
 import aboutus from "/img/hero/aboutus.png";
+import { people } from "../../data";
 
-const people = [
-  {
-    id: 1,
-    name: "Abdul Malik Matoha",
-    role: "UI Designer / Frontend Developer",
-    imageUrl: "img/avatar/malik.png",
-  },
-  {
-    id: 2,
-    name: "Mohamad Rafiq Daud",
-    role: "Frontend Developer",
-    imageUrl: "img/avatar/rafiq.jpg",
-  },
-  {
-    id: 3,
-    name: "M. Diki Iswari",
-    role: "Frontend Developer",
-    imageUrl: "img/avatar/diki.jpg",
-  },
-  {
-    id: 4,
-    name: "Yanuar Faturahman",
-    role: "Backend Developer",
-    imageUrl: "img/avatar/yanuar.jpg",
-  },
-  {
-    id: 5,
-    name: "Azmi Maulidan",
-    role: "Frontend Developer",
-    imageUrl: "img/avatar/malik.png",
-  },
-];
 
 function About() {
   return (
@@ -82,7 +51,7 @@ function About() {
               <li key={person.id}>
                 <div className="flex items-center gap-x-6">
                   <img
-                    className="h-16 w-16 rounded-full"
+                    className="h-16 w-16 rounded-full object-cover"
                     src={person.imageUrl}
                     alt=""
                   />

@@ -62,9 +62,8 @@ const DoctorRegister = () => {
   return (
     <>
       {isLoading && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <span className="loading loading-dots loading-lg"></span>
-        </div>
+        <div className="absolute top-1/2 lg:left-[47%] left-[45%] w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-600"></div>
+        
       )}
       <div className="flex flex-col lg:flex-row h-screen">
         <div className="absolute top-0 left-0 p-8 md:p-8 xl:p-12">

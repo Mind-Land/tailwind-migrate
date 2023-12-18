@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 import Getdetaildokter from "../../pages/templates/Getdetaildokter";
 import { AuthContext } from "../../context/AuthContext";
-import background from "/img/backgroundprofilecard.png"
+import background from "/img/backgroundprofilecard.png";
 
 function Profilecard({ profile }) {
   const { id, name, job, pengalaman, followers, avatar } = profile;

@@ -51,6 +51,41 @@ export const navLinks = [
     path: "/about",
     text: "Tentang",
   },
+  
+];
+
+
+export const people = [
+  {
+    id: 1,
+    name: "Abdul Malik Matoha",
+    role: "UI Designer / Frontend Developer",
+    imageUrl: "img/avatar/malik.png",
+  },
+  {
+    id: 2,
+    name: "Mohamad Rafiq Daud",
+    role: "Frontend Developer",
+    imageUrl: "img/avatar/rafiq.jpg",
+  },
+  {
+    id: 3,
+    name: "M. Diki Iswari",
+    role: "Frontend Developer",
+    imageUrl: "img/avatar/diki.jpg",
+  },
+  {
+    id: 4,
+    name: "Yanuar Faturahman",
+    role: "Backend Developer",
+    imageUrl: "img/avatar/yanuar.jpg",
+  },
+  {
+    id: 5,
+    name: "Azmi Maulidan",
+    role: "Frontend Developer",
+    imageUrl: "img/avatar/azmi.png",
+  },
 ];
 
 export const navLinksAfterLogin = [
@@ -108,32 +143,32 @@ export const sidebarLinks = [
 export const faq = [
   {
     id: 1,
-    title: "Apakah Boleh punya pacar 1?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "apa itu mindland?",
+    desc: "Mindland, sebuah platform kesehatan mental menyediakan fitur-fitur seperti Chat AI, evaluasi tingkat depresi dan kecemasan berlebihan, konsultasi dengan tenaga medis, dan artikel khusus untuk pasien. Dengan akses mudah dan dukungan komprehensif, Mindland hadir sebagai sumber pertolongan pertama yang dapat diandalkan bagi kesehatan mental masyarakat.",
   },
   {
     id: 2,
-    title: "Apakah Boleh punya pacar 2?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Bagaimana artikel kesehatan mental dapat memberikan inspirasi?",
+    desc: "LMindland menyajikan artikel kesehatan mental yang menginspirasi, memberikan wawasan, dan membantu pengguna mencapai keseimbangan emosional.",
   },
   {
     id: 3,
-    title: "Apakah Boleh punya pacar 3?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apa yang dimaksud dengan Chat AI di Mindland?",
+    desc: "Chat AI adalah fitur yang membantu pengguna menjaga kesejahteraan mental melalui interaksi percakapan dengan kecerdasan buatan.",
   },
   {
     id: 4,
-    title: "Apakah Boleh punya pacar 4?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Bagaimana beragam fitur di Mindland dapat membantu pengguna?",
+    desc: "Mindland menyediakan fitur-fitur seperti Chat AI, artikel kesehatan mental, dan lainnya untuk membantu pengguna menemukan solusi terbaik dalam menjaga kesehatan mental.",
   },
   {
     id: 5,
-    title: "Apakah Boleh punya pacar 5?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "Apakah kebebasan eksplorasi di Mindland memiliki batasan?",
+    desc: "Tidak ada batasan dalam eksplorasi fitur di Mindland. Pengguna bebas menjelajahi dan memanfaatkan sumber daya yang tersedia sesuai kebutuhan mereka.",
   },
   {
     id: 6,
-    title: "Apakah Boleh punya pacar 6?",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estlaborum.",
+    title: "apakah Mindland mengutamakan kesejahteraan, kebebasan eksplorasi?",
+    desc: "Mindland didesain untuk memberikan pengalaman holistik. Dengan fitur-fitur seperti Chat AI, artikel kesehatan mental, dan evaluasi cek mental, Mindland mendukung pengguna mencapai kesejahteraan dan keseimbangan dalam hidup. ",
   },
 ];

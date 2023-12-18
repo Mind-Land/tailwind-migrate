@@ -182,6 +182,21 @@ function Navbarcomponent() {
                   {link.text}
                 </NavLink>
               ))}
+          <Dropdown
+            label={
+              <p className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-color-primary-700 md:p-0 dark:text-white md:dark:hover:text-color-primary-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                Cek mental
+              </p>
+            }
+            inline
+          >
+            <NavLink to="/checkdepression">
+              <Dropdown.Item>Cek tingkat depresi</Dropdown.Item>
+            </NavLink>
+            <NavLink to="/checkanxiety">
+              <Dropdown.Item>Cek tingkat cemas</Dropdown.Item>
+            </NavLink>
+          </Dropdown>
         </Navbar.Collapse>
       </Navbar>
     </div>

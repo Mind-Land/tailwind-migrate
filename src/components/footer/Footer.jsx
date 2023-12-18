@@ -38,12 +38,12 @@ function Footer() {
                 </h2>
                 <ul className="text-gray-600 dark:text-gray-400">
                   <li className="mb-4">
-                    <a href="" className="hover:underline ">
+                    <a href="https://github.com/Mind-Land" className="hover:underline ">
                       Github
                     </a>
                   </li>
                   <li>
-                    <a href="" className="hover:underline">
+                    <a href="https://discord.com/invite/ZdxbNvMH" className="hover:underline">
                       Discord
                     </a>
                   </li>

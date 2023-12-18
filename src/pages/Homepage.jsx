@@ -3,7 +3,6 @@ import {
   HiChatAlt2,
   HiTrendingUp,
   HiUserGroup,
-  HiFingerPrint,
 } from "react-icons/hi";
 import { useEffect } from "react";
 import Getpopulararticles from "../pages/templates/Getpopulararticles";
@@ -36,15 +35,16 @@ function Homepage() {
                 Teman Setia Kamu
               </h1>
               <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
-                Chat psikolog, test tingkat stress, forum diskusi, artikel
-                kesehatan mental, dan chat bersama exppert.
+                Optimalkan kesejahteraan mentalmu: Temui keseimbangan dengan
+                Chat AI, terinspirasi oleh artikel kesehatan mental, dan
+                evaluasi tingkat kesehatanmu melalui cek mental
               </p>
               <Button
                 className="inline-flex items-center justify-center"
                 color="primary"
-                onClick={() => navigate("/checkstress")}
+                onClick={() => navigate("/login")}
               >
-                Periksa Sekarang
+                Cari Tahu Sekarang
               </Button>
               <p className="mt-6 mb-4 font-bold text-gray-800 dark:text-white">
                 Layanan Favorite Kami
@@ -54,7 +54,7 @@ function Homepage() {
                   Chat AI
                 </Badge>
                 <Badge color="primary" icon={HiUserGroup}>
-                  Forum Diskusi
+                  Artikel
                 </Badge>
                 <Badge color="primary" icon={HiTrendingUp}>
                   Cek Tingkat Stress
@@ -103,14 +103,10 @@ function Homepage() {
               </div>
               <div>
                 <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
-                  Jika anda punya keluhan, segera hubungi para ahli dengan
-                  mengklik tombol di bawah.!
+                  Jelajahi beragam fitur di Mindland, temukan solusi terbaik
+                  untuk kesehatan mentalmu. Kebebasan eksplorasi, kesejahteraan,
+                  dan keseimbangan dalam genggamanmu.
                 </p>
-
-                <Button color="light" onClick={() => navigate("/doctor")}>
-                  <HiFingerPrint className="mr-2 h-5 w-5" />
-                  Cari Ahli
-                </Button>
               </div>
             </div>
             <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">

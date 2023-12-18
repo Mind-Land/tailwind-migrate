@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import heroarticle from "../../assets/heroarticle.png";
 import Showarticles from "./Showarticles";
-import artikel from "/img/hero/artikel.png"
+import artikel from "/img/hero/artikel.png";
 
 function Articles() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -54,7 +54,7 @@ function Articles() {
                   Chat AI
                 </Badge>
                 <Badge color="primary" icon={HiUserGroup}>
-                  Forum Diskusi
+                  Artikel
                 </Badge>
                 <Badge color="primary" icon={HiTrendingUp}>
                   Cek Tingkat Stress

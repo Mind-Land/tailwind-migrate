@@ -55,7 +55,7 @@ const Doctor = () => {
                   Chat AI
                 </Badge>
                 <Badge color="primary" icon={HiUserGroup}>
-                  Forum Diskusi
+                  Artikel
                 </Badge>
                 <Badge color="primary" icon={HiTrendingUp}>
                   Cek Tingkat Stress

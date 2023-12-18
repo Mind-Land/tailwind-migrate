@@ -36,9 +36,7 @@ function Login() {
   return (
     <>
       {isLoading && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <span className="loading loading-dots loading-lg"></span>
-        </div>
+        <div className="absolute top-1/2 lg:left-[47%] left-[45%] w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-600"></div>
       )}
       <div className="h-screen flex items-center justify-center">
         <div className="top-0 left-0 p-6 md:p-12 xl:p-12 absolute">
