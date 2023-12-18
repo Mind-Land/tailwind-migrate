@@ -55,64 +55,6 @@ function Navbarcomponent() {
           {user ? (
             <>
               <Dropdown
-                label=""
-                renderTrigger={() => (
-                  <Button color="primary" size="sm" className="mr-4">
-                    <HiChatAlt2 className="h-4 w-4" />
-                  </Button>
-                )}
-                color="primary"
-                className="w-4/5 md:w-3/5 lg:w-1/5 h-96 overflow-auto"
-              >
-                <Dropdown.Header>
-                  <span className="block text-sm">Chat dokter</span>
-                </Dropdown.Header>
-                <Dropdown.Item>
-                  <Link to="/user/chatdokter" className="flex ">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="rounded-full w-11 h-11 object-cover"
-                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww"
-                        alt="Leslie image"
-                      />
-                    </div>
-                    <div className="w-full ps-3 text-left">
-                      <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                        <span className="font-semibold text-gray-900 dark:text-white">
-                          Leslie Livingston
-                        </span>
-                        <br />
-                      </div>
-                      <div className="text-xs text-blue-600 dark:text-blue-500">
-                        1 hour ago
-                      </div>
-                    </div>
-                  </Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <a href="#" className="flex ">
-                    <div className="flex-shrink-0">
-                      <img
-                        className="rounded-full w-11 h-11 object-cover"
-                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9jdG9yfGVufDB8fDB8fHww"
-                        alt="Leslie image"
-                      />
-                    </div>
-                    <div className="w-full ps-3 text-left">
-                      <div className="text-gray-500 text-sm mb-1.5 dark:text-gray-400">
-                        <span className="font-semibold text-gray-900 dark:text-white">
-                          Leslie Livingston
-                        </span>
-                        <br />
-                      </div>
-                      <div className="text-xs text-blue-600 dark:text-blue-500">
-                        1 hour ago
-                      </div>
-                    </div>
-                  </a>
-                </Dropdown.Item>
-              </Dropdown>
-              <Dropdown
                 arrowIcon={false}
                 inline
                 label={

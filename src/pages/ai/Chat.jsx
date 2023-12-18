@@ -56,7 +56,7 @@ function Chat() {
   console.log(messages);
 
   const config = new Configuration({
-    apiKey: "",
+    apiKey: import.meta.env.VITE_APP_MIND_LAND_KEY,
   });
   const openai = new OpenAIApi(config);
 
@@ -109,9 +109,9 @@ function Chat() {
                     </div>
                   </div>
                   <img
-                    src="/img/rafiq.jpg"
+                    src="/img/brandlogo.png"
                     alt="My profile"
-                    className="w-6 h-6 rounded-full order-1"
+                    className="w-6 h-6 rounded-full order-1 object-cover"
                   />
                 </div>
               </div>

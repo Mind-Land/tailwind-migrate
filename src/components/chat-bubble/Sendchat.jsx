@@ -11,7 +11,7 @@ function Sendchat({ name, text }) {
         </div>
       </div>
       <img
-        src="/img/rafiq.jpg"
+        src={JSON.parse(localStorage.getItem('user')).avatar}
         alt={`${name} profile picutre`}
         className="w-6 h-6 rounded-full order-2 object-cover"
       />

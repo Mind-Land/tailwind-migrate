@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import logo from "/img/brandlogo.png"
 function Recievechat({ name, text }) {
   return (
     <>
@@ -11,9 +11,9 @@ function Recievechat({ name, text }) {
         </div>
       </div>
       <img
-        src="/img/rafiq.jpg"
+        src={logo}
         alt={`${name} profile picutre`}
-        className="w-6 h-6 rounded-full order-1"
+        className="w-6 h-6 rounded-full order-1 object-cover"
       />
     </>
   );
