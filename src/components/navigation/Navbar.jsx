@@ -11,21 +11,37 @@ import logo from "/img/brandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
 import { HiChatAlt2 } from "react-icons/hi";
 import { navLinks } from "../../data/index";
-import { NavLink, useNavigate, useLocation, Link } from "react-router-dom";
+// import { useEffect } from "react";
+import { NavLink, useNavigate, Link } from "react-router-dom";
 import { navLinksAfterLogin } from "../../data/index";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { useLogout } from "../../hooks/useLogout";
+
 function Navbarcomponent() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  // const location = useLocation();
+  // const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const { user } = useContext(AuthContext);
+  const { logout } = useLogout();
 
-  useEffect(() => {
-    // Determine whether the user is logged in based on the current path
-    setIsUserLoggedIn(location.pathname.startsWith("/user"));
-  }, [location]);
+  const handleLogout = (e) => {
+    e.preventDefault();
+    logout();
+    navigate("/");
+  };
+
+  // useEffect(() => {
+  //   // Determine whether the user is logged in based on the current path
+  //   setIsUserLoggedIn(location.pathname.startsWith("/user"));
+  // }, [location]);
 
   return (
-    <div className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-20">
+    <div
+      className="bg-white border-gray-200 dark:bg-gray-800 fixed w-full z-20"
+      data-aos="fade-down"
+      data-aos-duration="1700"
+    >
       <Navbar fluid className="max-w-screen-xl mx-auto">
         <Navbar.Brand href="/">
           <img
@@ -36,7 +52,7 @@ function Navbarcomponent() {
         </Navbar.Brand>
         <div className="flex md:order-2">
           <DarkThemeToggle className="ml-2 mr-2" />
-          {isUserLoggedIn ? (
+          {user ? (
             <>
               <Dropdown
                 label=""
@@ -101,27 +117,34 @@ function Navbarcomponent() {
                 inline
                 label={
                   <Avatar
-                    alt="User settings"
-                    img="https://flowbite.com/docs/images/people/profile-picture-5.jpg"
+                    alt={user.name || user.username}
+                    img={user.avatar}
                     rounded
                     className="mr-2"
                   />
                 }
               >
                 <Dropdown.Header>
-                  <span className="block text-sm">Bonnie Green</span>
+                  <span className="block text-sm">
+                    {user.username || user.name}
+                  </span>
                   <span className="block truncate text-sm font-medium">
-                    name@flowbite.com
+                    {user.email}
                   </span>
                 </Dropdown.Header>
-                <NavLink to="/user/">
+                <NavLink to="/user">
                   <Dropdown.Item>Beranda</Dropdown.Item>
                 </NavLink>
-                <NavLink to="/user/tambahartikel">
-                  <Dropdown.Item>Buat artikel</Dropdown.Item>
+                <NavLink to="/user/profil">
+                  <Dropdown.Item>Profile</Dropdown.Item>
                 </NavLink>
+                {user.roles === "doctor" && (
+                  <NavLink to="/user/tambahartikel">
+                    <Dropdown.Item>Buat artikel</Dropdown.Item>
+                  </NavLink>
+                )}
                 <Dropdown.Divider />
-                <NavLink to="/">
+                <NavLink onClick={handleLogout}>
                   <Dropdown.Item>Keluar</Dropdown.Item>
                 </NavLink>
               </Dropdown>
@@ -140,7 +163,7 @@ function Navbarcomponent() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          {isUserLoggedIn
+          {user
             ? navLinksAfterLogin.map((link) => (
                 <NavLink
                   key={link.id}

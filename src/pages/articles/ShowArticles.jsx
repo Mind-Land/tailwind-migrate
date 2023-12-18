@@ -93,13 +93,12 @@ function Showarticles() {
                 </div>
               </div>
             </div>
-            <div className="grid gap-6 lg:grid-cols-3">
-              <Getarticles
-                searchTerm={searchTerm}
-                selectedCategory={selectedCategory}
-                onArticleCountChange={handleArticleCountChange}
-              />
-            </div>
+
+            <Getarticles
+              searchTerm={searchTerm}
+              selectedCategory={selectedCategory}
+              onArticleCountChange={handleArticleCountChange}
+            />
           </div>
         </section>
       </div>

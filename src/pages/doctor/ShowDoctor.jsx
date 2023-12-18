@@ -1,7 +1,7 @@
 import { HiSearch } from "react-icons/hi";
 import { useState } from "react";
 import { TextInput } from "flowbite-react";
-import Getdokter from "../templates/Getdokter";
+import GetDoctor from "../templates/GetDoctor";
 
 function Showdoctor() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -47,12 +47,10 @@ function Showdoctor() {
                 </div>
               </div>
             </div>
-            <div className="grid gap-10 md:grid-cols-3">
-              <Getdokter
-                searchTerm={searchTerm}
-                onDoctorsCountChange={handleDoctorsCountChange}
-              />
-            </div>
+            <GetDoctor
+              searchTerm={searchTerm}
+              onDoctorsCountChange={handleDoctorsCountChange}
+            />
           </div>
         </section>
       </div>

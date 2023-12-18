@@ -1,10 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import ScrollToTop from "./components/ScrollTop.jsx";
+import { ToastContainer } from "react-toastify";
 
+import "./index.css";
+import "react-toastify/dist/ReactToastify.css";
+
+import App from "./App.jsx";
+import ScrollToTop from "./components/ScrollTop.jsx";
+import { AuthContextProvider } from "./context/AuthContext.jsx";
 
 // Animate on scroll
 import AOS from "aos";
@@ -13,9 +17,12 @@ AOS.init();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
+    <AuthContextProvider>
+      <BrowserRouter>
+        <ToastContainer />
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </AuthContextProvider>
   </React.StrictMode>
 );

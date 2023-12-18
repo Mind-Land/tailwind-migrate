@@ -1,21 +1,23 @@
 import { Flowbite } from "flowbite-react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
 import customTheme from "./custom-theme";
 import Homepage from "./pages/Homepage";
 import Navbarcomponent from "./components/navigation/Navbar";
 import Footer from "./components/footer/Footer";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
+import DoctorLogin from "./pages/auth/doctor/DoctorLogin";
+import DoctorRegister from "./pages/auth/doctor/DoctorRegister";
 import About from "./pages/about/About";
 import Articles from "./pages/articles/Articles";
 import Doctor from "./pages/doctor/Doctor";
 import Detailarticles from "./pages/articles/Detailarticles";
 import User from "./pages/user/User";
-import Chat from "./pages/Ai/Chat";
+import Chat from "./pages/ai/Chat";
 import ResetPassword from "./pages/auth/Reset";
-import DoctorLogin from "./pages/auth/doctor/DoctorLogin";
-import DoctorRegister from "./pages/auth/doctor/DoctorRegister";
+import NotFound from "./pages/NotFound";
 import CheckDepression from "./pages/mentaltest/CheckDepression";
 import CheckAnxiety from "./pages/mentaltest/CheckAnxiety";
 
@@ -53,10 +55,14 @@ function App() {
             <Route path="/checkdepression" Component={CheckDepression}></Route>
             <Route path="/checkanxiety" Component={CheckAnxiety}></Route>
             <Route path="/articles" Component={Articles}></Route>
-            <Route path="/detailarticles" Component={Detailarticles}></Route>
+            <Route
+              path="articles/detailarticles/:slug"
+              Component={Detailarticles}
+            />
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/chatai" Component={Chat}></Route>
             <Route path="/user/*" element={<User />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           {shouldShowNavbarFooter && <Footer />}
         </Flowbite>

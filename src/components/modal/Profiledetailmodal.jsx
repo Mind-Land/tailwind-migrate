@@ -1,22 +1,41 @@
 import { Modal, Button } from "flowbite-react";
-import { HiOutlineChat, HiBriefcase, HiEmojiHappy, HiStar } from "react-icons/hi";
+import {
+  HiOutlineChat,
+  HiBriefcase,
+  HiEmojiHappy,
+  HiStar,
+} from "react-icons/hi";
 import PropTypes from "prop-types";
 
 function Profiledetailmodal({ closeModal, openModal, profileDetail }) {
   const {
-    title,
-    image,
-    role,
-    rating: { avarage },
-    tentang,
-    kontak: { email, nomor_telp },
+    fullName,
+    avatar,
+    job,
+    rating,
+    about,
+    email,
+    createdAt,
+    phoneNumber,
   } = profileDetail;
 
   const phoneNumberFormater = (number) => {
-    const nomorBersih = `${number}`.replace(/\D/g, ''); // Menghilangkan karakter selain angka
-    const nomorFormatted = nomorBersih.replace(/(\d{4})(\d{4})(\d{3})/, '$1-$2-$3');
+    const nomorBersih = `${number}`.replace(/\D/g, ""); // Menghilangkan karakter selain angka
+    const nomorFormatted = nomorBersih.replace(
+      /(\d{4})(\d{4})(\d{3})/,
+      "$1-$2-$3"
+    );
     return nomorFormatted;
-  }
+  };
+
+  // console.log(phoneNumber);
+
+  const timeFormater = (time) => {
+    const date = new Date(time);
+    const month = date.toLocaleString("default", { month: "long" });
+    const year = date.getFullYear();
+    return `${month} ${year}`;
+  };
 
   return (
     <>
@@ -26,13 +45,13 @@ function Profiledetailmodal({ closeModal, openModal, profileDetail }) {
             <div className="flex items-center gap-4">
               <img
                 className="w-14 h-14 rounded-full object-cover"
-                src={image}
-                alt={`${title} picture`}
+                src={avatar}
+                alt={`${fullName} picture`}
               />
               <div className="font-medium dark:text-white">
-                <div className="md:text-lg">{title}</div>
+                <div className="md:text-lg">{fullName}</div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
-                  Joined in August 2014
+                  Bergabung pada {timeFormater(createdAt)}
                 </div>
               </div>
             </div>
@@ -63,7 +82,8 @@ function Profiledetailmodal({ closeModal, openModal, profileDetail }) {
           <div className="flex flex-col gap-4 mb-4 md:flex-row md:gap-8">
             <dl className="flex-2">
               <dd className="flex items-center text-gray-500">
-                <HiBriefcase className="mr-1 h-4 w-4" />{role}
+                <HiBriefcase className="mr-1 h-4 w-4" />
+                {job}
               </dd>
               <dd className="flex items-center mb-4 text-gray-500">
                 <HiEmojiHappy className="mr-1 h-4 w-4" />
@@ -74,14 +94,14 @@ function Profiledetailmodal({ closeModal, openModal, profileDetail }) {
               </dt>
               <dd className="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
                 {email} <br />
-                +62 {phoneNumberFormater(nomor_telp)}
+                +62 {phoneNumberFormater(phoneNumber)}
               </dd>
               <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">
                 Rating
               </dt>
               <dd className="flex items-center mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
-                <HiStar  className="mr-1 h-4 w-4" />
-                {avarage}
+                <HiStar className="mr-1 h-4 w-4" />
+                {rating}
               </dd>
             </dl>
             <dl className="flex-1">
@@ -89,7 +109,7 @@ function Profiledetailmodal({ closeModal, openModal, profileDetail }) {
                 Tentang
               </dt>
               <dd className="mb-4 font-light text-gray-500 sm:mb-5 dark:text-gray-400">
-                {tentang}
+                {about}
               </dd>
               <dt className="mb-2 font-semibold leading-none text-gray-900 dark:text-white">
                 Sosial
@@ -213,17 +233,15 @@ Profiledetailmodal.propTypes = {
   openModal: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
   profileDetail: PropTypes.shape({
-    title: PropTypes.string,
-    image: PropTypes.string,
-    role: PropTypes.string,
-    rating: PropTypes.shape({
-      avarage: PropTypes.number
-    }),
+    fullName: PropTypes.string,
+    avatar: PropTypes.string,
+    email: PropTypes.string,
+    job: PropTypes.string,
+    rating: PropTypes.string,
     tentang: PropTypes.string,
-    kontak: PropTypes.shape({
-      email: PropTypes.string,
-      nomor_telp: PropTypes.number
-    })
+    about: PropTypes.string,
+    phoneNumber: PropTypes.string,
+    createdAt: PropTypes.string,
   }),
 };
 

@@ -8,7 +8,7 @@ export const MyFeature = [
     id: 1,
     image: chatdokter,
     title: "Chat dokter",
-    link: "/doctor"
+    link: "/doctor",
   },
   {
     id: 2,
@@ -26,10 +26,9 @@ export const MyFeature = [
     id: 4,
     image: chatai,
     title: "Chat AI",
-    link: "/chatai"
+    link: "/chatai",
   },
 ];
-
 
 export const navLinks = [
   {
@@ -57,7 +56,7 @@ export const navLinks = [
 export const navLinksAfterLogin = [
   {
     id: 1,
-    path: "/user/",
+    path: "/user",
     text: "Beranda",
   },
   {
@@ -69,43 +68,42 @@ export const navLinksAfterLogin = [
     id: 3,
     path: "/user/dokter",
     text: "Dokter",
-    icon: "HiUsers"
+    icon: "HiUsers",
   },
   {
     id: 4,
     path: "/chatai",
-    text: "Chat Ai",
-    icon: "HiGlobeAlt"
+    text: "Chat AI",
+    icon: "HiGlobeAlt",
   },
-]
+];
 
 export const sidebarLinks = [
   {
     id: 1,
-    path: "/user/",
+    path: "/user",
     text: "Beranda",
-    icon: "HiHome"
+    icon: "HiHome",
   },
   {
     id: 2,
     path: "/user/article",
     text: "Article",
-    icon: "HiBookOpen"
+    icon: "HiBookOpen",
   },
   {
     id: 3,
     path: "/user/dokter",
     text: "Dokter",
-    icon: "HiUsers"
+    icon: "HiUsers",
   },
   {
     id: 4,
     path: "/user/ai",
     text: "Chat Ai",
-    icon: "HiGlobeAlt"
+    icon: "HiGlobeAlt",
   },
-]
-
+];
 
 export const faq = [
   {
