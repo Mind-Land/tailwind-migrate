@@ -46,7 +46,10 @@ function Templatearticledetail({ article }) {
           {title}
         </h1>
       </header>
-      <div dangerouslySetInnerHTML={{ __html: body }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: body }}
+        className="dark:text-white"
+      />
     </>
   );
 }
