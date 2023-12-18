@@ -14,6 +14,7 @@ import DoctorProfile from "./DoctorProfile";
 import UserProfile from "./UserProfile";
 import EditUserProfile from "./EditUserProfile";
 
+
 function User() {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);

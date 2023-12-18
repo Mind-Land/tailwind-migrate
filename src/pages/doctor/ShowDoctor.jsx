@@ -47,7 +47,6 @@ function Showdoctor() {
                 </div>
               </div>
             </div>
-
             <GetDoctor
               searchTerm={searchTerm}
               onDoctorsCountChange={handleDoctorsCountChange}

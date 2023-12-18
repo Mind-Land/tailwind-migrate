@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import LazyLoad from "react-lazy-load";
 
 function Imagecard({ article }) {
   const { title, author, timestamp, summary, imageUrl, slug } = article;
@@ -16,11 +17,13 @@ function Imagecard({ article }) {
     <>
       <div className="max-w-sm md:min-w-[390px] overflow-hidden bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
-          <img
-            className="rounded-t-lg w-full h-[180px] object-cover"
-            src={imageUrl}
-            alt={title}
-          />
+          <LazyLoad onContentVisible={() => {console.log('loaded')}}>
+            <img
+              className="rounded-t-lg w-full h-[180px] object-cover"
+              src={imageUrl}
+              alt={title}
+            />
+          </LazyLoad>
         </a>
         <div className="p-5">
           <Link to={`/articles/detailarticles/${slug}`}>
