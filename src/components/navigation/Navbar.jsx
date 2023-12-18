@@ -9,10 +9,9 @@ import {
 } from "flowbite-react";
 import logo from "/img/brandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
-import { HiChatAlt2 } from "react-icons/hi";
 import { navLinks } from "../../data/index";
 // import { useEffect } from "react";
-import { NavLink, useNavigate, Link } from "react-router-dom";
+import { NavLink, useNavigate, } from "react-router-dom";
 import { navLinksAfterLogin } from "../../data/index";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
