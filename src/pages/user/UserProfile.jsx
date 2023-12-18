@@ -23,8 +23,8 @@ const UserProfile = () => {
         </div>
       )}
       {errorProfileData && <p>{errorProfileData.message}</p>}
-      <div className="bg-gray-100 dark:bg-gray-900 py-10">
-        <div className="container mx-auto py-8">
+      <div className="bg-gray-100 dark:bg-gray-900 pt-10">
+        <div className="container mx-auto pt-8 min-h-screen ">
           <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
             <div className="col-span-4 sm:col-span-3">
               {isLoadingProfileData ? (
