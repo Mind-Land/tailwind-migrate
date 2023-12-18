@@ -3,9 +3,10 @@ import { HiOutlineChat, HiOutlineInformationCircle } from "react-icons/hi";
 import PropTypes from "prop-types";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
+import LazyLoad from "react-lazy-load";
 import Getdetaildokter from "../../pages/templates/Getdetaildokter";
 import { AuthContext } from "../../context/AuthContext";
+import background from "/img/backgroundprofilecard.png"
 
 function Profilecard({ profile }) {
   const { id, name, job, pengalaman, followers, avatar } = profile;
@@ -46,15 +47,22 @@ function Profilecard({ profile }) {
         <div className="flex flex-col items-center pb-5">
           <div className="relative flex h-32 w-full justify-center rounded-xl bg-cover mb-14">
             <img
-              src="https://horizon-tailwind-react-git-tailwind-components-horizon-ui.vercel.app/static/media/banner.ef572d78f29b0fee0a09.png"
-              className="absolute flex h-32 w-full justify-center rounded-xl bg-cover"
+              src={background}
+              className="absolute flex h-32 w-full justify-center rounded-xl bg-cover object-cover"
             />
+
             <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-full border-[4px] border-white dark:border-gray-800 bg-pink-400 dark:!border-navy-700">
-              <img
-                className="h-full w-full rounded-full object-cover"
-                src={avatar}
-                alt="profile image"
-              />
+              <LazyLoad
+                onContentVisible={() => {
+                  console.log("loaded");
+                }}
+              >
+                <img
+                  className="h-full w-full rounded-full object-cover"
+                  src={avatar}
+                  alt="profile image"
+                />
+              </LazyLoad>
             </div>
           </div>
           <div className="flex flex-col items-center">

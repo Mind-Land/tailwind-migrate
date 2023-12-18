@@ -7,7 +7,7 @@ import {
   Dropdown,
   Avatar,
 } from "flowbite-react";
-import logo from "../../assets/mindlandlogo.png";
+import logo from "/img/brandlogo.png";
 import { HiChevronRight } from "react-icons/hi";
 import { HiChatAlt2 } from "react-icons/hi";
 import { navLinks } from "../../data/index";

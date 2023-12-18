@@ -4,11 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import { Configuration, OpenAIApi } from "openai";
 import { useNavigate } from "react-router-dom";
 
-import Sendchat from "../../components/Sendchat";
-import Recievechat from "../../components/Recievechat";
+import Sendchat from "../../components/chat-bubble/Sendchat";
+import Recievechat from "../../components/chat-bubble/Recievechat";
 import "react-loading-skeleton/dist/skeleton.css";
 
-function Chatsample() {
+function Chat() {
   const [userInput, setUserInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([]);
@@ -168,4 +168,4 @@ function Chatsample() {
   );
 }
 
-export default Chatsample;
+export default Chat;

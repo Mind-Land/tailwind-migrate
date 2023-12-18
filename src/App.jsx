@@ -17,18 +17,18 @@ import Detailarticles from "./pages/articles/Detailarticles";
 import User from "./pages/user/User";
 import Chat from "./pages/ai/Chat";
 import ResetPassword from "./pages/auth/Reset";
-import CheckStress from "./pages/CheckStress/CheckStress";
 import NotFound from "./pages/NotFound";
-import CheckDepression from "./pages/MentalTest/CheckDepression";
-import CheckAnxiety from "./pages/MentalTest/CheckAnxiety";
+import CheckDepression from "./pages/mentaltest/CheckDepression";
+import CheckAnxiety from "./pages/mentaltest/CheckAnxiety";
 
 const queryClient = new QueryClient();
 const pagesWithoutNavbarFooter = [
   "/login",
-  "/login-doctor",
+  "/login",
   "/reset",
   "/register",
-  "/register-doctor",
+  "/doctorlogin",
+  "/doctorregister",
   "/user",
   "/user/*",
 ];
@@ -48,8 +48,8 @@ function App() {
             <Route path="/" Component={Homepage}></Route>
             <Route path="/login" Component={Login}></Route>
             <Route path="/register" Component={Register}></Route>
-            <Route path="/login-doctor" Component={DoctorLogin}></Route>
-            <Route path="/register-doctor" Component={DoctorRegister}></Route>
+            <Route path="/doctorlogin" Component={DoctorLogin}></Route>
+            <Route path="/doctorregister" Component={DoctorRegister}></Route>
             <Route path="/reset" Component={ResetPassword}></Route>
             <Route path="/about" Component={About}></Route>
             <Route path="/checkdepression" Component={CheckDepression}></Route>
@@ -62,7 +62,6 @@ function App() {
             <Route path="/doctor" Component={Doctor}></Route>
             <Route path="/chatai" Component={Chat}></Route>
             <Route path="/user/*" element={<User />} />
-            <Route path="/checkstress" Component={CheckStress}></Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
           {shouldShowNavbarFooter && <Footer />}

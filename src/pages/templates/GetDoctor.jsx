@@ -32,18 +32,20 @@ function GetDoctor({ searchTerm, onDoctorsCountChange }) {
   return (
     <>
       {isLoading && (
-        <>
+        <div className="grid gap-6 lg:grid-cols-3">
           <ArticlecardSkeleton />
           <ArticlecardSkeleton />
           <ArticlecardSkeleton />
-        </>
+        </div>
       )}
       {isError && <p>Error fetching data</p>}
-      {!isLoading &&
-        !isError &&
-        filteredDoctors.map((dokter) => (
-          <Profilecard key={dokter.id} profile={dokter} />
-        ))}
+      {!isLoading && !isError && (
+        <div className="grid gap-6 lg:grid-cols-3">
+          {filteredDoctors.map((dokter) => (
+            <Profilecard key={dokter.id} profile={dokter} />
+          ))}
+        </div>
+      )}
       {!isLoading && !isError && (
         <div className="flex overflow-x-auto sm:justify-center pt-5">
           <Pagination

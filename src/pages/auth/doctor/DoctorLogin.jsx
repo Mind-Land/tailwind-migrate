@@ -152,14 +152,14 @@ const DoctorLogin = () => {
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Belum mempunyai akun?{" "}
                   <Link
-                    to="/register-doctor"
+                    to="/doctorregister"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Daftar sekarang
                   </Link>
                 </p>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Bukan dokter?{" "}
+                  Kamu pengguna?{" "}
                   <Link
                     to="/login"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"

@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
-
+import loginhero from "/img/hero/login.png";
 import { useLogin } from "../../hooks/useLogin";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -52,11 +52,7 @@ function Login() {
         </div>
 
         <div className="h-screen bg-color-primary-400 dark:bg-color-primary-800 w-full hidden lg:flex items-center justify-center ">
-          <img
-            className="w-3/5 -scale-x-100"
-            src="./public/img/hero-image.png"
-            alt=""
-          />
+          <img className="w-3/5 -scale-x-100" src={loginhero} alt="" />
         </div>
         <div className="bg-white dark:bg-gray-900 h-screen w-full px-6 flex flex-col items-center justify-center ">
           <div className="flex flex-col items-center justify-center">
@@ -150,25 +146,25 @@ function Login() {
                 >
                   Masuk
                 </button>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Belum mempunyai akun?{" "}
-                  <Link
-                    to="/register"
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
+              </form>
+              <button
+                type="submit"
+                className="w-full text-color-primary-500 hover:text-white border border-color-primary-500 hover:bg-color-primary-500 focus:ring-4 focus:outline-none focus:ring-color-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-color-primary-500 dark:text-color-primary-500 dark:hover:text-white dark:hover:bg-color-primary-500 dark:focus:ring-color-primary-500"
+                onClick={() => navigate("/doctorlogin")}
+              >
+                Masuk sebagai dokter
+              </button>
+              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                Belum mempunyai akun?
+                <a
+                  href="#"
+                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                >
+                  <Link className="ml-1" to="/register">
                     Daftar sekarang
                   </Link>
-                </p>
-                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Kamu dokter?{" "}
-                  <Link
-                    to="/login-doctor"
-                    className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                  >
-                    Masuk disini
-                  </Link>
-                </p>
-              </form>
+                </a>
+              </p>
             </div>
           </div>
         </div>
