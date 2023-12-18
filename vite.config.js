@@ -4,9 +4,6 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  build: {
-    sourcemap: true,
-  },
   plugins: [
     react(),
     ViteImageOptimizer({
