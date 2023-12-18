@@ -8,7 +8,7 @@ import {
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import heroarticle from "../../assets/heroarticle.png";
-import ShowArticles from "./ShowArticles";
+import ShowArticles from "./Showarticles";
 import artikel from "/img/hero/artikel.png";
 
 function Articles() {
