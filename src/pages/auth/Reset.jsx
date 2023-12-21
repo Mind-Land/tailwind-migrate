@@ -87,8 +87,8 @@ function ResetPassword() {
                 />
                 {!validPassword && password.length > 0 && (
                   <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
-                    Password harus mengandung 1 huruf kapital, 8 karakter, dan 1
-                    atau 2 angka.
+                    Password harus mengandung 1 huruf kapital, 8 karakter, 1
+                    simbol dan 1 atau 2 angka.
                   </p>
                 )}
               </div>

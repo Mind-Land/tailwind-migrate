@@ -104,7 +104,6 @@ const DoctorRegister = () => {
                   id="name1"
                   type="text"
                   placeholder="Masukkan nama depan Anda"
-                  required
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
                 />
@@ -121,7 +120,6 @@ const DoctorRegister = () => {
                   id="name2"
                   type="text"
                   placeholder="Masukkan nama belakang Anda"
-                  required
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                 />
@@ -138,7 +136,6 @@ const DoctorRegister = () => {
               <Select
                 id="jenisKelamin"
                 name="jenisKelamin"
-                required
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
               >
@@ -149,7 +146,9 @@ const DoctorRegister = () => {
                 <option value="Perempuan">Perempuan</option>
               </Select>
               {formSubmitted && !gender && (
-                <p className="text-red-500 text-xs mt-1">Gender is required.</p>
+                <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                  Gender harus di isi
+                </p>
               )}
             </div>
 
@@ -159,7 +158,6 @@ const DoctorRegister = () => {
                 id="email"
                 type="email"
                 placeholder="Masukkan alamat email anda"
-                required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -175,7 +173,6 @@ const DoctorRegister = () => {
                 <TextInput
                   id="password2"
                   type="password"
-                  required
                   placeholder="Masukkan password anda"
                   onChange={handlePasswordChange}
                   value={password}
@@ -187,8 +184,8 @@ const DoctorRegister = () => {
                 )}
                 {!validPassword && password && (
                   <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
-                    Password harus mengandung 1 huruf kapital, 8 karakter, dan 1
-                    atau 2 angka
+                    Password harus mengandung 1 huruf kapital, 8 karakter, 1
+                    simbol dan 1 atau 2 angka
                   </p>
                 )}
               </div>
@@ -199,7 +196,6 @@ const DoctorRegister = () => {
                   id="repeat-password"
                   type="password"
                   placeholder="Konfimasi password anda"
-                  required
                   onChange={handleRepeatPasswordChange}
                   value={repeatPassword}
                 />
