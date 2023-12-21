@@ -63,13 +63,12 @@ const DoctorRegister = () => {
     <>
       {isLoading && (
         <div className="absolute top-1/2 lg:left-[47%] left-[45%] w-16 h-16 border-8 border-dashed rounded-full animate-spin border-blue-600"></div>
-        
       )}
       <div className="flex flex-col lg:flex-row h-screen">
         <div className="absolute top-0 left-0 p-8 md:p-8 xl:p-12">
           <Link
             to="/doctorlogin"
-            className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white"
+            className="rounded-lg p-4 text-white bg-color-primary-500 hover:bg-color-primary-800  xl:text-color-primary-500 xl:bg-gray-100 xl:hover:bg-gray-400 xl:hover:text-color-primary-100 md:bg-color-primary-500 md:hover:bg-color-primary-800 md:text-white"
             type="submit"
           >
             <HiArrowSmLeft />
@@ -110,8 +109,8 @@ const DoctorRegister = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                 />
                 {formSubmitted && !firstName && (
-                  <p className="text-red-500 text-xs mt-1">
-                    First Name is required.
+                  <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                    Nama Depan harus di isi
                   </p>
                 )}
               </div>
@@ -127,8 +126,8 @@ const DoctorRegister = () => {
                   onChange={(e) => setLastName(e.target.value)}
                 />
                 {formSubmitted && !lastName && (
-                  <p className="text-red-500 text-xs mt-1">
-                    Last Name is required.
+                  <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                    Nama Belakang harus di isi
                   </p>
                 )}
               </div>
@@ -165,7 +164,9 @@ const DoctorRegister = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               {formSubmitted && !email && (
-                <p className="text-red-500 text-xs mt-1">Email is required.</p>
+                <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                  Email harus di isi
+                </p>
               )}
             </div>
             <div className="flex flex-col lg:flex-row justify-between gap-4">
@@ -180,14 +181,14 @@ const DoctorRegister = () => {
                   value={password}
                 />
                 {formSubmitted && !password && (
-                  <p className="text-red-500 text-xs mt-1">
-                    Password is required.
+                  <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                    Kata sandi harus di isi
                   </p>
                 )}
                 {!validPassword && password && (
-                  <p className="text-red-500 text-xs mt-1">
-                    Password must contain 1 uppercase letter, 8 characters, and
-                    1 or 2 digits.
+                  <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                    Password harus mengandung 1 huruf kapital, 8 karakter, dan 1
+                    atau 2 angka
                   </p>
                 )}
               </div>
@@ -203,20 +204,20 @@ const DoctorRegister = () => {
                   value={repeatPassword}
                 />
                 {formSubmitted && !repeatPassword && (
-                  <p className="text-red-500 text-xs mt-1">
-                    Repeat Password is required.
+                  <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                    Ulangi kata sandi
                   </p>
                 )}
                 {!passwordsMatch && repeatPassword && (
-                  <p className="text-red-500 text-xs mt-1">
-                    Passwords do not match.
+                  <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
+                    Kata sandi tidak sama
                   </p>
                 )}
               </div>
             </div>
 
             {errors && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-color-warning-700 dark:text-color-warning-200 text-xs mt-1">
                 {errors.message || errors}
               </p>
             )}

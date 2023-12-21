@@ -14,13 +14,13 @@ export const MyFeature = [
     id: 2,
     image: cekstress,
     title: "Cek Depresi",
-    link: "/checkdepression"
+    link: "/checkdepression",
   },
   {
     id: 3,
     image: artikel,
     title: "Cek Kecemasan",
-    link: "/checkanxiety"
+    link: "/checkanxiety",
   },
   {
     id: 4,
@@ -51,9 +51,7 @@ export const navLinks = [
     path: "/about",
     text: "Tentang",
   },
-  
 ];
-
 
 export const people = [
   {
@@ -65,7 +63,7 @@ export const people = [
   {
     id: 2,
     name: "Mohamad Rafiq Daud",
-    role: "Frontend Developer",
+    role: "UX Designer / Frontend Developer",
     imageUrl: "img/avatar/rafiq.jpg",
   },
   {

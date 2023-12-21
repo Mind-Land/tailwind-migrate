@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiArrowSmLeft } from "react-icons/hi";
-import registerhero from "/img/hero/login.png"
+import registerhero from "/img/hero/login.png";
 
 import { useRegister } from "../../hooks/useRegister";
 
@@ -114,7 +114,7 @@ function Register() {
                     </p>
                   )}
                   {errors && (
-                    <p className="text-color-danger-700 dark:text-color-warning-200 text-sm mt-2">
+                    <p className="text-color-warning-700 dark:text-color-warning-200 text-sm mt-2">
                       {errors}
                     </p>
                   )}

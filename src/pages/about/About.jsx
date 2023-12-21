@@ -1,8 +1,7 @@
 import { Badge } from "flowbite-react";
-import { HiChatAlt2, HiTrendingUp, HiUserGroup } from "react-icons/hi";
+import { HiChatAlt2, HiTrendingUp, HiDocumentText } from "react-icons/hi";
 import aboutus from "/img/hero/aboutus.png";
 import { people } from "../../data";
-
 
 function About() {
   return (
@@ -12,7 +11,7 @@ function About() {
           <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
             <div className="mr-auto place-self-center lg:col-span-7">
               <h1 className="max-w-2xl text-color-primary-500 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl dark:text-white">
-                Tentang kami 
+                Tentang kami
               </h1>
               <p className="max-w-2xl mb-6 font-light text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-100">
                 Mind Land merupakan pusat kesehatan mental di era digital.
@@ -111,16 +110,16 @@ function About() {
               <li className="relative mb-6 sm:mb-0">
                 <div className="flex items-center">
                   <div className="flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full ring-0 ring-white dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-                    <Badge color="primary" icon={HiUserGroup}></Badge>
+                    <Badge color="primary" icon={HiDocumentText}></Badge>
                   </div>
                 </div>
                 <div className="mt-3 sm:pe-8">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    Forum Diskusi
+                    Artikel
                   </h3>
                   <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                    Merupakan fitur untuk menjalin komunikasi antar masyarakat
-                    mengenai psikologis dan kehidupan sehari-hari
+                    Merupakan fitur untuk memberikan informasi dan saran praktis
+                    untuk meningkatkan kesejahteraan mental.
                   </p>
                 </div>
               </li>
