@@ -7,7 +7,7 @@ export const MyFeature = [
   {
     id: 1,
     image: chatdokter,
-    title: "Chat dokter",
+    title: "Baca artikel",
     link: "/doctor",
   },
   {
@@ -143,7 +143,7 @@ export const sidebarLinks = [
 export const faq = [
   {
     id: 1,
-    title: "apa itu mindland?",
+    title: "Apa itu mindland?",
     desc: "Mindland, sebuah platform kesehatan mental menyediakan fitur-fitur seperti Chat AI, evaluasi tingkat depresi dan kecemasan berlebihan, konsultasi dengan tenaga medis, dan artikel khusus untuk pasien. Dengan akses mudah dan dukungan komprehensif, Mindland hadir sebagai sumber pertolongan pertama yang dapat diandalkan bagi kesehatan mental masyarakat.",
   },
   {
@@ -168,7 +168,7 @@ export const faq = [
   },
   {
     id: 6,
-    title: "apakah Mindland mengutamakan kesejahteraan, kebebasan eksplorasi?",
+    title: "Apakah Mindland mengutamakan kesejahteraan, kebebasan eksplorasi?",
     desc: "Mindland didesain untuk memberikan pengalaman holistik. Dengan fitur-fitur seperti Chat AI, artikel kesehatan mental, dan evaluasi cek mental, Mindland mendukung pengguna mencapai kesejahteraan dan keseimbangan dalam hidup. ",
   },
 ];

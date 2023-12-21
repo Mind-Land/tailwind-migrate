@@ -27,7 +27,7 @@ function Articleshow() {
     <>
       <div className="min-h-screen bg-white dark:bg-gray-900">
         <section className="h-full flex flex-col items-center justify-center w-full">
-          <div className="py-8 mx-auto max-w-screen-xl lg:py-16  w-full">
+          <div className="py-8 mx-auto max-w-screen-xl lg:py-16 px-4 w-full">
             <h3 className="text-2xl font-bold dark:text-white mb-6 text-color-primary-500">
               Artikel Populer
             </h3>

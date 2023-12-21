@@ -34,7 +34,7 @@ function User() {
           path="article"
           element={
             <>
-              <div className="bg-white dark:bg-gray-900 min-h-screen px-4 pt-20 md:pt-10">
+              <div className="bg-white dark:bg-gray-900 min-h-screen  pt-20 md:pt-10">
                 <Articleshow />
               </div>
             </>
@@ -44,7 +44,7 @@ function User() {
           path="dokter"
           element={
             <>
-              <div className=" bg-white dark:bg-gray-900 min-h-screen px-4 pt-20 md:pt-10">
+              <div className=" bg-white dark:bg-gray-900 min-h-screen  pt-20 md:pt-10">
                 <DoctorShow />
               </div>
             </>

@@ -47,7 +47,7 @@ function GetDoctor({ searchTerm, onDoctorsCountChange }) {
         </div>
       )}
       {!isLoading && !isError && (
-        <div className="flex overflow-x-auto sm:justify-center pt-5">
+        <div className="flex justify-center pt-5">
           <Pagination
             currentPage={data.currentPage}
             totalPages={data.totalPages}
